@@ -1500,6 +1500,52 @@ body:not(.tab-opened) .use-guide,
 body:not(.tab-opened) .guide-search{
   display:none !important;
 }
+  /* تحسين الغلاف مع بقاء الشعار في اليمين */
+.cover{
+  padding:70px 190px 70px 60px !important;
+  min-height:auto !important;
+  text-align:center;
+}
+
+.cover-logo{
+  position:absolute !important;
+  top:34px !important;
+  right:38px !important;
+  width:115px !important;
+  height:auto !important;
+  background:#fff;
+  padding:8px;
+  border-radius:14px;
+  z-index:3;
+}
+
+.cover h1{
+  font-size:clamp(30px, 4vw, 50px) !important;
+  line-height:1.45 !important;
+  margin:0 auto !important;
+  max-width:1200px !important;
+}
+
+.cover .cmeta{
+  display:none !important;
+}
+
+@media(max-width:620px){
+  .cover{
+    padding:36px 16px 42px !important;
+  }
+
+  .cover-logo{
+    position:static !important;
+    width:92px !important;
+    display:block !important;
+    margin:0 auto 18px !important;
+  }
+
+  .cover h1{
+    font-size:25px !important;
+  }
+}
 </style>
 </head>
 
