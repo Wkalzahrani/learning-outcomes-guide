@@ -1,0 +1,3625 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ط§ظ„ط¯ظ„ظٹظ„ ط§ظ„ط£ظƒط§ط¯ظٹظ…ظٹ ط§ظ„ط´ط§ظ…ظ„ ظ„طµظٹط§ط؛ط© ظˆظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --p:#0d6e6e;
+  --pl:#1a8f8f;
+  --g:#b8972e;
+  --gl:#d4b04a;
+  --bg:#f4f8f8;
+  --w:#fff;
+  --t:#1a2a2a;
+  --tl:#4a5f5f;
+  --bd:#c8dede;
+  --red:#c62828;
+  --green:#2e7d32;
+  --pur:#064E4E;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--bg);
+  color:var(--t);
+  line-height:1.9;
+  font-size:15px;
+}
+
+button,
+input,
+textarea,
+select,
+table{
+  font-family:'Cairo',sans-serif;
+}
+
+/* ط´ط±ظٹط· طھظ‚ط¯ظ… ط§ظ„ظ‚ط±ط§ط،ط© */
+.read-progress{
+  position:fixed;
+  top:0;
+  right:0;
+  height:5px;
+  width:0;
+  background:linear-gradient(90deg,var(--g),var(--p));
+  z-index:9999;
+}
+
+/* COVER */
+.cover{
+  background:linear-gradient(150deg,#062e2e 0%,#0d6e6e 55%,#1a8f8f 100%);
+  color:#fff;
+  padding:80px 60px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.cover::before{
+  content:'';
+  position:absolute;
+  top:-60px;
+  right:-60px;
+  width:220px;
+  height:220px;
+  border:3px solid rgba(184,151,46,.25);
+  border-radius:50%;
+}
+
+.cover::after{
+  content:'';
+  position:absolute;
+  bottom:-80px;
+  left:-80px;
+  width:280px;
+  height:280px;
+  border:3px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cover,
+.cover h1,
+.cover h2,
+.cover .ctag,
+.cover .cmeta span{
+  color:#fff !important;
+}
+
+.cover-logo{
+  position:absolute;
+  top:24px;
+  right:32px;
+  width:110px;
+  height:auto;
+  background:#fff;
+  padding:8px;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(0,0,0,.18);
+  z-index:2;
+}
+
+.cover h1{
+  font-size:38px;
+  font-weight:800;
+  line-height:1.3;
+  margin-bottom:10px;
+}
+
+.cover h2{
+  font-size:17px;
+  font-weight:400;
+  opacity:.82;
+  margin-bottom:30px;
+}
+
+.cmeta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:32px;
+  padding-top:28px;
+  border-top:1px solid rgba(255,255,255,.15);
+}
+
+.cmeta span{
+  background:rgba(255,255,255,.12);
+  padding:6px 16px;
+  border-radius:20px;
+  font-size:13px;
+}
+
+/* CONTAINER */
+.wrap{
+  max-width:980px;
+  margin:0 auto;
+  padding:0 20px 50px;
+}
+
+/* INTRO + TABS */
+.intro-tabs{
+  max-width:980px;
+  margin:32px auto;
+  padding:0 20px 10px;
+}
+
+.intro-card{
+  background:#fff;
+  border-radius:18px;
+  padding:30px 34px;
+  box-shadow:0 2px 18px rgba(13,110,110,.07);
+  border-right:5px solid var(--p);
+  margin-bottom:20px;
+}
+
+.intro-card h2{
+  color:var(--p);
+  font-size:22px;
+  margin-bottom:10px;
+  font-weight:800;
+}
+
+.intro-card p{
+  font-size:15px;
+  color:var(--tl);
+  margin-bottom:0;
+}
+
+.tab-buttons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin:18px 0 22px;
+}
+
+.tab-btn{
+  border:0;
+  border-radius:16px;
+  padding:22px 18px;
+  background:#fff;
+  box-shadow:0 2px 18px rgba(13,110,110,.08);
+  cursor:pointer;
+  text-align:right;
+  border:2px solid transparent;
+  transition:.25s ease;
+  color:var(--t);
+}
+
+.tab-btn:hover{
+  transform:translateY(-2px);
+  border-color:var(--bd);
+}
+
+.tab-btn.active{
+  border-color:var(--p);
+  background:linear-gradient(135deg,#e8f4f4,#fff);
+}
+
+.tab-btn.plan.active{
+  border-color:var(--g);
+  background:linear-gradient(135deg,#fef9e8,#fff);
+}
+
+.tab-btn .tab-ico{
+  font-size:26px;
+  margin-bottom:6px;
+}
+
+.tab-btn .tab-title{
+  font-weight:800;
+  font-size:18px;
+  color:var(--p);
+  margin-bottom:4px;
+}
+
+.tab-btn.plan .tab-title{
+  color:var(--g);
+}
+
+.tab-btn .tab-desc{
+  font-size:13px;
+  color:var(--tl);
+  line-height:1.7;
+}
+
+.tab-hint{
+  background:#fff;
+  border-radius:14px;
+  padding:16px 20px;
+  text-align:center;
+  color:var(--tl);
+  border:1px dashed var(--bd);
+  margin-bottom:24px;
+}
+
+.tab-panel{
+  display:none;
+}
+
+.tab-panel.active{
+  display:block;
+}
+
+.tab-panel .wrap{
+  padding-top:0;
+}
+
+.mini-toc{
+  background:#fff;
+  border-radius:16px;
+  padding:24px;
+  margin:0 auto 26px;
+  max-width:980px;
+  box-shadow:0 2px 18px rgba(13,110,110,.06);
+  border-right:5px solid var(--g);
+}
+
+.mini-toc h2{
+  color:var(--p);
+  font-size:18px;
+  margin-bottom:14px;
+}
+
+.mini-toc ul{
+  columns:2;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.mini-toc li{
+  break-inside:avoid;
+  border-bottom:1px dashed var(--bd);
+  padding:7px 0;
+  margin:0;
+}
+
+.mini-toc a{
+  text-decoration:none;
+  color:var(--t);
+  font-weight:600;
+  font-size:13px;
+}
+
+.mini-toc a:hover{
+  color:var(--p);
+}
+
+/* ط£ط²ط±ط§ط± ط³ط±ظٹط¹ط© */
+.guide-actions{
+  max-width:980px;
+  margin:0 auto 24px;
+  padding:0 20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+
+.guide-action{
+  border:0;
+  background:var(--p);
+  color:#fff;
+  padding:10px 18px;
+  border-radius:24px;
+  font-size:13px;
+  font-weight:800;
+  cursor:pointer;
+  text-decoration:none;
+  box-shadow:0 6px 14px rgba(13,110,110,.14);
+}
+
+.guide-action.gold{
+  background:var(--g);
+}
+
+/* ظƒظٹظپ ط£ط³طھط®ط¯ظ… ط§ظ„ط¯ظ„ظٹظ„ */
+.use-guide{
+  max-width:980px;
+  margin:0 auto 28px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.use-card{
+  background:#fff;
+  border:1px solid var(--bd);
+  border-top:4px solid var(--p);
+  border-radius:10px;
+  padding:16px;
+  box-shadow:0 2px 14px rgba(13,110,110,.06);
+}
+
+.use-card strong{
+  display:block;
+  color:var(--p);
+  margin-bottom:6px;
+}
+
+.use-card p{
+  font-size:13px;
+  margin:0;
+}
+
+/* ط§ظ„ط¹ظ†ط§ظˆظٹظ† ط§ظ„ط±ط¦ظٹط³ظٹط© */
+.part{
+  position:relative;
+  background:linear-gradient(135deg,#064E4E,#0d7773) !important;
+  color:#fff;
+  border-radius:14px;
+  padding:28px 34px !important;
+  margin:46px 0 26px !important;
+  box-shadow:0 10px 24px rgba(13,110,110,.14);
+  border-right:6px solid var(--g);
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  gap:0;
+}
+
+.part::before{
+  content:'';
+  position:absolute;
+  top:-45px;
+  left:-45px;
+  width:130px;
+  height:130px;
+  border:2px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.part::after{
+  content:'';
+  position:absolute;
+  bottom:-55px;
+  right:-55px;
+  width:150px;
+  height:150px;
+  border:2px solid rgba(184,151,46,.22);
+  border-radius:50%;
+}
+
+.part > div{
+  position:relative;
+  z-index:1;
+}
+
+.part-num{
+  display:none !important;
+}
+
+.part-title{
+  color:#fff;
+  font-size:23px;
+  font-weight:800;
+  line-height:1.6;
+}
+
+.part-sub{
+  color:rgba(255,255,255,.82);
+  font-size:13px;
+  margin-top:4px;
+}
+
+/* ط§ظ„ط£ظ‚ط³ط§ظ… */
+.sec{
+  background:#fff;
+  border-radius:16px;
+  padding:38px;
+  margin-bottom:28px;
+  box-shadow:0 2px 16px rgba(13,110,110,.06);
+}
+
+.sec-hd{
+  background:#f4fbfb;
+  border:1px solid #d9eeee;
+  border-right:5px solid var(--p);
+  border-radius:12px;
+  padding:16px 20px !important;
+  margin-bottom:24px;
+  display:flex;
+  align-items:flex-start;
+  gap:0;
+}
+
+.sec-n{
+  display:none !important;
+}
+
+.sec-t{
+  color:#0b6666;
+  font-size:21px;
+  line-height:1.6;
+  font-weight:800;
+}
+
+.sec-s{
+  color:#5b7373;
+  font-size:13px;
+  margin-top:3px;
+}
+
+h3{
+  color:var(--p);
+  font-size:16px;
+  margin:22px 0 10px;
+}
+
+h4{
+  color:var(--g);
+  font-size:14px;
+  margin:14px 0 8px;
+  font-weight:700;
+}
+
+p{
+  color:var(--tl);
+  margin-bottom:12px;
+}
+
+strong{
+  color:var(--t);
+}
+
+ul,
+ol{
+  padding-right:20px;
+  color:var(--tl);
+  margin-bottom:12px;
+}
+
+li{
+  margin-bottom:5px;
+}
+
+/* ط§ظ„طµظ†ط§ط¯ظٹظ‚ */
+.box{
+  padding:15px 19px;
+  border-radius:10px;
+  margin:14px 0;
+  border-right:4px solid;
+}
+
+.bi{background:#e8f4f4;border-color:var(--p);}
+.bw{background:#fef9e8;border-color:var(--g);}
+.bs{background:#e8f5e9;border-color:var(--green);}
+.bd{background:#fdeaea;border-color:var(--red);}
+.bp{background:#e8f4f4;border-color:var(--pur);}
+
+.bt{
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.bi .bt{color:var(--p);}
+.bw .bt{color:var(--g);}
+.bs .bt{color:var(--green);}
+.bd .bt{color:var(--red);}
+.bp .bt{color:var(--pur);}
+
+/* ط§ظ„طھط¹ط±ظٹظپ */
+.def{
+  background:linear-gradient(135deg,var(--p),var(--pl));
+  color:#fff;
+  padding:24px 28px;
+  border-radius:14px;
+  margin:18px 0;
+}
+
+.def h3{
+  color:var(--gl);
+  margin-top:0;
+}
+
+.def p{
+  color:rgba(255,255,255,.9);
+}
+
+/* ط§ظ„ط¬ط¯ط§ظˆظ„ ط¨ظ†ظ…ط· ظ…ظˆط­ط¯ */
+.tbl,
+.mx{
+  width:100%;
+  border-collapse:separate !important;
+  border-spacing:0 !important;
+  margin:14px 0;
+  border:1px solid #c9e3e3 !important;
+  border-radius:14px !important;
+  overflow:hidden !important;
+  background:#fff !important;
+  box-shadow:0 8px 24px rgba(13,110,110,.08) !important;
+  font-size:15px !important;
+}
+
+.tbl th,
+.mx th{
+  background:#0d7773 !important;
+  color:#fff !important;
+  padding:18px 18px !important;
+  font-size:15px !important;
+  font-weight:800 !important;
+  text-align:right !important;
+  border-left:1px solid rgba(255,255,255,.08) !important;
+  line-height:1.7 !important;
+}
+
+.mx th{
+  text-align:center !important;
+}
+
+.tbl td,
+.mx td{
+  padding:18px 18px !important;
+  color:#496363 !important;
+  border-bottom:1px solid #d9eeee !important;
+  border-left:1px solid #e8f4f4 !important;
+  background:#fff !important;
+  line-height:1.9 !important;
+  vertical-align:middle !important;
+}
+
+.mx td{
+  text-align:center;
+}
+
+.tbl tr:nth-child(even) td,
+.mx tr:nth-child(even) td{
+  background:#f4f9f9 !important;
+}
+
+.tbl tr:hover td,
+.mx tr:hover td{
+  background:#edf7f7 !important;
+}
+
+.tbl tr:last-child td,
+.mx tr:last-child td{
+  border-bottom:0 !important;
+}
+
+.tbl th:last-child,
+.tbl td:last-child,
+.mx th:last-child,
+.mx td:last-child{
+  border-left:0 !important;
+}
+
+.tbl .rh,
+.mx .mr{
+  background:#eef5f5 !important;
+  font-weight:700;
+  color:var(--p) !important;
+}
+
+.mx .mr{
+  text-align:right;
+}
+
+.cs{background:#e8f4f4 !important;color:var(--p) !important;font-weight:700;text-align:center;}
+.cr{background:#fef9e8 !important;color:var(--g) !important;font-weight:700;text-align:center;}
+.ct{background:#e8f5e9 !important;color:var(--green) !important;font-weight:700;text-align:center;}
+.cx{background:#f5f5f5 !important;color:#999 !important;text-align:center;}
+.cok{background:#e8f5e9 !important;color:var(--green) !important;font-weight:700;text-align:center;}
+.cno{background:#fdeaea !important;color:var(--red) !important;font-weight:700;text-align:center;}
+
+/* ط£ظپط¹ط§ظ„ ط§ظ„ظ‚ظٹط§ط³ */
+.vtags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin:10px 0;
+}
+
+.vt{
+  background:var(--p);
+  color:#fff;
+  padding:4px 13px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+}
+
+.vt.g{background:var(--g);}
+.vt.pu{background:var(--pur);}
+
+.vcat{
+  background:#eef5f5;
+  border-radius:8px;
+  padding:14px 18px;
+  margin-bottom:10px;
+}
+
+.vcat-t{
+  font-weight:700;
+  color:var(--p);
+  margin-bottom:8px;
+}
+
+/* ط§ظ„ظ‚ظˆط§ط¦ظ… */
+.cl{
+  list-style:none;
+  padding:0;
+}
+
+.cl li{
+  padding:7px 0;
+  border-bottom:1px solid var(--bd);
+  display:flex;
+  align-items:flex-start;
+  gap:9px;
+  color:var(--tl);
+  font-size:14px;
+}
+
+.cl li::before{
+  content:'âœ“';
+  background:var(--green);
+  color:#fff;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:10px;
+  flex-shrink:0;
+  margin-top:3px;
+}
+
+.cl li:last-child{
+  border-bottom:none;
+}
+
+/* ط§ظ„ط®ط·ظˆط§طھ */
+.steps{
+  counter-reset:sc;
+}
+
+.step{
+  display:flex;
+  gap:16px;
+  margin-bottom:20px;
+  padding-bottom:20px;
+  border-bottom:1px dashed var(--bd);
+}
+
+.step:last-child{
+  border-bottom:none;
+  margin-bottom:0;
+}
+
+.sn{
+  counter-increment:sc;
+  background:var(--p);
+  color:#fff;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:14px;
+  flex-shrink:0;
+}
+
+.sc h4{
+  margin-top:0;
+  color:var(--p);
+}
+
+/* ط´ط§ط±ط§طھ */
+.b{
+  display:inline-block;
+  padding:3px 11px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:700;
+  margin:2px;
+}
+
+.bp2{background:#e8f4f4;color:var(--p);border:1px solid var(--p);}
+.bg2{background:#fef9e8;color:var(--g);border:1px solid var(--g);}
+.bk{background:#e8f5e9;color:var(--green);border:1px solid var(--green);}
+.br{background:#fdeaea;color:var(--red);border:1px solid var(--red);}
+.bpu{background:#e8f4f4;color:var(--pur);border:1px solid var(--pur);}
+
+/* ط§ظ„ظ…ط¹ط§ط¯ظ„ط§طھ */
+.fml{
+  background:linear-gradient(135deg,#0d6e6e,#1a8f8f);
+  color:#fff;
+  border-radius:12px;
+  padding:20px;
+  text-align:center;
+  margin:16px 0;
+  font-size:16px;
+  font-weight:700;
+  line-height:2.1;
+}
+
+.fml .num{
+  font-size:20px;
+  color:var(--gl);
+}
+
+/* ط´ط±ظٹط· ط§ظ„ط£ظˆط²ط§ظ† */
+.wbar{
+  max-width:620px;
+  height:30px;
+  margin:12px auto 18px;
+  border-radius:9px;
+  overflow:hidden;
+  font-size:13px;
+  font-weight:800;
+  display:flex;
+  box-shadow:0 4px 12px rgba(13,110,110,.08);
+}
+
+.wd{
+  background:#0d7773;
+  color:#fff;
+}
+
+.wi{
+  background:#b8972e;
+  color:#fff;
+}
+
+.wd,
+.wi{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 10px;
+}
+
+/* ط§ظ„ط´ط¨ظƒط§طھ */
+.g2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin:14px 0;
+}
+
+.g3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+  margin:14px 0;
+}
+
+/* ط§ظ„ط¨ط·ط§ظ‚ط§طھ */
+.card{
+  border-radius:12px;
+  overflow:hidden;
+  border:1.5px solid var(--bd);
+}
+
+.card-h{
+  padding:11px 15px;
+  color:#fff;
+  font-weight:700;
+  font-size:14px;
+}
+
+.card-b{
+  padding:15px;
+  font-size:13px;
+  color:var(--tl);
+}
+
+/* ط§ظ„طھط®طµطµط§طھ */
+.spg{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin:16px 0;
+}
+
+.sp{
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid var(--bd);
+}
+
+.sp-h{
+  padding:10px 15px;
+  font-weight:700;
+  font-size:13px;
+  color:#fff;
+}
+
+.sp.mk .sp-h{background:#0d6e6e;}
+.sp.hr .sp-h{background:#064E4E;}
+.sp.ac .sp-h{background:#c62828;}
+.sp.sy .sp-h{background:#064E4E;}
+
+.sp-b{
+  padding:13px 15px;
+  font-size:13px;
+  color:var(--tl);
+}
+
+/* ظ…ط®ط·ط· ط§ظ„ط¥ط¬ط±ط§ط،ط§طھ */
+.flow{
+  display:grid !important;
+  grid-template-columns:repeat(5,1fr);
+  gap:20px 28px;
+  align-items:center;
+  margin:22px 0;
+}
+
+.flow + .flow{
+  grid-template-columns:repeat(4,1fr);
+  margin-top:24px;
+}
+
+.fstep{
+  width:100%;
+  min-width:0;
+  flex:auto;
+}
+
+.fin{
+  width:100% !important;
+  height:118px !important;
+  min-height:118px !important;
+  background:#eef7f7;
+  border:2px solid #c9e3e3;
+  border-radius:14px;
+  box-shadow:0 4px 12px rgba(13,110,110,.05);
+  padding:16px 12px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.flow + .flow .fin{
+  background:#fff9e8;
+}
+
+.fnum{
+  background:var(--p);
+  color:#fff;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 10px;
+  font-weight:800;
+  font-size:15px;
+}
+
+.flow + .flow .fnum{
+  background:var(--g) !important;
+}
+
+.flbl{
+  font-size:13.5px;
+  line-height:1.7;
+  text-align:center;
+  font-weight:800;
+  color:var(--t);
+}
+
+.farr{
+  display:none !important;
+}
+
+/* ط§ظ„ط£ظ…ط«ظ„ط© */
+.ex{
+  border:1.5px solid var(--bd);
+  border-radius:12px;
+  overflow:hidden;
+  margin:14px 0;
+}
+
+.ex-h{
+  background:var(--g);
+  color:#fff;
+  padding:10px 17px;
+  font-weight:700;
+  font-size:13px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.ex-b{
+  padding:16px;
+}
+
+/* ط²ط± ط§ظ„ط¹ظˆط¯ط© ظ„ظ„ط£ط¹ظ„ظ‰ */
+.back-top{
+  position:fixed;
+  left:22px;
+  bottom:22px;
+  width:46px;
+  height:46px;
+  border:0;
+  border-radius:50%;
+  background:var(--p);
+  color:#fff;
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
+  display:none;
+  z-index:999;
+}
+
+/* FOOTER */
+.footer{
+  background:var(--p);
+  color:rgba(255,255,255,.8);
+  text-align:center;
+  padding:24px;
+  margin-top:40px;
+  font-size:13px;
+}
+
+/* ط§ظ„ط·ط¨ط§ط¹ط© */
+@media print{
+  .tab-buttons,
+  .tab-hint,
+  .guide-actions,
+  .back-top,
+  .read-progress,
+  .mini-toc{
+    display:none !important;
+  }
+
+  .tab-panel{
+    display:block !important;
+  }
+
+  body{
+    background:#fff;
+  }
+
+  .sec,
+  .intro-card,
+  .part{
+    box-shadow:none !important;
+    break-inside:avoid;
+  }
+
+  a{
+    color:inherit;
+    text-decoration:none;
+  }
+}
+
+/* ط§ظ„ط¬ظˆط§ظ„ */
+@media(max-width:900px){
+  .flow,
+  .flow + .flow{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:620px){
+  .cover{
+    padding:40px 16px;
+  }
+
+  .cover h1{
+    font-size:26px;
+  }
+
+  .cover-logo{
+    position:relative;
+    top:auto;
+    right:auto;
+    width:92px;
+    margin:0 auto 18px;
+    display:block;
+  }
+
+  .g2,
+  .g3,
+  .spg,
+  .use-guide{
+    grid-template-columns:1fr;
+  }
+
+  .sec{
+    padding:20px 14px;
+  }
+
+  .flow,
+  .flow + .flow{
+    grid-template-columns:1fr;
+  }
+
+  .fin{
+    height:auto !important;
+    min-height:96px !important;
+  }
+
+  .wbar{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .wd,
+  .wi{
+    padding:10px;
+  }
+
+  .intro-tabs{
+    padding:0 12px;
+  }
+
+  .intro-card{
+    padding:22px 18px;
+  }
+
+  .tab-buttons{
+    grid-template-columns:1fr;
+  }
+
+  .guide-actions{
+    justify-content:stretch;
+  }
+
+  .guide-action{
+    width:100%;
+    text-align:center;
+  }
+
+  .mini-toc ul{
+    columns:1;
+  }
+
+  .tbl,
+  .mx{
+    font-size:12px !important;
+  }
+
+  .tbl th,
+  .tbl td,
+  .mx th,
+  .mx td{
+    padding:11px 10px !important;
+  }
+}
+/* ظ„ظˆظ† ط¹ظ†ط§ظˆظٹظ† ط¨ط·ط§ظ‚ط§طھ ظ…ط¬ط§ظ„ط§طھ ط§ظ„طھط¹ظ„ظ… */
+#s3 .g3 > div > div:first-child,
+#s3 .g3 > div > div:first-child *,
+#s3 .g3 > div > div:first-child strong{
+  color:#fff !important;
+}
+/* طھط­ط³ظٹظ† طھطµظ…ظٹظ… ظ…ط­طھظˆظٹط§طھ ط§ظ„طھط¨ظˆظٹط¨ظٹظ† */
+.mini-toc{
+  background:#fff;
+  border-radius:18px;
+  padding:30px;
+  margin:0 auto 30px;
+  max-width:980px;
+  box-shadow:0 10px 28px rgba(13,110,110,.08);
+  border-right:7px solid var(--g);
+  border-left:1px solid #e1eeee;
+  border-top:1px solid #e1eeee;
+  border-bottom:1px solid #e1eeee;
+}
+
+.mini-toc h2{
+  color:var(--p);
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:22px;
+  padding-bottom:14px;
+  border-bottom:2px solid #e8f4f4;
+}
+
+.mini-toc ul{
+  columns:unset !important;
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  counter-reset:tocItem;
+}
+
+.mini-toc li{
+  counter-increment:tocItem;
+  border:1px solid #d9eeee;
+  border-radius:10px;
+  padding:0;
+  margin:0;
+  background:#f8fcfc;
+  transition:.2s ease;
+  overflow:hidden;
+}
+
+.mini-toc li:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(13,110,110,.08);
+  border-color:#b9dada;
+}
+
+.mini-toc a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-height:54px;
+  padding:12px 14px;
+  text-decoration:none;
+  color:var(--t);
+  font-weight:700;
+  font-size:13.5px;
+  line-height:1.6;
+}
+
+.mini-toc a::before{
+  content:counter(tocItem, arabic-indic);
+  background:var(--p);
+  color:#fff;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:800;
+  flex-shrink:0;
+}
+
+.mini-toc li:nth-child(even) a::before{
+  background:var(--g);
+}
+
+.mini-toc a:hover{
+  color:var(--p);
+}
+
+@media(max-width:620px){
+  .mini-toc{
+    padding:22px 16px;
+  }
+
+  .mini-toc ul{
+    grid-template-columns:1fr;
+  }
+
+  .mini-toc h2{
+    font-size:18px;
+  }
+}
+/* ط£ظ„ظˆط§ظ† طھط±ظ‚ظٹظ… ظ…ط­طھظˆظٹط§طھ ظƒظ„ طھط¨ظˆظٹط¨ */
+#panel-plan .mini-toc a::before{
+  background:var(--g) !important;
+}
+
+#panel-formulation .mini-toc a::before{
+  background:var(--p) !important;
+}
+/* ط¥ط®ظپط§ط، ط§ظ„ظ…ظ„ط§ط­ط¸ط§طھ طھط­طھ ط¹ظ†ط§ظˆظٹظ† ط§ظ„ط£ظ‚ط³ط§ظ… */
+.sec-s{
+  display:none !important;
+}
+/* طھظƒط¨ظٹط± ط´ط±ظٹط· ط§ظ„ط£ظˆط²ط§ظ† */
+.wbar{
+  max-width:820px !important;
+  height:46px !important;
+  font-size:16px !important;
+  border-radius:12px !important;
+  margin:18px auto 24px !important;
+}
+
+.wd,
+.wi{
+  padding:12px 16px !important;
+}
+/* طھط­ط³ظٹظ†ط§طھ ط§ط­طھط±ط§ظپظٹط© ط¥ط¶ط§ظپظٹط© */
+.guide-search{
+  max-width:980px;
+  margin:0 auto 28px;
+  padding:0 20px;
+}
+
+.guide-search label{
+  display:block;
+  color:var(--p);
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.guide-search input{
+  width:100%;
+  border:1px solid var(--bd);
+  border-right:5px solid var(--p);
+  border-radius:14px;
+  padding:14px 18px;
+  font-size:15px;
+  outline:none;
+  background:#fff;
+  box-shadow:0 2px 14px rgba(13,110,110,.06);
+}
+
+.search-results{
+  margin-top:10px;
+  display:grid;
+  gap:8px;
+}
+
+.search-results a{
+  display:block;
+  background:#fff;
+  border:1px solid #d9eeee;
+  border-radius:10px;
+  padding:10px 14px;
+  color:var(--t);
+  text-decoration:none;
+  font-weight:700;
+}
+
+.search-results a:hover{
+  color:var(--p);
+  background:#f4fbfb;
+}
+
+.quick-warnings{
+  max-width:980px;
+  margin:0 auto 30px;
+  padding:0 20px;
+}
+
+.quick-warnings h2{
+  color:var(--p);
+  font-size:20px;
+  margin-bottom:12px;
+}
+
+.warning-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.warning-grid div{
+  background:#fff;
+  border:1px solid #d9eeee;
+  border-top:4px solid var(--g);
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 2px 14px rgba(13,110,110,.06);
+}
+
+.warning-grid strong{
+  display:block;
+  color:var(--p);
+  margin-bottom:6px;
+}
+
+.warning-grid p{
+  font-size:13px;
+  margin:0;
+}
+
+.copy-formula{
+  display:inline-block;
+  margin-top:10px;
+  border:0;
+  border-radius:18px;
+  background:#fff;
+  color:var(--p);
+  padding:6px 13px;
+  font-size:12px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.panel-end-action{
+  text-align:center;
+  margin:28px 0 10px;
+}
+
+a[target="_blank"]::after{
+  content:" â†—";
+  font-size:12px;
+  opacity:.75;
+}
+
+.status-ok,
+.status-near,
+.status-low{
+  display:inline-block;
+  padding:4px 12px;
+  border-radius:18px;
+  font-weight:800;
+  font-size:12px;
+}
+
+.status-ok{background:#e8f5e9;color:var(--green);}
+.status-near{background:#fef9e8;color:var(--g);}
+.status-low{background:#fdeaea;color:var(--red);}
+
+@media print{
+  body::before{
+    content:"ط¯ظ„ظٹظ„ ط¥ط¹ط¯ط§ط¯ ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظˆطµظٹط§ط؛طھظ‡ط§ ظˆظ‚ظٹط§ط³ظ‡ط§ - ط§ظ„ظƒظ„ظٹط© ط§ظ„طھط·ط¨ظٹظ‚ظٹط© - ط¬ط§ظ…ط¹ط© ط£ظ… ط§ظ„ظ‚ط±ظ‰";
+    display:block;
+    text-align:center;
+    font-weight:800;
+    color:#0d6e6e;
+    margin-bottom:18px;
+    border-bottom:1px solid #c8dede;
+    padding-bottom:10px;
+  }
+
+  .guide-search,
+  .quick-warnings,
+  .panel-end-action{
+    display:none !important;
+  }
+}
+
+@media(max-width:620px){
+  .warning-grid{
+    grid-template-columns:1fr;
+  }
+}
+/* ط¥طµظ„ط§ط­ طھظ†ط³ظٹظ‚ ط§ظ„ط¨ط­ط« ظˆط¨ط·ط§ظ‚ط§طھ ط§ظ„ط¥ط±ط´ط§ط¯ ظˆط§ظ„ط£ط®ط·ط§ط، */
+.guide-search{
+  max-width:980px !important;
+  margin:24px auto 28px !important;
+  padding:0 20px !important;
+}
+
+.guide-search label{
+  text-align:center;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.guide-search input{
+  max-width:520px;
+  display:block;
+  margin:0 auto;
+  text-align:center;
+}
+
+.quick-warnings{
+  max-width:980px !important;
+  margin:0 auto 30px !important;
+  padding:0 20px !important;
+}
+
+.quick-warnings h2{
+  text-align:center;
+  font-size:22px;
+  margin-bottom:18px;
+}
+
+.warning-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+  gap:18px !important;
+}
+
+.warning-grid div{
+  min-height:150px;
+  padding:20px !important;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.warning-grid strong{
+  font-size:17px;
+  line-height:1.7;
+}
+
+.warning-grid p{
+  font-size:14px;
+  line-height:1.8;
+}
+
+.use-guide{
+  max-width:980px !important;
+  margin:0 auto 30px !important;
+  padding:0 20px !important;
+  display:grid !important;
+  grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+  gap:18px !important;
+}
+
+.use-card{
+  min-height:145px;
+  padding:20px !important;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.use-card strong{
+  font-size:17px;
+  line-height:1.7;
+}
+
+.use-card p{
+  font-size:14px;
+  line-height:1.8;
+}
+
+/* ط¹ظ„ظ‰ ط§ظ„ط¬ظˆط§ظ„ */
+@media(max-width:760px){
+  .warning-grid,
+  .use-guide{
+    grid-template-columns:1fr !important;
+  }
+
+  .guide-search input{
+    max-width:100%;
+  }
+}
+.footer,
+.footer strong{
+  color:#fff !important;
+}
+.footer,
+.footer strong,
+.footer p{
+  color:#fff !important;
+}
+
+.footer p{
+  margin:6px 0 0;
+  font-size:13px;
+}
+
+/* ط¥ط®ظپط§ط، ط£ط¯ظˆط§طھ ط§ظ„ط¯ظ„ظٹظ„ ظ‚ط¨ظ„ ط§ط®طھظٹط§ط± ط£ط­ط¯ ط§ظ„طھط¨ظˆظٹط¨ظٹظ† */
+body:not(.tab-opened) .use-guide,
+body:not(.tab-opened) .guide-search{
+  display:none !important;
+}
+
+/* ظ…ظ„ط®طµط§طھ ط§ظ„ط®ط·ظˆط§طھ */
+.summary-steps{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:12px;
+  margin:16px 0;
+}
+
+.summary-step{
+  background:#f8fcfc;
+  border:1px solid #d9eeee;
+  border-right:4px solid var(--p);
+  border-radius:12px;
+  padding:14px 16px;
+}
+
+.summary-step strong{
+  display:block;
+  color:var(--p);
+  margin-bottom:4px;
+}
+
+.summary-step.gold{
+  border-right-color:var(--g);
+}
+
+.summary-step.gold strong{
+  color:var(--g);
+}
+
+@media(max-width:760px){
+  .summary-steps{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="read-progress" id="read-progress"></div>
+<button class="back-top" id="back-top" type="button" aria-label="ط§ظ„ط¹ظˆط¯ط© ظ„ظ„ط£ط¹ظ„ظ‰">â†‘</button>
+
+<!-- COVER -->
+<div class="cover">
+  <img class="cover-logo" src="assets/applied-college-logo.jpeg" alt="ط´ط¹ط§ط± ط§ظ„ظƒظ„ظٹط© ط§ظ„طھط·ط¨ظٹظ‚ظٹط©">
+  <h1>ط¯ظ„ظٹظ„ ط¥ط¹ط¯ط§ط¯ ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظˆ طµظٹط§ط؛طھظ‡ط§ ظˆ ظ‚ظٹط§ط³ظ‡ط§<br> </h1>
+  <div class="cmeta"></div>
+</div>
+
+<!-- INTRO + TABS -->
+<div class="intro-tabs">
+  <div class="intro-card">
+    <p> ظٹظ‡ط¯ظپ ظ‡ط°ط§ ط§ظ„ط¯ظ„ظٹظ„ ط¥ظ„ظ‰ طھظˆط¶ظٹط­ ط¢ظ„ظٹط© ط¥ط¹ط¯ط§ط¯ ظˆطھظ†ظپظٹط° ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ط£ظƒط§ط¯ظٹظ…ظٹط© ظˆظپظ‚ ظ…طھط·ظ„ط¨ط§طھ ط§ظ„ط¬ظˆط¯ط© ظˆط§ظ„ط§ط¹طھظ…ط§ط¯ ط§ظ„ط£ظƒط§ط¯ظٹظ…ظٹطŒ ظ…ظ† ط®ظ„ط§ظ„ طھظ‚ط¯ظٹظ… ط®ط·ظˆط§طھ ط¹ظ…ظ„ظٹط© ظˆط¥ط±ط´ط§ط¯ط§طھ ظ…ط¨ط³ط·ط© طھط³ط§ط¹ط¯ ط£ط¹ط¶ط§ط، ظ‡ظٹط¦ط© ط§ظ„طھط¯ط±ظٹط³ ط¹ظ„ظ‰ طھط­ط¯ظٹط¯ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظˆظ‚ظٹط§ط³ظ‡ط§ ظˆطھط­ظ„ظٹظ„ ظ†طھط§ط¦ط¬ظ‡ط§ ظˆط§ظ„ط§ط³طھظپط§ط¯ط© ظ…ظ†ظ‡ط§ ظپظٹ طھط­ط³ظٹظ† ط§ظ„ط¹ظ…ظ„ظٹط© ط§ظ„طھط¹ظ„ظٹظ…ظٹط©. ظƒظ…ط§ ظٹط³ظ‡ظ… ط§ظ„ط¯ظ„ظٹظ„ ظپظٹ طھظˆط­ظٹط¯ ط¥ط¬ط±ط§ط،ط§طھ ط§ظ„ظ‚ظٹط§ط³ ظˆط§ظ„طھظ‚ظˆظٹظ… ظˆطھط¹ط²ظٹط² ط¬ظˆط¯ط© ط§ظ„ظ…ط®ط±ط¬ط§طھ ط§ظ„طھط¹ظ„ظٹظ…ظٹط© ط¨ظ…ط§ ظٹط­ظ‚ظ‚ ط£ظ‡ط¯ط§ظپ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ط§ظ„ط£ظƒط§ط¯ظٹظ…ظٹ ظˆط±ط³ط§ظ„ط© ط§ظ„ظ…ط¤ط³ط³ط© ط§ظ„طھط¹ظ„ظٹظ…ظٹط©.</p>
+  </div>
+
+  <div class="tab-buttons" role="tablist" aria-label="طھط¨ظˆظٹط¨ط§طھ ط§ظ„ط¯ظ„ظٹظ„">
+    <button class="tab-btn plan" type="button" role="tab" aria-controls="panel-plan" aria-selected="false" onclick="openGuideTab('plan', this)">
+      <div class="tab-ico">ًں“‹</div>
+      <div class="tab-title">ط¥ط¹ط¯ط§ط¯ ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</div>
+      <div class="tab-desc">ط§ظ„ط®ط·ط© ط§ظ„ظ…ط¤ط³ط³ظٹط©طŒ ط®طµط§ط¦طµ ط§ظ„ط®ط±ظٹط¬ظٹظ†طŒ ط§ظ„ظ†ظˆط§طھط¬ ط§ظ„ظ…ط¤ط³ط³ظٹط©طŒ ظ…طµط§ط¯ط± ط§ظ„ط¨ظٹط§ظ†ط§طھطŒ ط§ظ„ط£ظˆط²ط§ظ†طŒ ط§ظ„طھط­ظ„ظٹظ„طŒ ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ط±ط³ظ…ظٹط© ظˆط§ظ„طھظˆط«ظٹظ‚.</div>
+    </button>
+
+    <button class="tab-btn" type="button" role="tab" aria-controls="panel-formulation" aria-selected="false" onclick="openGuideTab('formulation', this)">
+      <div class="tab-ico">âœچï¸ڈ</div>
+      <div class="tab-title">طµظٹط§ط؛ط© ظˆظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</div>
+      <div class="tab-desc">طھط¹ط±ظٹظپ ط§ظ„ظ†ظˆط§طھط¬طŒ ط´ط±ظˆط· ط§ظ„طµظٹط§ط؛ط©طŒ ط§ظ„ظ…طµظپظˆظپط§طھطŒ ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³طŒ ط§ظ„ط­ط³ط§ط¨طŒ ط§ظ„طھظ‚ظٹظٹظ…طŒ ط§ظ„طھط­ط³ظٹظ†طŒ ظˆط£ط¯ظˆط§ط± ط¹ط¶ظˆ ظ‡ظٹط¦ط© ط§ظ„طھط¯ط±ظٹط³.</div>
+    </button>
+  </div>
+
+  <div id="tab-hint" class="tab-hint">ظٹط±ط¬ظ‰ ط§ط®طھظٹط§ط± ط£ط­ط¯ ط§ظ„طھط¨ظˆظٹط¨ظٹظ† ط£ط¹ظ„ط§ظ‡ ظ„ط¹ط±ط¶ ط§ظ„ظ…ط­طھظˆظ‰..</div>
+</div>
+
+
+<div class="guide-search">
+  <label for="guide-search-input">ط§ظ„ط¨ط­ط« ط¯ط§ط®ظ„ ط§ظ„ط¯ظ„ظٹظ„</label>
+  <input id="guide-search-input" type="search" placeholder="ط§ظƒطھط¨ ظƒظ„ظ…ط© ظ…ط«ظ„: RubricطŒ ظ‚ظٹط§ط³ ظ…ط¨ط§ط´ط±طŒ ط®ط·ط© طھط­ط³ظٹظ†">
+  <div id="guide-search-results" class="search-results"></div>
+</div>
+
+<div id="panel-plan" class="tab-panel" role="tabpanel">
+  <div class="mini-toc">
+    <h2>محتويات تبويب إعداد خطة قياس نواتج التعلم</h2>
+    <ul>
+      <li><a href="#s16">خصائص خريجي جامعة أم القرى ونواتج التعلم المؤسسية</a></li>
+      <li><a href="#s17">خطة قياس نواتج التعلم المؤسسية والإجراءات الرسمية</a></li>
+      <li><a href="#s18">مصادر البيانات والأوزان ومستويات التحليل المؤسسي</a></li>
+      <li><a href="#plan-steps-summary">ملخص خطوات إعداد خطة قياس نواتج التعلم</a></li>
+      <li><a href="#s19">النماذج الرسمية والتوثيق والاعتماد</a></li>
+    </ul>
+  </div>
+
+  <div class="wrap">
+    <div class="sec" id="s16">
+      <div class="sec-hd">
+        <div class="sec-n pur">ظ،ظ¦</div>
+        <div>
+          <div class="sec-t">ط®طµط§ط¦طµ ط®ط±ظٹط¬ظٹ ط¬ط§ظ…ط¹ط© ط£ظ… ط§ظ„ظ‚ط±ظ‰ ظˆظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط©</div>
+          <div class="sec-s">ط§ظ„ط±ط¨ط· ط¨ظٹظ† ط®طµط§ط¦طµ ط§ظ„ط®ط±ظٹط¬ظٹظ†طŒ ظˆظ…ط¬ط§ظ„ط§طھ ط§ظ„طھط¹ظ„ظ…طŒ ظˆط±ظ…ظˆط² ط§ظ„ظ†ظˆط§طھط¬ ط§ظ„ظ…ط¤ط³ط³ظٹط©</div>
+        </div>
+      </div>
+
+      <p>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط© طھظ…ط«ظ„ ط§ظ„طµظˆط±ط© ط§ظ„ط¥ط¬ط±ط§ط¦ظٹط© ط§ظ„ظ‚ط§ط¨ظ„ط© ظ„ظ„ظ‚ظٹط§ط³ ظ„ط®طµط§ط¦طµ ط§ظ„ط®ط±ظٹط¬طŒ ظˆظ‡ظٹ طھظڈط³طھط®ط¯ظ… ظ„ظ„طھط­ظ‚ظ‚ ظ…ظ† طھط­ظ‚ظ‚ ط§ظ„ط®طµط§ط¦طµ ط§ظ„ظ…ط´طھط±ظƒط© ط§ظ„طھظٹ ظٹظ†ط¨ط؛ظٹ ط£ظ† طھط¸ظ‡ط± ظ„ط¯ظ‰ ط¬ظ…ظٹط¹ ط®ط±ظٹط¬ظٹ ط§ظ„ط¬ط§ظ…ط¹ط©.</p>
+
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ…</th>
+            <th>ط®ط§طµظٹط© ط§ظ„ط®ط±ظٹط¬</th>
+            <th>ظ†ط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹ ط§ظ„ظ…ط±طھط¨ط·</th>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ظ،</td><td>ط§ظ„ظ…ط¹ط±ظپط© ط§ظ„ط´ط§ظ…ظ„ط© ظˆط§ظ„ظپظ‡ظ… ط§ظ„ظ…طھظƒط§ظ…ظ„ ظپظٹ ظ…ط¬ط§ظ„ ط§ظ„طھط®طµطµ</td><td><strong>KI-1</strong> ظٹط¸ظ‡ط± ظ…ط¹ط±ظپط© ظˆظپظ‡ظ…ط§ظ‹ ط¨ط§ظ„ظ…ظپط§ظ‡ظٹظ… ظˆط§ظ„ط¹ظ…ظ„ظٹط§طھ ظˆظƒظٹظپظٹط© ط§ط³طھط®ط¯ط§ظ… ط§ظ„ط£ط¯ظˆط§طھ ظˆط§ظ„طھظ‚ظ†ظٹط§طھ ظپظٹ ط¶ظˆط، ط§ظ„ظ…ط¹ط§ط±ظپ ط§ظ„ظ…طھط¹ظ„ظ‚ط© ط¨ظ…ط¬ط§ظ„ ط§ظ„طھط®طµطµ.</td><td class="cs">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…</td></tr>
+          <tr><td>ظ¢</td><td>طھظˆط¸ظٹظپ ط§ظ„ظ…ط¹ط±ظپط©</td><td><strong>SI-1</strong> ظٹط¤ط¯ظٹ ط§ظ„ظ…ظ‡ط§ظ… ط§ظ„ط¹ظ…ظ„ظٹط© ظپظٹ ط³ظٹط§ظ‚ط§طھ ظ…طھط¹ط¯ط¯ط© ظ…ظ† ط®ظ„ط§ظ„ طھط·ط¨ظٹظ‚ ط§ظ„ظ…ط¹ط§ط±ظپ ظˆط§ظ„ظ…ظ‡ط§ط±ط§طھ ظˆط§ط³طھط®ط¯ط§ظ… ط§ظ„ظ…ظˆط§ط¯ ظˆط§ظ„ط£ط¬ظ‡ط²ط© ظˆط§ظ„طھظ‚ظ†ظٹط§طھ ط§ظ„ظ…طھط®طµطµط©.</td><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td></tr>
+          <tr><td>ظ£</td><td>ظ…ظ‡ط§ط±ط§طھ ط§ظ„ط¨ط­ط« ظˆط§ظ„ط§ط¨طھظƒط§ط± ظˆط­ظ„ ط§ظ„ظ…ط´ظƒظ„ط§طھ</td><td><strong>SI-2</strong> ظٹط³طھط®ط¯ظ… ظ…ظ‡ط§ط±ط§طھ ط§ظ„ط¨ط­ط« ظˆط§ظ„ط§ط³طھظ‚طµط§ط، ظپظٹ ط­ظ„ ط§ظ„ظ…ط´ظƒظ„ط§طھ ظ…ط·ط¨ظ‚ط§ظ‹ ظ…ظ‡ط§ط±ط§طھ ط§ظ„طھظپظƒظٹط± ط§ظ„ظ…ظ†ط·ظ‚ظٹ ظˆط§ظ„ط¥ط¨ط¯ط§ط¹ظٹ ظˆط§ظ„ظ†ظ‚ط¯ظٹ.</td><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td></tr>
+          <tr><td>ظ¤</td><td>ظ…ظ‡ط§ط±ط§طھ طھظ‚ظ†ظٹط© ط§ظ„ظ…ط¹ظ„ظˆظ…ط§طھ</td><td><strong>SI-3</strong> ظٹط³طھط®ط¯ظ… ط§ظ„طھظ‚ظ†ظٹط© ط§ظ„ط±ظ‚ظ…ظٹط© ظˆطھظƒظ†ظˆظ„ظˆط¬ظٹط§ ط§ظ„ظ…ط¹ظ„ظˆظ…ط§طھ ظپظٹ ط³ظٹط§ظ‚ط§طھ ظ…طھط¹ط¯ط¯ط© ظˆظٹظƒظٹظپظ‡ط§ ظ„ظ…ط¹ط§ظ„ط¬ط© ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ظƒظ…ظٹط© ظˆط§ظ„ظ†ظˆط¹ظٹط© ط¨ط§ط³طھط®ط¯ط§ظ… ط§ظ„ط£ط³ط§ظ„ظٹط¨ ط§ظ„ط±ظٹط§ط¶ظٹط© ط§ظ„ظ…ظ†ط§ط³ط¨ط©.</td><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td></tr>
+          <tr><td>ظ¥</td><td>ط§ظ„طھظˆط§طµظ„ ط§ظ„ظپط¹ط§ظ„</td><td><strong>SI-4</strong> ظٹطھظˆط§طµظ„ ط¨ظپط§ط¹ظ„ظٹط© ظ…ظ† ط®ظ„ط§ظ„ ط£ط³ط§ظ„ظٹط¨ ظ…طھط¹ط¯ط¯ط© ظ„ظ†ظ‚ظ„ ط§ظ„ط£ظپظƒط§ط± ظˆط§ظ„ظ…ط¹ط§ط±ظپ ظˆط§ظ„ظ…ظ‡ط§ط±ط§طھ.</td><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td></tr>
+          <tr><td>ظ¦</td><td>ط§ظ„ظ…ط´ط§ط±ظƒط© ظپظٹ ط£ط¹ظ…ط§ظ„ ط§ظ„ط­ط¬ ظˆط§ظ„ط¹ظ…ط±ط©</td><td><strong>SI-5</strong> ظٹط´ط§ط±ظƒ ط¨ظپط¹ط§ظ„ظٹط© ظپظٹ ط£ط¹ظ…ط§ظ„ ط§ظ„ط­ط¬ ظˆط§ظ„ط¹ظ…ط±ط© ط¨ط·ط±ظ‚ طھط±طھط¨ط· ط¨ط§ظ„طھط®طµطµ.</td><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td></tr>
+          <tr><td>ظ§</td><td>ط§ظ„ط£ط®ظ„ط§ظ‚ ظˆط§ظ„ظ‚ظٹظ… ط§ظ„ط¥ط³ظ„ط§ظ…ظٹط© ظˆط§ظ„ظ†ط²ط§ظ‡ط© ط§ظ„ظ…ظ‡ظ†ظٹط©</td><td><strong>VI-1</strong> ظٹط·ط¨ظ‚ ظ…ط¹ط§ظٹظٹط± ط§ظ„ظ†ط²ط§ظ‡ط© ظˆط§ظ„طھظƒط§ظپظ„ ظˆط§ظ„ط³ظ„ظˆظƒ ط§ظ„ط£ط®ظ„ط§ظ‚ظٹ ظپظٹ ظ…ط®طھظ„ظپ ط§ظ„ظ…ط¬ط§ظ„ط§طھ ط§ظ„ط£ظƒط§ط¯ظٹظ…ظٹط© ظˆط§ظ„ظ…ظ‡ظ†ظٹط© ظˆط§ظ„ط¨ط­ط«ظٹط©.</td><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td></tr>
+          <tr><td>ظ¨</td><td>ط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆطھط­ظ…ظ„ ط§ظ„ظ…ط³ط¤ظˆظ„ظٹط© ظˆط§ظ„ط¹ظ…ظ„ ط§ظ„ط¬ظ…ط§ط¹ظٹ</td><td><strong>VI-2</strong> ظٹط¸ظ‡ط± ط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆطھط­ظ…ظ„ ط§ظ„ظ…ط³ط¤ظˆظ„ظٹط© ظپظٹ ط§ظ„ط³ظٹط§ظ‚ط§طھ ط§ظ„ظ…ط®طھظ„ظپط© ط§ظ„ظپط±ط¯ظٹط© ظˆط§ظ„ط¬ظ…ط§ط¹ظٹط©.</td><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td></tr>
+          <tr><td>ظ©</td><td>ط§ظ…طھظ„ط§ظƒ ظ…ظ‡ط§ط±ط§طھ ط§ظ„طھط¹ظ„ظ… ط§ظ„ط°ط§طھظٹ ظˆط§ظ„طھط¹ظ„ظ… ظ…ط¯ظ‰ ط§ظ„ط­ظٹط§ط©</td><td><strong>VI-3</strong> ظٹط·ط¨ظ‚ ظ…ظ‡ط§ط±ط§طھ ط§ظ„طھط¹ظ„ظ… ط§ظ„ط°ط§طھظٹ ظˆط§ظ„طھط·ظˆظٹط± ط§ظ„ط´ط®طµظٹ ظپظٹ ظ…ط®طھظ„ظپ ط§ظ„ظ…ط¬ط§ظ„ط§طھ.</td><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bi">
+        <div class="bt">ظƒظٹظپ ظٹط³طھظپظٹط¯ ط¹ط¶ظˆ ظ‡ظٹط¦ط© ط§ظ„طھط¯ط±ظٹط³طں</div>
+        ط¹ظ†ط¯ ط§ط®طھظٹط§ط± ظ†ط§طھط¬ ظ…ظ‚ط±ط± ط£ظˆ ط¨ط±ظ†ط§ظ…ط¬ ظ„ظ„ظ‚ظٹط§ط³طŒ طھط£ظƒط¯ ط£ظ† ط§ظ„ط±ط¨ط· ظ…ط¹ ط§ظ„ظ†ط§طھط¬ ط§ظ„ظ…ط¤ط³ط³ظٹ ظٹطھظ… ط¯ط§ط®ظ„ ط§ظ„ظ…ط¬ط§ظ„ ظ†ظپط³ظ‡: ظ…ط¹ط±ظپط© ظ…ط¹ ظ…ط¹ط±ظپط©طŒ ظ…ظ‡ط§ط±ط© ظ…ط¹ ظ…ظ‡ط§ط±ط©طŒ ظˆظ‚ظٹظ… ظ…ط¹ ظ‚ظٹظ…. ظˆظٹظپط¶ظ„ ط§ط®طھظٹط§ط± ظ…ظ‚ط±ط± طھطھظˆظٹط¬ظٹ ط£ظˆ ظ…ظ‚ط±ط± ظ…طھظ‚ط¯ظ… ظٹط¨ط±ط² طھط­ظ‚ظ‚ ط§ظ„ظ†ط§طھط¬ ط¨ظˆط¶ظˆط­.
+      </div>
+
+      <div class="box bw">
+        <div class="bt">ظ†ظ‚ط·ط© ط®ط§طµط© ط¨ط¬ط§ظ…ط¹ط© ط£ظ… ط§ظ„ظ‚ط±ظ‰</div>
+        ظ†ط§طھط¬ <strong>ط§ظ„ظ…ط´ط§ط±ظƒط© ظپظٹ ط£ط¹ظ…ط§ظ„ ط§ظ„ط­ط¬ ظˆط§ظ„ط¹ظ…ط±ط©</strong> ظ…ظ† ط§ظ„ظ†ظˆط§طھط¬ ط§ظ„ظ…ط¤ط³ط³ظٹط© ط§ظ„ظ…ظ…ظٹط²ط©طŒ ظˆظٹظ†ط¨ط؛ظٹ ط±ط¨ط·ظ‡ ط¨ط³ظٹط§ظ‚ ط§ظ„طھط®طµطµ ط¹ظ†ط¯ ظ…ظ„ط§ط،ظ…طھظ‡ط› ظ…ط«ظ„: طھظ†ط¸ظٹظ… ط§ظ„ط­ظ…ظ„ط§طھطŒ ط¥ط¯ط§ط±ط© ط§ظ„ط­ط´ظˆط¯ ظˆط؛ظٹط±ظ‡ط§.
+      </div>
+    </div>
+
+    <div class="sec" id="s17">
+      <div class="sec-hd">
+        <div class="sec-n pur">ظ،ظ§</div>
+        <div>
+          <div class="sec-t">ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط© ظˆط§ظ„ط¥ط¬ط±ط§ط،ط§طھ ط§ظ„ط±ط³ظ…ظٹط©</div>
+          <div class="sec-s">ط§ظ„طھط³ظ„ط³ظ„ ط§ظ„ظ…ط¤ط³ط³ظٹ ظ…ظ† طھط´ظƒظٹظ„ ط§ظ„ظ„ط¬ظ†ط© ط¥ظ„ظ‰ طھط­ط¯ظٹط« ط®ط·ط© ط§ظ„ظ‚ظٹط§ط³</div>
+        </div>
+      </div>
+
+      <h3>ط§ظ„ط¥ط¬ط±ط§ط،ط§طھ ط§ظ„ظ…ط¤ط³ط³ظٹط© ط§ظ„ظ…ط¹طھظ…ط¯ط©</h3>
+
+      <div class="flow">
+        <div class="fstep"><div class="fin"><div class="fnum">ظ،</div><div class="flbl">طھط´ظƒظٹظ„ ط§ظ„ظ„ط¬ظ†ط©</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin"><div class="fnum">ظ¢</div><div class="flbl">طھط­ط¯ظٹط¯ ظ…طµط§ط¯ط± ط§ظ„ط¨ظٹط§ظ†ط§طھ</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin"><div class="fnum">ظ£</div><div class="flbl">ط¥ط¹ط¯ط§ط¯ ط§ظ„ظ†ظ…ط§ط°ط¬</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin"><div class="fnum">ظ¤</div><div class="flbl">طھط¯ط±ظٹط¨ ط£ط¹ط¶ط§ط، ظ‡ظٹط¦ط© ط§ظ„طھط¯ط±ظٹط³</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin"><div class="fnum">ظ¥</div><div class="flbl">ط¥ط¯ط®ط§ظ„ ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³</div></div></div>
+      </div>
+
+      <div class="flow">
+        <div class="fstep"><div class="fin" style="background:#fef9e8;"><div class="fnum" style="background:var(--g);">ظ¦</div><div class="flbl">ط¬ظ…ط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆطھط­ظ„ظٹظ„ظ‡ط§</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin" style="background:#fef9e8;"><div class="fnum" style="background:var(--g);">ظ§</div><div class="flbl">ط¥ط¹ط¯ط§ط¯ ط§ظ„طھظ‚ط±ظٹط± ط§ظ„ظ†ظ‡ط§ط¦ظٹ</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin" style="background:#fef9e8;"><div class="fnum" style="background:var(--g);">ظ¨</div><div class="flbl">ط±ظپط¹ ط§ظ„طھظˆطµظٹط§طھ</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin" style="background:#fef9e8;"><div class="fnum" style="background:var(--g);">ظ©</div><div class="flbl">طھط­ط¯ظٹط« ط§ظ„ط®ط·ط©</div></div></div>
+      </div>
+
+      <h3>طھط´ظƒظٹظ„ ظ„ط¬ظ†ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط©</h3>
+      <div class="box bi">
+        <div class="bt">طھظƒظˆظٹظ† ط§ظ„ظ„ط¬ظ†ط©</div>
+        طھطµط¯ط± ط¥ط¯ط§ط±ط© ط§ظ„ط¬ط§ظ…ط¹ط© ظ‚ط±ط§ط±ط§ظ‹ ط¨طھط´ظƒظٹظ„ ظ„ط¬ظ†ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط©طŒ ظˆطھط¶ظ… ظ…ظ…ط«ظ„ظٹظ† ط¹ظ† ط¹ظ…ط§ط¯ط© ط§ظ„ط¬ظˆط¯ط© ظˆط§ظ„ظƒظ„ظٹط§طھطŒ ط¥ط¶ط§ظپط© ط¥ظ„ظ‰ ط®ط¨ط±ط§ط، ظپظٹ ط§ظ„ظ‚ظٹط§ط³ ظˆط§ظ„طھظ‚ظˆظٹظ…طŒ ظ…ط¹ طھط­ط¯ظٹط¯ ط§ظ„ظ…ظ‡ط§ظ… ظˆط¬ط¯ظˆظ„ ط§ظ„ط§ط¬طھظ…ط§ط¹ط§طھ ظˆط¢ظ„ظٹط© ط§ظ„طھظˆط§طµظ„.
+      </div>
+
+      <h3>ط§ظ„ط¬ط¯ظˆظ„ ط§ظ„ط²ظ…ظ†ظٹ ط§ظ„ظ…ط¤ط³ط³ظٹ</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط±ط­ظ„ط©</th>
+            <th>ط§ظ„ظ…ظ‡ظ…ط©</th>
+            <th>ظ…ط³ط¤ظˆظ„ظٹط© ط§ظ„طھظ†ظپظٹط°</th>
+            <th>ط§ظ„ط¥ط·ط§ط± ط§ظ„ط²ظ…ظ†ظٹ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ظ،</td><td>طھط´ظƒظٹظ„ ظ„ط¬ظ†ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط©</td><td>ط¹ظ…ط§ط¯ط© ط§ظ„طھط·ظˆظٹط± ظˆط§ظ„ط¬ظˆط¯ط©</td><td>ط§ظ„ظپطµظ„ ط§ظ„ط¯ط±ط§ط³ظٹ ط§ظ„ط«ط§ظ†ظٹ</td></tr>
+          <tr><td>ظ¢</td><td>طھط­ط¯ظٹط¯ ظ…طµط§ط¯ط± ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ظ…ظ†ط§ط³ط¨ط© ظ„طھظ†ظپظٹط° ط§ظ„ظ‚ظٹط§ط³</td><td>ظ„ط¬ظ†ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط©</td><td>ط§ظ„ظپطµظ„ ط§ظ„ط¯ط±ط§ط³ظٹ ط§ظ„ط«ط§ظ†ظٹ</td></tr>
+          <tr><td>ظ£</td><td>ط¥ط¹ط¯ط§ط¯ ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹط© ط§ظ„ط®ط§طµط© ط¨ط¬ظ…ط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ</td><td>ظ„ط¬ظ†ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط©</td><td>ط§ظ„ظپطµظ„ ط§ظ„ط¯ط±ط§ط³ظٹ ط§ظ„ط«ط§ظ†ظٹ</td></tr>
+          <tr><td>ظ¤</td><td>طھط¯ط±ظٹط¨ ط£ط¹ط¶ط§ط، ظ‡ظٹط¦ط© ط§ظ„طھط¯ط±ظٹط³ ط¹ظ„ظ‰ ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³</td><td>ظ„ط¬ظ†ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط©</td><td>ط§ظ„ظپطµظ„ ط§ظ„ط¯ط±ط§ط³ظٹ ط§ظ„ط«ط§ظ†ظٹ</td></tr>
+          <tr><td>ظ¥</td><td>ط¥ط¯ط®ط§ظ„ ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³ ط§ظ„ظ…ط¨ط§ط´ط± ظ…ظ† ط§ظ„ظ…ظ‚ط±ط±ط§طھ ظˆط§ظ„ط¨ط±ط§ظ…ط¬</td><td>ط§ظ„ط¨ط±ط§ظ…ط¬ ط§ظ„ط£ظƒط§ط¯ظٹظ…ظٹط©</td><td>ط§ظ„ظپطµظ„ ط§ظ„ط¯ط±ط§ط³ظٹ ط§ظ„ط£ظˆظ„ ظ…ظ† ط§ظ„ط¹ط§ظ… ط§ظ„طھط§ظ„ظٹ</td></tr>
+          <tr><td>ظ¦</td><td>ط¬ظ…ط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆطھط­ظ„ظٹظ„ظ‡ط§ ط¥ط­طµط§ط¦ظٹط§ظ‹</td><td>ظ„ط¬ظ†ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط©</td><td>ط§ظ„ظپطµظ„ ط§ظ„ط¯ط±ط§ط³ظٹ ط§ظ„ط£ظˆظ„ ظ…ظ† ط§ظ„ط¹ط§ظ… ط§ظ„طھط§ظ„ظٹ</td></tr>
+          <tr><td>ظ§</td><td>ط¥ط¹ط¯ط§ط¯ ط§ظ„طھظ‚ط±ظٹط± ط§ظ„ظ†ظ‡ط§ط¦ظٹ ظˆط®ط·ط· ط§ظ„طھط­ط³ظٹظ†</td><td>ظ„ط¬ظ†ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط©</td><td>ط§ظ„ظپطµظ„ ط§ظ„ط¯ط±ط§ط³ظٹ ط§ظ„ط£ظˆظ„ ظ…ظ† ط§ظ„ط¹ط§ظ… ط§ظ„طھط§ظ„ظٹ</td></tr>
+          <tr><td>ظ¨</td><td>طھظ‚ط¯ظٹظ… ط§ظ„طھظˆطµظٹط§طھ ظˆط±ظپط¹ظ‡ط§ ظ„ظ„ط¥ط¯ط§ط±ط© ط§ظ„ط¹ظ„ظٹط§</td><td>ط¹ظ…ط§ط¯ط© ط§ظ„طھط·ظˆظٹط± ظˆط§ظ„ط¬ظˆط¯ط©</td><td>ط§ظ„ظپطµظ„ ط§ظ„ط¯ط±ط§ط³ظٹ ط§ظ„ط£ظˆظ„ ظ…ظ† ط§ظ„ط¹ط§ظ… ط§ظ„طھط§ظ„ظٹ</td></tr>
+          <tr><td>ظ©</td><td>طھط­ط¯ظٹط« ط®ط·ط© ط§ظ„ظ‚ظٹط§ط³ ط§ط³طھط¹ط¯ط§ط¯ط§ظ‹ ظ„ظ„ط¯ظˆط±ط© ط§ظ„ظ‚ط§ط¯ظ…ط©</td><td>ط¹ظ…ط§ط¯ط© ط§ظ„طھط·ظˆظٹط± ظˆط§ظ„ط¬ظˆط¯ط©</td><td>ط§ظ„ظپطµظ„ ط§ظ„ط¯ط±ط§ط³ظٹ ط§ظ„ط£ظˆظ„ ظ…ظ† ط§ظ„ط¹ط§ظ… ط§ظ„طھط§ظ„ظٹ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec" id="s18">
+      <div class="sec-hd">
+        <div class="sec-n pur">ظ،ظ¨</div>
+        <div>
+          <div class="sec-t">ظ…طµط§ط¯ط± ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆط§ظ„ط£ظˆط²ط§ظ† ظˆظ…ط³طھظˆظٹط§طھ ط§ظ„طھط­ظ„ظٹظ„ ط§ظ„ظ…ط¤ط³ط³ظٹ</div>
+          <div class="sec-s">ظ…ط§ ط§ظ„ط°ظٹ ظٹظڈط¬ظ…ط¹طں ظˆط¨ط£ظٹ ظˆط²ظ†طں ظˆظƒظٹظپ طھظڈط­ظ„ظ„ ط§ظ„ظ†طھط§ط¦ط¬طں</div>
+        </div>
+      </div>
+
+      <h3>ظ…ط¹ط§ظٹظٹط± ط§ط®طھظٹط§ط± ظ…طµط§ط¯ط± ط§ظ„ط¨ظٹط§ظ†ط§طھ</h3>
+      <ul class="cl">
+        <li>طھظˆظپط± ط§ظ„ط¨ظٹط§ظ†ط§طھ ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ط§ظ„ط¬ط§ظ…ط¹ط© ط¨ط¬ظ…ظٹط¹ ط¨ط±ط§ظ…ط¬ظ‡ط§ ظˆطھط®طµطµط§طھظ‡ط§ ط§ظ„ط£ظƒط§ط¯ظٹظ…ظٹط©.</li>
+        <li>ط³ظ‡ظˆظ„ط© ط§ظ„ظˆطµظˆظ„ ط¥ظ„ظ‰ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆط¥ظ…ظƒط§ظ†ظٹط© ظ…ط¹ط§ظ„ط¬طھظ‡ط§ ط¥ط­طµط§ط¦ظٹط§ظ‹ ظ„ط¶ظ…ط§ظ† ظ…ظˆط¶ظˆط¹ظٹط© ط§ظ„ظ†طھط§ط¦ط¬.</li>
+        <li>طھظ…ط«ظٹظ„ ط´ط§ظ…ظ„ ظ„ظ„ط°ظƒظˆط± ظˆط§ظ„ط¥ظ†ط§ط« ظˆط§ظ„ظپط±ظˆط¹ ظˆط§ظ„ظ…ط³طھظˆظٹط§طھ ظˆظ…ط¬ط§ظ„ط§طھ ط§ظ„طھط®طµطµ ط§ظ„ظ…ط®طھظ„ظپط©.</li>
+        <li>طھط­ط¯ظٹط¯ ط§ظ„ط­ط¯ ط§ظ„ط£ط¯ظ†ظ‰ ظ…ظ† ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¶ط±ظˆط±ظٹط©طŒ ظ…ط¹ ط§ظ„طھط£ظƒط¯ ظ…ظ† ظ‚ط¯ط±طھظ‡ط§ ط¹ظ„ظ‰ طھط­ظ‚ظٹظ‚ ط§ظ„ط؛ط±ط¶ ط§ظ„طھظ‚ظٹظٹظ…ظٹ.</li>
+        <li>ط§ظ„ط§ط³طھظپط§ط¯ط© ظ…ظ† ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³ ط؛ظٹط± ط§ظ„ظ…ط¨ط§ط´ط± ط§ظ„ظ…ط¹طھظ…ط¯ط© ظ…ط¤ط³ط³ظٹط§ظ‹ ظ…ط«ظ„ ط§ظ„ط§ط³طھط¨ط§ظ†ط§طھ ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹط© ط§ظ„ظ…ظˆط­ط¯ط©.</li>
+      </ul>
+
+      <h3>ظ…طµط§ط¯ط± ط§ظ„ظ‚ظٹط§ط³ ط§ظ„ظ…ط¨ط§ط´ط± ظˆط؛ظٹط± ط§ظ„ظ…ط¨ط§ط´ط±</h3>
+      <div class="g2">
+        <div class="card">
+          <div class="card-h" style="background:var(--p);">ًں“ڈ ط§ظ„ظ‚ظٹط§ط³ ط§ظ„ظ…ط¨ط§ط´ط± â€” ظ¦ظ ظھ ظ…ط¤ط³ط³ظٹط§ظ‹</div>
+          <div class="card-b">
+            ظٹط¹طھظ…ط¯ ط¹ظ„ظ‰ ط£ط¯ط§ط، ط§ظ„ط·ط§ظ„ط¨ ظپظٹ طھظ‚ظٹظٹظ…ط§طھ ظپط¹ظ„ظٹط© ط¯ط§ط®ظ„ ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط£ظˆ ط§ظ„ط¨ط±ط§ظ…ط¬طŒ ظˆظٹظپط¶ظ„ ط£ظ† ظٹظƒظˆظ† ط¹ط¨ط± ظ…ظ‚ط±ط± طھطھظˆظٹط¬ظٹ ط£ظˆ ظ…ظ‚ط±ط± ظ…طھظ‚ط¯ظ… ظ…ط±طھط¨ط· ظ…ط¨ط§ط´ط±ط© ط¨ظ†ط§طھط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ظˆط§ظ„ظ†ط§طھط¬ ط§ظ„ظ…ط¤ط³ط³ظٹ.
+            <br><br>
+            <strong>ط£ظ…ط«ظ„ط© ط§ظ„ط£ط¯ظˆط§طھ:</strong>
+            <ul style="padding-right:16px;margin-top:8px;">
+              <li>ط§ط®طھط¨ط§ط±ط§طھ طھط­ط±ظٹط±ظٹط©</li>
+              <li>ظ…ط´ط§ط±ظٹط¹ ظˆط£ط¨ط­ط§ط«</li>
+              <li>طھظ‚ظٹظٹظ…ط§طھ ط¹ظ…ظ„ظٹط© ط£ظˆ ط³ط±ظٹط±ظٹط©</li>
+              <li>ط¹ط±ظˆط¶ طھظ‚ط¯ظٹظ…ظٹط©</li>
+              <li>طھط¯ط±ظٹط¨ ط¹ظ…ظ„ظٹ ط£ظˆ ظ…ظٹط¯ط§ظ†ظٹ</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h" style="background:var(--g);">ًں“‹ ط§ظ„ظ‚ظٹط§ط³ ط؛ظٹط± ط§ظ„ظ…ط¨ط§ط´ط± â€” ظ¤ظ ظھ ظ…ط¤ط³ط³ظٹط§ظ‹</div>
+          <div class="card-b">
+            ظٹط¹طھظ…ط¯ ط¹ظ„ظ‰ ط§ظ„ط§ط³طھط¨ط§ظ†ط§طھ ط§ظ„ظ…ط¤ط³ط³ظٹط© ط§ظ„ظ…ط¹طھظ…ط¯ط©طŒ ظˆطھظڈط³طھط®ط¯ظ… ط§ظ„ظپظ‚ط±ط§طھ ط§ظ„ظ…ط±طھط¨ط·ط© ظ…ط¨ط§ط´ط±ط© ط¨ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ظٹط© ظƒظ…طµط¯ط± ظ„ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط®ط§ظ….
+            <br><br>
+            <strong>ط§ظ„ط£ط¯ظˆط§طھ ط§ظ„ط±ط³ظ…ظٹط©:</strong>
+            <ul style="padding-right:16px;margin-top:8px;">
+              <li>ط§ط³طھط¨ط§ظ†ط© طھظ‚ظٹظٹظ… ط¬ظˆط¯ط© ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ â€” ط§ظ„ط®ط±ظٹط¬ظˆظ†</li>
+              <li>ط§ط³طھط¨ط§ظ†ط© طھظ‚ظˆظٹظ… ط®ط¨ط±ط© ط§ظ„ط·ط§ظ„ط¨ â€” ط§ظ„ط®ط±ظٹط¬ظˆظ†</li>
+              <li>ط§ط³طھط¨ط§ظ†ط© طھظ‚ظˆظٹظ… ط§ظ„ظ…ظ‚ط±ط±ط§طھ â€” ط¬ظ…ظٹط¹ ط§ظ„ط·ظ„ط§ط¨</li>
+              <li>ط§ط³طھط¨ط§ظ†ط© طھظ‚ظٹظٹظ… ط£ط±ط¨ط§ط¨ ط§ظ„ط¹ظ…ظ„ ظ„ط£ط¯ط§ط، ط§ظ„ط®ط±ظٹط¬ظٹظ†</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3>ط§ظ„ط£ظˆط²ط§ظ† ط§ظ„ظ†ط³ط¨ظٹط© ط§ظ„ظ…ط¹طھظ…ط¯ط© ظ…ط¤ط³ط³ظٹط§ظ‹</h3>
+      <div class="wbar">
+        <div class="wd" style="flex:60;">ظ‚ظٹط§ط³ ظ…ط¨ط§ط´ط± â€” ظ¦ظ ظھ</div>
+        <div class="wi" style="flex:40;">ظ‚ظٹط§ط³ ط؛ظٹط± ظ…ط¨ط§ط´ط± â€” ظ¤ظ ظھ</div>
+      </div>
+
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ†ظˆط¹ ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط§ظ„ظ…طµط¯ط±</th>
+            <th>ط§ظ„ظˆط²ظ†</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ظ…ط¨ط§ط´ط±</td><td>ظ†طھط§ط¦ط¬ ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ظ…ظ‚ط±ط±ط§طھ ظˆط§ظ„ط¨ط±ط§ظ…ط¬ ط§ظ„ظ…ط±طھط¨ط·ط© ط¨ط§ظ„ظ†ظˆط§طھط¬ ط§ظ„ظ…ط¤ط³ط³ظٹط©</td><td class="cs">ظ¦ظ ظھ</td></tr>
+          <tr><td>ط؛ظٹط± ظ…ط¨ط§ط´ط±</td><td>ط§ط³طھط¨ط§ظ†ط© طھظ‚ظٹظٹظ… ط£ط±ط¨ط§ط¨ ط§ظ„ط¹ظ…ظ„ ظ„ط£ط¯ط§ط، ط§ظ„ط®ط±ظٹط¬ظٹظ†</td><td class="cr">ظ،ظ¥ظھ</td></tr>
+          <tr><td>ط؛ظٹط± ظ…ط¨ط§ط´ط±</td><td>ط§ط³طھط¨ط§ظ†ط© طھظ‚ظˆظٹظ… ط®ط¨ط±ط© ط§ظ„ط·ط§ظ„ط¨ â€” ط§ظ„ط®ط±ظٹط¬ظˆظ†</td><td class="cr">ظ،ظ¥ظھ</td></tr>
+          <tr><td>ط؛ظٹط± ظ…ط¨ط§ط´ط±</td><td>ط§ط³طھط¨ط§ظ†ط© طھظ‚ظˆظٹظ… ط§ظ„ظ…ظ‚ط±ط±ط§طھ â€” ط¬ظ…ظٹط¹ ط§ظ„ط·ظ„ط§ط¨</td><td class="cr">ظ،ظ ظھ</td></tr>
+        </tbody>
+      </table>
+
+      <div class="fml" style="font-size:14px;">
+        ط§ظ„ظ†ط³ط¨ط© ط§ظ„ظ†ظ‡ط§ط¦ظٹط© ظ„ظ„ظ†ط§طھط¬ ط§ظ„ظ…ط¤ط³ط³ظٹ =
+        <span class="num">(ظ†طھظٹط¬ط© ط§ظ„ظ…ط¨ط§ط´ط± أ— ظ .ظ¦ظ ) + (ظ†طھظٹط¬ط© ط£ط±ط¨ط§ط¨ ط§ظ„ط¹ظ…ظ„ أ— ظ .ظ،ظ¥) + (ظ†طھظٹط¬ط© ط®ط¨ط±ط© ط§ظ„ط·ط§ظ„ط¨ أ— ظ .ظ،ظ¥) + (ظ†طھظٹط¬ط© طھظ‚ظˆظٹظ… ط§ظ„ظ…ظ‚ط±ط±ط§طھ أ— ظ .ظ،ظ )</span>
+      </div>
+
+      <h3>ظ…ط³طھظˆظٹط§طھ ط§ظ„طھط­ظ„ظٹظ„ ط§ظ„ط¥ط­طµط§ط¦ظٹ</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ‚ظٹط§ط³ ط§ظ„ظ…ط¨ط§ط´ط±</th>
+            <th>ط§ظ„ظ‚ظٹط§ط³ ط؛ظٹط± ط§ظ„ظ…ط¨ط§ط´ط±</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ط¹ط§ظ… ظ„ظƒظ„ ظ†ط§طھط¬ طھط¹ظ„ظ… ظ…ط¤ط³ط³ظٹ</td><td>ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ظƒظ„ ظپط¦ط© ظ…ط³طھظ‡ط¯ظپط©: ط·ظ„ط§ط¨طŒ ط®ط±ظٹط¬ظˆظ†طŒ ط£ط±ط¨ط§ط¨ ط¹ظ…ظ„</td></tr>
+          <tr><td>ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ظƒظ„ ظپط±ط¹ ظ…ظ† ظپط±ظˆط¹ ط§ظ„ط¬ط§ظ…ط¹ط©</td><td>ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ط¹ط§ظ… ظ„ظƒظ„ ظ†ط§طھط¬ طھط¹ظ„ظ… ظ…ط¤ط³ط³ظٹ</td></tr>
+          <tr><td>ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ط§ظ„ط¯ط±ط¬ط© ط§ظ„ط¹ظ„ظ…ظٹط©</td><td>ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ظƒظ„ ظپط±ط¹ ظ…ظ† ظپط±ظˆط¹ ط§ظ„ط¬ط§ظ…ط¹ط©</td></tr>
+          <tr><td>ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ط§ظ„طھط®طµطµ</td><td>ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ط§ظ„ط¯ط±ط¬ط© ط§ظ„ط¹ظ„ظ…ظٹط©</td></tr>
+          <tr><td>ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ط§ظ„ط°ظƒظˆط± ظˆط§ظ„ط¥ظ†ط§ط«</td><td>ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ط§ظ„طھط®طµطµ</td></tr>
+          <tr><td>ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ط¹ط§ظ… ظ„ظƒظ„ ظ…ط¬ط§ظ„: ط§ظ„ظ…ط¹ط±ظپط©طŒ ط§ظ„ظ…ظ‡ط§ط±ط§طھطŒ ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ط§ظ„ط°ظƒظˆط± ظˆط§ظ„ط¥ظ†ط§ط« ظˆط§ظ„ظ…ط¬ط§ظ„ ط§ظ„ط¹ط§ظ… ظ„ظ„ظ†ظˆط§طھط¬</td></tr>
+        </tbody>
+      </table>
+    </div>    <div class="sec" id="plan-steps-summary">
+      <div class="sec-hd">
+        <div>
+          <div class="sec-t">ملخص خطوات إعداد خطة قياس نواتج التعلم</div>
+        </div>
+      </div>
+
+      <div class="box bi">
+        يختص هذا الملخص بما يتم التخطيط له على مستوى البرنامج قبل تنفيذ القياس داخل المقررات.
+      </div>
+
+      <div class="summary-steps">
+        <div class="summary-step"><strong>١. تحديد نواتج تعلم البرنامج</strong>حصر نواتج تعلم البرنامج المعتمدة.</div>
+        <div class="summary-step gold"><strong>٢. تصنيف النواتج</strong>تصنيفها إلى معرفة، مهارات، قيم واستقلالية ومسؤولية.</div>
+        <div class="summary-step"><strong>٣. تحديد مؤشرات الأداء</strong>تحديد ما الذي سيقاس لكل ناتج وكيف يظهر تحقق الناتج.</div>
+        <div class="summary-step gold"><strong>٤. تحديد أدوات القياس</strong>اختيار الأدوات المناسبة مثل الاختبارات، المشاريع، العروض، ملفات الإنجاز، التدريب، أو الاستبانات.</div>
+        <div class="summary-step"><strong>٥. تحديد مستويات التحصيل</strong>تحديد الحد الأدنى المقبول الذي يدل على تحقق الناتج.</div>
+        <div class="summary-step gold"><strong>٦. تحديد القيم المستهدفة</strong>تحديد النسبة المستهدفة لتحقق نواتج التعلم.</div>
+        <div class="summary-step"><strong>٧. إعداد مصفوفة الربط</strong>ربط نواتج البرنامج بالمقررات وتحديد مستوى الإسهام.</div>
+        <div class="summary-step gold"><strong>٨. إعداد دورة القياس</strong>توزيع النواتج على الفصول أو الأعوام الدراسية.</div>
+        <div class="summary-step"><strong>٩. توزيع المسؤوليات</strong>تحديد أدوار منسق البرنامج، أعضاء هيئة التدريس، لجنة الجودة، والجهات ذات العلاقة.</div>
+        <div class="summary-step gold"><strong>١٠. اعتماد الخطة ومتابعتها</strong>اعتماد الخطة رسميًا ومتابعة تنفيذها وتحديثها عند الحاجة.</div>
+      </div>
+    </div><div class="sec" id="s19">
+      <div class="sec-hd">
+        <div class="sec-n pur">ظ،ظ©</div>
+        <div>
+          <div class="sec-t">ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ط±ط³ظ…ظٹط© ظˆط§ظ„طھظˆط«ظٹظ‚ ظˆط§ظ„ط§ط¹طھظ…ط§ط¯</div>
+          <div class="sec-s">ظ†ظ…ط§ط°ط¬ ط§ظ„ط®ط·ط© ظˆط§ظ„طھظ‚ط±ظٹط± ظˆط§ظ„طھظˆط«ظٹظ‚ ط§ظ„ظ…ط·ظ„ظˆط¨ ظپظٹ ط§ظ„ظ…ظ„ظپط§طھ ط§ظ„ط³ظ†ظˆظٹط©</div>
+        </div>
+      </div>
+
+      <h3>ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ط±ط³ظ…ظٹط© ط§ظ„طھظٹ ظٹظ†ط¨ط؛ظٹ طھظˆظپظٹط±ظ‡ط§</h3>
+      <div class="g3">
+        <div style="background:#e8f4f4;border-radius:10px;padding:16px;border-top:4px solid var(--p);">
+          <strong style="color:var(--p);">ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</strong>
+          <ul style="font-size:13px;padding-right:16px;margin-top:8px;">
+            <li>ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط£ط³ط§ط³ظٹط© ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</li>
+            <li>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ…طµظ†ظپط© ط­ط³ط¨ ط§ظ„ظ…ط¬ط§ظ„ط§طھ</li>
+            <li>ط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³</li>
+            <li>ط¯ظˆط±ط© ط§ظ„ظ‚ظٹط§ط³</li>
+            <li>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ط§ظ„ظ‚ظٹط§ط³</li>
+            <li>ط§ط¹طھظ…ط§ط¯ ط§ظ„ط®ط·ط© ظ…ظ† ط§ظ„ط£ظ‚ط³ط§ظ…/ط§ظ„ظƒظ„ظٹط§طھ/ط§ظ„ظپط±ظˆط¹</li>
+          </ul>
+        </div>
+
+        <div style="background:#fef9e8;border-radius:10px;padding:16px;border-top:4px solid var(--g);">
+          <strong style="color:var(--g);">طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</strong>
+          <ul style="font-size:13px;padding-right:16px;margin-top:8px;">
+            <li>ظ†طھط§ط¦ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ظ…ظ‚ط±ط±ط§طھ</li>
+            <li>ظ†طھط§ط¦ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</li>
+            <li>ط§ظ„طھط¹ظ„ظٹظ‚ ط¹ظ„ظ‰ ط§ظ„ظ†طھط§ط¦ط¬</li>
+            <li>طھط­ظ„ظٹظ„ ط¬ظˆط§ظ†ط¨ ط§ظ„ظ‚ظˆط© ظˆط§ظ„طھط­ط³ظٹظ†</li>
+            <li>ط®ط·ط· ط§ظ„طھط­ط³ظٹظ†</li>
+            <li>ط§ط¹طھظ…ط§ط¯ ط§ظ„طھظ‚ط±ظٹط±</li>
+          </ul>
+        </div>
+
+        <div style="background:#e8f4f4;border-radius:10px;padding:16px;border-top:4px solid var(--pur);">
+          <strong style="color:var(--pur);">طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„ظ…ظ‚ط±ط±</strong>
+          <ul style="font-size:13px;padding-right:16px;margin-top:8px;">
+            <li>ط§ط³ظ… ط§ظ„ظ…ظ‚ط±ط± ظˆط§ظ„ظ‚ط³ظ… ظˆظ…ظ†ط³ظ‚ ط§ظ„ظ…ظ‚ط±ط±</li>
+            <li>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط±طھط¨ط·ط© ط¨ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</li>
+            <li>ط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³ ظˆط§ظ„ظ‚ظٹظ… ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</li>
+            <li>ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³</li>
+            <li>ط§ظ„طھط¹ظ„ظٹظ‚ ط¹ظ„ظ‰ ط§ظ„ظ†طھط§ط¦ط¬</li>
+            <li>ط®ط·ط© ط§ظ„طھط­ط³ظٹظ†</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>ط§ظ„ظ†ظ…ظˆط°ط¬ ط§ظ„ط£ظˆظ„: ظ†ظ…ظˆط°ط¬ ظ…ظ‚طھط±ط­ ظ„ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h3>
+      <div class="box bi">
+        <div class="bt">ط§ظ„ط؛ط±ط¶ ظ…ظ† ط§ظ„ظ†ظ…ظˆط°ط¬</div>
+        ظٹظڈط³طھط®ط¯ظ… ظ‡ط°ط§ ط§ظ„ظ†ظ…ظˆط°ط¬ ظ‚ط¨ظ„ ط¨ط¯ط، ط¯ظˆط±ط© ط§ظ„ظ‚ظٹط§ط³ ظ„طھظˆط«ظٹظ‚ ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬طŒ ظˆظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…طŒ ظˆط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³طŒ ظˆط¯ظˆط±ط© ط§ظ„ظ‚ظٹط§ط³طŒ ظˆط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط©طŒ ظˆط§ط¹طھظ…ط§ط¯ ط§ظ„ط®ط·ط©.
+      </div>
+
+      <h4>ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط£ط³ط§ط³ظٹط©</h4>
+      <table class="tbl">
+        <tbody>
+          <tr><td class="rh">ط§ط³ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</td><td>........................................................</td></tr>
+          <tr><td class="rh">ط§ظ„ط£ظ‚ط³ط§ظ…/ط§ظ„ظƒظ„ظٹط§طھ ط§ظ„ظ…ظ‚ط¯ظ…ط© ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</td><td>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................<br>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................<br>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ط±ظ…ط² ط§ظ„ظ†ط§طھط¬</th>
+            <th>ظ†طµ ظ†ط§طھط¬ ط§ظ„طھط¹ظ„ظ…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="2" class="cs">ط§ظ„ظ…ط¹ط±ظپط©  ظˆط§ظ„ظپظ‡ظ…</td><td>ط¹ظ،</td><td>........................................................</td></tr>
+          <tr><td>ط¹...</td><td>........................................................</td></tr>
+          <tr><td rowspan="2" class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،</td><td>........................................................</td></tr>
+          <tr><td>ظ…...</td><td>........................................................</td></tr>
+          <tr><td rowspan="2" class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،</td><td>........................................................</td></tr>
+          <tr><td>ظ‚ظ¢</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط·ط±ظ‚ ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط§ط±ظپ</td><td>ط¹ظ،</td><td>ظ…ط¨ط§ط´ط± / ط؛ظٹط± ظ…ط¨ط§ط´ط±</td><td>ط§ط®طھط¨ط§ط± / ظ…ط´ط±ظˆط¹ / ط§ط³طھط¨ط§ظ†ط© / ط£ط®ط±ظ‰</td><td>........%</td></tr>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط§ط±ظپ</td><td>ط¹...</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…...</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ¢</td><td>........</td><td>........</td><td>........%</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط¯ظˆط±ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط§ظ„ط¹ط§ظ… ط§ظ„ط¯ط±ط§ط³ظٹ ....</th>
+            <th>ط§ظ„ط¹ط§ظ… ط§ظ„ط¯ط±ط§ط³ظٹ ....</th>
+            <th>ط§ظ„ط¹ط§ظ… ط§ظ„ط¯ط±ط§ط³ظٹ ....</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="rh">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…: ط¹ظ،طŒ ط¹...</td><td>........</td><td>........</td><td>........</td></tr>
+          <tr><td class="rh">ط§ظ„ظ…ظ‡ط§ط±ط§طھ: ظ…ظ،طŒ ظ…...</td><td>........</td><td>........</td><td>........</td></tr>
+          <tr><td class="rh">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©: ظ‚ظ،طŒ ظ‚ظ¢</td><td>........</td><td>........</td><td>........</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط© ظپظٹ ط§ظ„ظ‚ظٹط§ط³</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…</td><td>ط¹ظ،طŒ ط¹...</td><td>........................................................</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،طŒ ظ…...</td><td>........................................................</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،طŒ ظ‚ظ¢</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط§ط¹طھظ…ط§ط¯ ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹</th>
+            <th>طھط§ط±ظٹط® ظˆط±ظ‚ظ… ط¬ظ„ط³ط© ط§ظ„ظ…ط¬ظ„ط³</th>
+            <th>ط§ط¹طھظ…ط§ط¯ ط§ظ„ط£ظ‚ط³ط§ظ… ط§ظ„ظ…ظ‚ط¯ظ…ط© ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>....................</td><td>....................</td><td>....................</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bi" style="text-align:center;">
+        <a href="https://drive.uqu.edu.sa/_/quality/files/21d70234-0c07-41d8-972d-f030f252bfbc.docx" target="_blank" rel="noopener" class="guide-action">
+          طھط­ظ…ظٹظ„ ظ†ظ…ظˆط°ط¬ ط®ط·ط© ط§ظ„ظ‚ظٹط§ط³ ط¨طµظٹط؛ط© Word
+        </a>
+      </div>
+
+      <h3>ط§ظ„ظ†ظ…ظˆط°ط¬ ط§ظ„ط«ط§ظ†ظٹ: ظ†ظ…ظˆط°ط¬ ظ…ظ‚طھط±ط­ ظ„طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬ ط§ظ„ط¯ط±ط§ط³ظٹ</h3>
+      <div class="box bw">
+        <div class="bt">ط§ظ„ط؛ط±ط¶ ظ…ظ† ط§ظ„ظ†ظ…ظˆط°ط¬</div>
+        ظٹظڈط³طھط®ط¯ظ… ط¨ط¹ط¯ طھظ†ظپظٹط° ط§ظ„ظ‚ظٹط§ط³ ظ„طھط¬ظ…ظٹط¹ ظ†طھط§ط¦ط¬ ط§ظ„ظ…ظ‚ط±ط±ط§طھطŒ ظˆط§ط³طھط®ط±ط§ط¬ ظ†طھط§ط¦ط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬طŒ ظˆطھط­ظ„ظٹظ„ ط¬ظˆط§ظ†ط¨ ط§ظ„ظ‚ظˆط© ظˆط§ظ„طھط­ط³ظٹظ†طŒ ظˆطھظˆط«ظٹظ‚ ط®ط·ط· ط§ظ„طھط­ط³ظٹظ† ظˆط§ظ„ط§ط¹طھظ…ط§ط¯.
+      </div>
+
+      <h4>ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط£ط³ط§ط³ظٹط©</h4>
+      <table class="tbl">
+        <tbody>
+          <tr><td class="rh">ط§ط³ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</td><td>........................................................</td></tr>
+          <tr><td class="rh">طھط§ط±ظٹط® ط§ظ„طھظ‚ط±ظٹط±</td><td>........................................................</td></tr>
+          <tr><td class="rh">ط§ظ„ط£ظ‚ط³ط§ظ…/ط§ظ„ظƒظ„ظٹط§طھ ط§ظ„ظ…ظ‚ط¯ظ…ط© ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</td><td>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................<br>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................<br>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط¨ظٹط§ظ†ط§طھ ط§ظ„ط®ط·ط© ط§ظ„ظ…ط¹طھظ…ط¯ط© ظپظٹ ط§ظ„طھظ‚ط±ظٹط±</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ط¹ظ†طµط±</th>
+            <th>ظ…ط§ ظٹطھظ… ط¥ط¯ط±ط§ط¬ظ‡ ظپظٹ ط§ظ„طھظ‚ط±ظٹط±</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</td><td>طھظڈط¯ط±ط¬ ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ظ…طµظ†ظپط© ط­ط³ط¨: ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…طŒ ط§ظ„ظ…ظ‡ط§ط±ط§طھطŒ ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©.</td></tr>
+          <tr><td>ط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³</td><td>طھظڈط¯ط±ط¬ ط·ط±ظ‚ ط§ظ„ظ‚ظٹط§ط³طŒ ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³طŒ ظˆط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط© ظ„ظƒظ„ ظ†ط§طھط¬.</td></tr>
+          <tr><td>ط¯ظˆط±ط© ط§ظ„ظ‚ظٹط§ط³</td><td>طھظڈط­ط¯ط¯ ط§ظ„ط£ط¹ظˆط§ظ… ط£ظˆ ط§ظ„ظپطµظˆظ„ ط§ظ„طھظٹ طھظ… ظپظٹظ‡ط§ ظ‚ظٹط§ط³ ظƒظ„ ظ†ط§طھط¬.</td></tr>
+          <tr><td>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ط§ظ„ظ‚ظٹط§ط³</td><td>طھظڈط°ظƒط± ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط© ظ„ظƒظ„ ظ†ط§طھط¬ طھط¹ظ„ظ….</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ظ†طھط§ط¦ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ظ…ظ‚ط±ط±ط§طھ</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ظ…ظ‚ط±ط± ظ،</th>
+            <th>ظ…ظ‚ط±ط± ظ¢</th>
+            <th>ظ…ظ‚ط±ط± ظ£</th>
+            <th>ط§ظ„ظ…طھظˆط³ط·</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„طµط؛ط±ظ‰</th>
+            <th>ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ظپط¹ظ„ظٹ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…</td><td>ط¹ظ،</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ظ†طھط§ط¦ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬ ظˆط§ظ„طھط¹ظ„ظٹظ‚ ط¹ظ„ظٹظ‡ط§</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</th>
+            <th>ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ظپط¹ظ„ظٹ</th>
+            <th>ط§ظ„ط­ظƒظ…</th>
+            <th>ط§ظ„طھط¹ظ„ظٹظ‚ ط¹ظ„ظ‰ ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط¹ظ،</td><td>....%</td><td>....%</td><td>ظ…طھط­ظ‚ظ‚ / ط؛ظٹط± ظ…طھط­ظ‚ظ‚</td><td>........................................................</td></tr>
+          <tr><td>ظ…ظ،</td><td>....%</td><td>....%</td><td>ظ…طھط­ظ‚ظ‚ / ط؛ظٹط± ظ…طھط­ظ‚ظ‚</td><td>........................................................</td></tr>
+          <tr><td>ظ‚ظ،</td><td>....%</td><td>....%</td><td>ظ…طھط­ظ‚ظ‚ / ط؛ظٹط± ظ…طھط­ظ‚ظ‚</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>طھط­ظ„ظٹظ„ ظ†طھط§ط¦ط¬ طھظ‚ظٹظٹظ… ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <tbody>
+          <tr><td class="rh">ط¬ظˆط§ظ†ط¨ ط§ظ„ظ‚ظˆط©</td><td>........................................................................................................</td></tr>
+          <tr><td class="rh">ط§ظ„ط¬ظˆط§ظ†ط¨ ط§ظ„طھظٹ طھط­طھط§ط¬ ط¥ظ„ظ‰ طھط­ط³ظٹظ†</td><td>........................................................................................................</td></tr>
+          <tr><td class="rh">ط£ظˆظ„ظˆظٹط§طھ ط§ظ„طھط­ط³ظٹظ†</td><td>........................................................................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط®ط·ط· ط§ظ„طھط­ط³ظٹظ†</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظپط¬ظˆط©/ط§ظ„ظ†ط§طھط¬</th>
+            <th>ط§ظ„ط¥ط¬ط±ط§ط، ط§ظ„طھط­ط³ظٹظ†ظٹ</th>
+            <th>ظ…ط³ط¤ظˆظ„ ط§ظ„طھظ†ظپظٹط°</th>
+            <th>ط§ظ„ط¥ط·ط§ط± ط§ظ„ط²ظ…ظ†ظٹ</th>
+            <th>ظ…ط¤ط´ط± ط§ظ„ظ…طھط§ط¨ط¹ط©</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>........</td><td>........</td><td>........</td><td>........</td><td>........</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط§ط¹طھظ…ط§ط¯ طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹</th>
+            <th>طھط§ط±ظٹط® ظˆط±ظ‚ظ… ط¬ظ„ط³ط© ط§ظ„ظ…ط¬ظ„ط³</th>
+            <th>ط§ط¹طھظ…ط§ط¯ ط§ظ„طھظ‚ط±ظٹط±</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>....................</td><td>....................</td><td>....................</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bw" style="text-align:center;">
+        <a href="https://drive.uqu.edu.sa/_/cbe/files/88a58d63-d54b-497d-bf50-121fcfd5b2e9.docx" target="_blank" rel="noopener" class="guide-action gold">
+          طھط­ظ…ظٹظ„ ظ†ظ…ظˆط°ط¬ طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬ ط¨طµظٹط؛ط© Word
+        </a>
+      </div>
+
+      <div class="box bi">
+        <div class="bt">ظ…ظ„ط­ظˆط¸ط©</div>
+        ظٹط±ظپظ‚ طھظ‚ط±ظٹط± ظ…ظ†ظپطµظ„ ط¹ظ† ظƒظ„ ظپط±ط¹ ظٹظ‚ظˆظ… ط¨طھط¯ط±ظٹط³ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬طŒ ط¹ظ„ظ‰ ط£ظ† ظٹطھط¶ظ…ظ† طھظ‚ط±ظٹط± ط§ظ„ظپط±ط¹ ظ…ظ„ط§ط­ظ‚ ظ…ظ† طھظ‚ط§ط±ظٹط± ط§ظ„ظ‚ظٹط§ط³ ظ„ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ط§ظ„ظ‚ظٹط§ط³ ظˆط§ظ„طھظٹ طھظ… طھط¯ط±ظٹط³ظ‡ط§ ظپظٹ ط§ظ„ظپط±ط¹.
+      </div>
+
+      <h3>ط§ظ„ظ†ظ…ظˆط°ط¬ ط§ظ„ط«ط§ظ„ط«: ظ†ظ…ظˆط°ط¬ ظ…ظ‚طھط±ط­ ظ„طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ…ظ‚ط±ط± ط¯ط±ط§ط³ظٹ</h3>
+      <div class="box bp">
+        <div class="bt">ط§ظ„ط؛ط±ط¶ ظ…ظ† ط§ظ„ظ†ظ…ظˆط°ط¬</div>
+        ظٹظڈط³طھط®ط¯ظ… ظ„ظƒظ„ ظ…ظ‚ط±ط± ط¯ط§ط®ظ„ ظ…طµظپظˆظپط© ط§ظ„ظ‚ظٹط§ط³طŒ ظˆظٹط±ظپظ‚ ظ…ط¹ طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬.
+      </div>
+
+      <h4>ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط£ط³ط§ط³ظٹط©</h4>
+      <table class="tbl">
+        <tbody>
+          <tr><td class="rh">ط§ط³ظ… ط§ظ„ظ…ظ‚ط±ط±</td><td>........................................................</td></tr>
+          <tr><td class="rh">طھط§ط±ظٹط® ط§ظ„طھظ‚ط±ظٹط±</td><td>........................................................</td></tr>
+          <tr><td class="rh">ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©</td><td>........................................................</td></tr>
+          <tr><td class="rh">ظ…ظ†ط³ظ‚ ط§ظ„ظ…ظ‚ط±ط±</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ط§ظ„ظ…ط±طھط¨ط·ط© ط¨ط§ظ„ظ…ظ‚ط±ط±</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ظ…ظ‚ط±ط±</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…</td><td>ط¹ظ،طŒ ط¹...</td><td>........................................................</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،طŒ ظ…...</td><td>........................................................</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،طŒ ظ‚ظ¢</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط·ط±ظ‚ ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط§ط±ظپ</td><td>ط¹ظ،</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،</td><td>........</td><td>........</td><td>........%</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ظ†طھط§ط¦ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ†ط§طھط¬ ط§ظ„طھط¹ظ„ظ…</th>
+            <th>ط£ط¯ط§ط© ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط¹ط¯ط¯ ط§ظ„ط·ظ„ط§ط¨</th>
+            <th>ط¹ط¯ط¯ ط§ظ„ط·ظ„ط§ط¨ ط§ظ„ظ…ط­ظ‚ظ‚ظٹظ† ظ„ظ„ظ…ط³طھظ‡ط¯ظپ</th>
+            <th>ظ†ط³ط¨ط© ط§ظ„طھط­ظ‚ظ‚</th>
+            <th>ط§ظ„ط­ظƒظ…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط¹ظ، / ظ…ظ، / ظ‚ظ،</td><td>........</td><td>........</td><td>........</td><td>........%</td><td>ظ…طھط­ظ‚ظ‚ / ط؛ظٹط± ظ…طھط­ظ‚ظ‚</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط© ظپظٹ ط§ظ„ظ‚ظٹط§ط³</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…</td><td>ط¹ظ،طŒ ط¹...</td><td>........................................................</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،طŒ ظ…...</td><td>........................................................</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،طŒ ظ‚ظ¢</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط§ظ„طھط¹ظ„ظٹظ‚ ط¹ظ„ظ‰ ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³ ظˆط®ط·ط© ط§ظ„طھط­ط³ظٹظ†</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</th>
+            <th>ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ظپط¹ظ„ظٹ</th>
+            <th>ط§ظ„طھط¹ظ„ظٹظ‚</th>
+            <th>ط®ط·ط© ط§ظ„طھط­ط³ظٹظ†</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1.1 / 2.1 / 3.1</td><td>....%</td><td>....%</td><td>................................</td><td>................................</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bw">
+        <div class="bt">ظ…ظ„ط­ظˆط¸ط©</div>
+        ظٹظƒط±ط± ط§ظ„طھظ‚ط±ظٹط± ظ„ظƒظ„ ظ…ظ‚ط±ط± ظپظٹ ظ…طµظپظˆظپط© ط§ظ„ظ‚ظٹط§ط³طŒ ظˆظٹط±ظپظ‚ ظ…ط¹ طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬.
+      </div>
+
+      <h3>ظ…طھط·ظ„ط¨ط§طھ ط§ظ„طھظˆط«ظٹظ‚ ظپظٹ ط§ظ„طھظ‚ط±ظٹط± ط§ظ„ط³ظ†ظˆظٹ</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط­ظˆط±</th>
+            <th>ظ…ط§ ظٹط¬ط¨ طھظˆط«ظٹظ‚ظ‡</th>
+            <th>ط§ظ„ط¯ظ„ظٹظ„/ط§ظ„ظ…ط±ظپظ‚ ط§ظ„ظ…طھظˆظ‚ط¹</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط§ظ„ط®ط·ط©</td><td>ط¯ظˆط±ط© ط§ظ„ظ‚ظٹط§ط³طŒ ط§ظ„ظ†ظˆط§طھط¬ ط§ظ„ظ…ط³طھظ‡ط¯ظپط©طŒ ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³طŒ ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط©</td><td>ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¹طھظ…ط¯ط©</td></tr>
+          <tr><td>ط§ظ„طھظ†ظپظٹط°</td><td>طھط·ط¨ظٹظ‚ ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³ ظˆط¬ظ…ط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظ…ظ† ط§ظ„ظ…ظ‚ط±ط±ط§طھ ظˆط§ظ„ط§ط³طھط¨ط§ظ†ط§طھ</td><td>ظ†ظ…ط§ط°ط¬ ط§ظ„ظ‚ظٹط§ط³طŒ RubricsطŒ ظƒط´ظˆظپ ط§ظ„ط¯ط±ط¬ط§طھطŒ ط±ظˆط§ط¨ط· ط§ظ„ط§ط³طھط¨ط§ظ†ط§طھ</td></tr>
+          <tr><td>ط§ظ„طھط­ظ„ظٹظ„</td><td>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ظپط¹ظ„ظٹ ط¨ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط© ظˆطھط­ظ„ظٹظ„ ط§ظ„ظپط¬ظˆط§طھ</td><td>ط¬ط¯ط§ظˆظ„ ط§ظ„طھط­ظ„ظٹظ„ ط§ظ„ط¥ط­طµط§ط¦ظٹ ظˆط±ط³ظˆظ… ط¨ظٹط§ظ†ظٹط© ط¹ظ†ط¯ ط§ظ„ط­ط§ط¬ط©</td></tr>
+          <tr><td>ط§ظ„طھط­ط³ظٹظ†</td><td>ط¬ظˆط§ظ†ط¨ ط§ظ„ظ‚ظˆط©طŒ ط§ظ„ط¬ظˆط§ظ†ط¨ ط§ظ„طھظٹ طھط­طھط§ط¬ طھط­ط³ظٹظ†ط§ظ‹طŒ ط£ظˆظ„ظˆظٹط§طھ ط§ظ„طھط­ط³ظٹظ†طŒ ط§ظ„ط¥ط¬ط±ط§ط،ط§طھ ط§ظ„طھطµط­ظٹط­ظٹط©</td><td>ط®ط·ط© طھط­ط³ظٹظ† ظˆظ…ط­ط§ط¶ط± ط§ظ„ظ„ط¬ط§ظ†/ط§ظ„ظ…ط¬ط§ظ„ط³ ط°ط§طھ ط§ظ„ط¹ظ„ط§ظ‚ط©</td></tr>
+          <tr><td>ط§ظ„ط§ط¹طھظ…ط§ط¯</td><td>ط§ط¹طھظ…ط§ط¯ ط§ظ„طھظ‚ط§ط±ظٹط± ظˆط§ظ„ط®ط·ط· ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹</td><td>طھط§ط±ظٹط® ظˆط±ظ‚ظ… ط¬ظ„ط³ط© ط§ظ„ظ…ط¬ظ„ط³ ظˆطھظˆظ‚ظٹط¹/ط§ط¹طھظ…ط§ط¯ ط§ظ„ط¬ظ‡ط© ط§ظ„ظ…ط®طھطµط©</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bs">
+        <div class="bt">ظ‚ط§ط¹ط¯ط© ط§ظ„ط¥ط؛ظ„ط§ظ‚ ط§ظ„ظ…ط¤ط³ط³ظٹ ظ„ظ„ط¬ظˆط¯ط©</div>
+        ظ„ط§ ظٹظ†طھظ‡ظٹ ط§ظ„ظ‚ظٹط§ط³ ط¹ظ†ط¯ ط§ط³طھط®ط±ط§ط¬ ط§ظ„ظ†ط³ط¨ط©ط› ظٹط¬ط¨ ط£ظ† ظٹظ†طھظ‡ظٹ ط¨ظ€ <strong>طھظˆطµظٹط§طھ طھط·ظˆظٹط±ظٹط©طŒ ط®ط·ط© طھط­ط³ظٹظ†طŒ ط¬ظ‡ط© ظ…ط³ط¤ظˆظ„ط©طŒ ط¥ط·ط§ط± ط²ظ…ظ†ظٹطŒ ظ…ط¤ط´ط± ظ…طھط§ط¨ط¹ط©طŒ ظˆطھظˆط«ظٹظ‚ ط±ط³ظ…ظٹ</strong>. ظˆط¨ظ‡ط°ط§ طھطھط­ظˆظ„ ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³ ط¥ظ„ظ‰ ظ‚ط±ط§ط±ط§طھ طھط­ط³ظٹظ† ظ…ط¨ظ†ظٹط© ط¹ظ„ظ‰ ط§ظ„ط£ط¯ظ„ط©.
+      </div>
+
+      <h3>ظ‚ط§ط¦ظ…ط© ظپط­طµ ط³ط±ظٹط¹ط© ظ‚ط¨ظ„ طھط³ظ„ظٹظ… ط§ظ„طھظ‚ط±ظٹط±</h3>
+      <ul class="cl">
+        <li>ظ‡ظ„ ط¬ظ…ظٹط¹ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ…طµظ†ظپط© ط­ط³ط¨ ط§ظ„ظ…ط¬ط§ظ„ط§طھ ط§ظ„ط«ظ„ط§ط«ط©طں</li>
+        <li>ظ‡ظ„ ظٹظˆط¬ط¯ ط±ط¨ط· ظˆط§ط¶ط­ ط¨ظٹظ† ظ†ظˆط§طھط¬ ط§ظ„ظ…ظ‚ط±ط±طŒ ظˆظ†ظˆط§طھط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬طŒ ظˆط§ظ„ظ†ظˆط§طھط¬ ط§ظ„ظ…ط¤ط³ط³ظٹط©طں</li>
+        <li>ظ‡ظ„ ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³ ظ…ظ†ط§ط³ط¨ط© ظ„ط·ط¨ظٹط¹ط© ط§ظ„ظ†ط§طھط¬طں</li>
+        <li>ظ‡ظ„ ط§ظ„ظ‚ظٹظ… ط§ظ„ظ…ط³طھظ‡ط¯ظپط© ظˆظ…ط¤ط´ط±ط§طھ ط§ظ„ط£ط¯ط§ط، ظ…ظˆط«ظ‚ط© ظ‚ط¨ظ„ ط§ظ„ظ‚ظٹط§ط³طں</li>
+        <li>ظ‡ظ„ طھظ… طھط­ظ„ظٹظ„ ط§ظ„ظ†طھط§ط¦ط¬ ط­ط³ط¨ ط§ظ„ظ…ط³طھظˆظٹط§طھ ط§ظ„ظ…ط·ظ„ظˆط¨ط©طں</li>
+        <li>ظ‡ظ„ ظƒظڈطھط¨طھ ط®ط·ط© طھط­ط³ظٹظ† ظ…ط±طھط¨ط·ط© ظ…ط¨ط§ط´ط±ط© ط¨ط§ظ„ظپط¬ظˆط§طھطں</li>
+        <li>ظ‡ظ„ طھظ… ط§ط¹طھظ…ط§ط¯ ط§ظ„ط®ط·ط© ط£ظˆ ط§ظ„طھظ‚ط±ظٹط± ظپظٹ ظ…ط¬ظ„ط³/ظ„ط¬ظ†ط© ظ…ط®طھطµط©طں</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<div id="panel-formulation" class="tab-panel" role="tabpanel">
+  <div class="mini-toc">
+    <h2>محتويات تبويب صياغة وقياس نواتج التعلم</h2>
+    <ul>
+      <li><a href="#s1">ما هي نواتج التعلم؟ — التعريف والأهمية</a></li>
+      <li><a href="#s2">الفرق بين الغايات والأهداف ونواتج التعلم</a></li>
+      <li><a href="#s3">مجالات نواتج التعلم الثلاثة</a></li>
+      <li><a href="#s4">صياغة نواتج التعلم — الخطوات والأفعال</a></li>
+      <li><a href="#s5">أخطاء شائعة في الصياغة مع التصحيح</a></li>
+      <li><a href="#s7">الفرق بين القياس والتقييم</a></li>
+      <li><a href="#s8">كيفية حساب نسبة تحقق ناتج التعلم</a></li>
+      <li><a href="#s10">قياس القيم والاستقلالية — Rubrics</a></li>
+      <li><a href="#s11">المقررات التتويجية وأدوات القياس والوثائق</a></li>
+      <li><a href="#s12">أدوار عضو هيئة التدريس والتسلسل الإجرائي</a></li>
+      <li><a href="#s13">مثال حي متكامل من دبلوم التسويق التطبيقي</a></li>
+      <li><a href="#s15">التحسين والإجراءات التصحيحية</a></li>
+      <li><a href="#formulation-steps-summary">ملخص خطوات صياغة وقياس نواتج التعلم</a></li>
+      <li><a href="#formulation-official-forms">النماذج الرسمية والتوثيق والاعتماد</a></li>
+      <li><a href="#institutional-forms-1447">نماذج قياس نواتج تعلم المؤسسة للعام ١٤٤٧</a></li>
+    </ul>
+  </div>
+
+  <div class="wrap">
+<div class="part">
+      <div class="part-num">ط£</div>
+      <div>
+        <div class="part-title">طµظٹط§ط؛ط© ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</div>
+        <div class="part-sub">ظ…ظ† ط§ظ„ظ…ظپظ‡ظˆظ… ط¥ظ„ظ‰ ط§ظ„ظƒطھط§ط¨ط© ط§ظ„طµط­ظٹط­ط©</div>
+      </div>
+    </div>
+
+    <div class="sec" id="s1">
+      <div class="sec-hd">
+        <div class="sec-n">ظ،</div>
+        <div>
+          <div class="sec-t">ظ…ط§ ظ‡ظٹ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…طں</div>
+          <div class="sec-s">ط§ظ„ظ…ظپط§ظ‡ظٹظ… ط§ظ„ط£ط³ط§ط³ظٹط© ط§ظ„طھظٹ ظٹط¬ط¨ ط£ظ† ظٹط¹ط±ظپظ‡ط§ ظƒظ„ ط¹ط¶ظˆ ظ‡ظٹط¦ط© طھط¯ط±ظٹط³</div>
+        </div>
+      </div>
+
+      <div class="def">
+        <h3>ط§ظ„طھط¹ط±ظٹظپ ط§ظ„ط±ط³ظ…ظٹ</h3>
+        <p>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ‡ظٹ <strong>ط¹ط¨ط§ط±ط§طھ طھط­ط¯ط¯ ظ…ط§ ظٹط¬ط¨ ط£ظ† ظٹط¹ط±ظپظ‡ ط§ظ„ط·ط§ظ„ط¨ ط£ظˆ ظٹظƒظˆظ† ظ‚ط§ط¯ط±ط§ظ‹ ط¹ظ„ظ‰ ظپط¹ظ„ظ‡ ط£ظˆ ط¥ط¸ظ‡ط§ط±ظ‡</strong> ط¹ظ†ط¯ظ…ط§ ظٹظڈظƒظ…ظ„ ط§ظ„ظ…ظ‚ط±ط± ط£ظˆ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬. ظˆظٹط¬ط¨ ط£ظ† طھط­ط¯ط¯ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط¥ط¬ط±ط§ط،ظ‹ ظ…ظ† ط¬ط§ظ†ط¨ ط§ظ„ط·ط§ظ„ط¨ ظٹظƒظˆظ† ظ‚ط§ط¨ظ„ط§ظ‹ ظ„ظ„ظ…ظ„ط§ط­ط¸ط© ظˆط§ظ„طھظˆط¶ظٹط­ ظˆط§ظ„ظ‚ظٹط§ط³.</p>
+      </div>
+
+      <h3>ظ„ظ…ط§ط°ط§ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ…ظ‡ظ…ط©طں</h3>
+      <div class="g3">
+        <div style="background:#e8f4f4;border-radius:10px;padding:16px;border-top:4px solid var(--p);">
+          <div style="font-size:22px;margin-bottom:6px;">ًںژ“</div>
+          <strong style="color:var(--p);">ظ„ظ„ط·ط§ظ„ط¨</strong>
+          <ul style="margin-top:8px;font-size:13px;padding-right:14px;">
+            <li>ظˆط¶ظˆط­ ظ…ط§ ظ‡ظˆ ظ…طھظˆظ‚ط¹ ظ…ظ†ظ‡</li>
+            <li>ظٹط®ط·ط· ظ„طھط¹ظ„ظ…ظ‡ ط¨ظˆط¹ظٹ</li>
+            <li>ظٹط³طھط®ط¯ظ… ط§ظ„ظ…ظ‡ط§ط±ط§طھ ط§ظ„ظ…ظ†ط§ط³ط¨ط©</li>
+          </ul>
+        </div>
+
+        <div style="background:#fef9e8;border-radius:10px;padding:16px;border-top:4px solid var(--g);">
+          <div style="font-size:22px;margin-bottom:6px;">ًں‘¨â€چًںڈ«</div>
+          <strong style="color:var(--g);">ظ„ط¹ط¶ظˆ ظ‡ظٹط¦ط© ط§ظ„طھط¯ط±ظٹط³</strong>
+          <ul style="margin-top:8px;font-size:13px;padding-right:14px;">
+            <li>ط§ط®طھظٹط§ط± ط£ط³ط§ظ„ظٹط¨ طھط¯ط±ظٹط³ ظ…ظ†ط§ط³ط¨ط©</li>
+            <li>ط§ط®طھظٹط§ط± ط£ط¯ظˆط§طھ ط§ظ„طھظ‚ظٹظٹظ… ط§ظ„طµط­ظٹط­ط©</li>
+            <li>طھط­ظ‚ظٹظ‚ ط§ظ„ط¹ط¯ط§ظ„ط© ظˆط§ظ„ظ…ظˆط¶ظˆط¹ظٹط©</li>
+          </ul>
+        </div>
+
+        <div style="background:#e8f5e9;border-radius:10px;padding:16px;border-top:4px solid var(--green);">
+          <div style="font-size:22px;margin-bottom:6px;">ًںڈ›ï¸ڈ</div>
+          <strong style="color:var(--green);">ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬ ظˆط§ظ„ظ…ط¤ط³ط³ط©</strong>
+          <ul style="margin-top:8px;font-size:13px;padding-right:14px;">
+            <li>طھظˆط§ط²ظ† ظˆطھظƒط§ظ…ظ„ ط¨ظٹظ† ط§ظ„ظ…ظ‚ط±ط±ط§طھ</li>
+            <li>ظ…ظˆط§طµظپط§طھ ظˆط§ط¶ط­ط© ظ„ظ„ط®ط±ظٹط¬</li>
+            <li>ظ…ظˆط§ط¦ظ…ط© ظ…ط¹ ط³ظˆظ‚ ط§ظ„ط¹ظ…ظ„</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec" id="s2">
+      <div class="sec-hd">
+        <div class="sec-n">ظ¢</div>
+        <div>
+          <div class="sec-t">ط§ظ„ظپط±ظ‚ ط¨ظٹظ† ط§ظ„ط؛ط§ظٹط§طھ ظˆط§ظ„ط£ظ‡ط¯ط§ظپ ظˆظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</div>
+          <div class="sec-s">ط£ظƒط«ط± ظ†ظ‚ط·ط© ظٹط®طھظ„ط· ظپظٹظ‡ط§ ط§ظ„ظ…ظپظ‡ظˆظ… ط¹ظ„ظ‰ ط£ط¹ط¶ط§ط، ظ‡ظٹط¦ط© ط§ظ„طھط¯ط±ظٹط³</div>
+        </div>
+      </div>
+
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط³طھظˆظ‰</th>
+            <th>ط§ظ„طھط¹ط±ظٹظپ</th>
+            <th>ظ…ط«ط§ظ„ ظپظٹ ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ</th>
+            <th>ظ…ط«ط§ظ„ ظپظٹ ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط©</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ًںŒگ <strong>ط§ظ„ط؛ط§ظٹط©</strong></td><td>طھظˆط¬ظ‡ ط¹ط§ظ… ط¨ط¹ظٹط¯ ط§ظ„ظ…ط¯ظ‰ â€” ظ„ط§ ظٹظڈظ‚ط§ط³ ظ…ط¨ط§ط´ط±ط©</td><td>ط¥ط¹ط¯ط§ط¯ ط®ط±ظٹط¬ظٹظ† ظ‚ط§ط¯ط±ظٹظ† ط¹ظ„ظ‰ ظ‚ظٹط§ط¯ط© ط§ظ„ط³ظˆظ‚</td><td>طھط®ط±ظٹط¬ ظ…ط­ط§ط³ط¨ظٹظ† ظ…طھظƒط§ظ…ظ„ظٹظ† ظ…طھظ…ظٹط²ظٹظ†</td></tr>
+          <tr><td>ًںژ¯ <strong>ط§ظ„ظ‡ط¯ظپ</strong></td><td>ظٹطµظپ ظ…ط§ ظٹط±ظٹط¯ ط§ظ„ظ…ط¹ظ„ظ… ط¥ظٹطµط§ظ„ظ‡ â€” ظ…ط±ظƒط²ظ‡ ط§ظ„ظ…ط¹ظ„ظ…</td><td>طھط¯ط±ظٹط³ ط§ط³طھط±ط§طھظٹط¬ظٹط§طھ ط§ظ„طھط³ط¹ظٹط± ظ„ظ„ط·ظ„ط§ط¨</td><td>ط´ط±ط­ ظ…ط¨ط§ط¯ط¦ ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط© ظ„ظ„ط·ظ„ط§ط¨</td></tr>
+          <tr><td>âœ… <strong>ظ†ط§طھط¬ ط§ظ„طھط¹ظ„ظ…</strong></td><td>ظٹطµظپ ظ…ط§ ظٹظپط¹ظ„ظ‡ ط§ظ„ط·ط§ظ„ط¨ â€” ظ…ط±ظƒط²ظ‡ ط§ظ„ط·ط§ظ„ط¨ â€” ظ‚ط§ط¨ظ„ ظ„ظ„ظ‚ظٹط§ط³</td><td>ط£ظ† ظٹظڈط­ظ„ظگظ‘ظ„ ط§ظ„ط·ط§ظ„ط¨ ط§ط³طھط±ط§طھظٹط¬ظٹط§طھ ط§ظ„طھط³ط¹ظٹط± ط§ظ„ظ…ظ†ط§ط³ط¨ط© ظ„ظ…ظ†طھط¬ ط¬ط¯ظٹط¯</td><td>ط£ظ† ظٹظڈط¹ظگط¯ظژظ‘ ط§ظ„ط·ط§ظ„ط¨ ظ‚ط§ط¦ظ…ط© ط¯ط®ظ„ ظˆظپظ‚ ظ…ط¨ط§ط¯ط¦ ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط©</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bw">
+        <div class="bt">âڑ ï¸ڈ ط§ظ„ظ‚ط§ط¹ط¯ط© ط§ظ„ط°ظ‡ط¨ظٹط©</div>
+        ط¥ط°ط§ ظˆط¬ط¯طھ ظ†ظپط³ظƒ طھظƒطھط¨ "ط³ط£ظڈط¯ط±ظگظ‘ط³..." ط£ظˆ "ط³ظٹطھط¹ظ„ظ… ط§ظ„ط·ظ„ط§ط¨..." ظپط£ظ†طھ طھظƒطھط¨ <strong>ظ‡ط¯ظپط§ظ‹ ظ„ظ„ظ…ط¹ظ„ظ…</strong> ظˆظ„ظٹط³ ظ†ط§طھط¬ طھط¹ظ„ظ…. ظ†ط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظٹط¨ط¯ط£ ط¯ط§ط¦ظ…ط§ظ‹ ط¨ظ€ <strong>"ط£ظ† ظٹظƒظˆظ† ط§ظ„ط·ط§ظ„ط¨ ظ‚ط§ط¯ط±ط§ظ‹ ط¹ظ„ظ‰..."</strong>
+      </div>
+
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¹ظٹط§ط±</th>
+            <th>ط§ظ„ط£ظ‡ط¯ط§ظپ</th>
+            <th>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط§ظ„ظ…ط­ظˆط±</td><td>ط§ظ„ظ…ط¹ظ„ظ… / ط¹ظ…ظ„ظٹط© ط§ظ„طھط¯ط±ظٹط³</td><td>ط§ظ„ط·ط§ظ„ط¨ / ظ…ط§ ظٹظڈط¸ظ‡ط±ظ‡</td></tr>
+          <tr><td>ط§ظ„طµظٹط§ط؛ط©</td><td>"ط³ظٹطھط¹ظ„ظ… ط§ظ„ط·ظ„ط§ط¨..."</td><td>"ط£ظ† ظٹظƒظˆظ† ط§ظ„ط·ط§ظ„ط¨ ظ‚ط§ط¯ط±ط§ظ‹ ط¹ظ„ظ‰..."</td></tr>
+          <tr><td>ط§ظ„ظ‚ظٹط§ط³</td><td>طµط¹ط¨ ط§ظ„ظ‚ظٹط§ط³ ط§ظ„ظ…ط¨ط§ط´ط±</td><td>ظ‚ط§ط¨ظ„ ظ„ظ„ظ…ظ„ط§ط­ط¸ط© ظˆط§ظ„ظ‚ظٹط§ط³</td></tr>
+          <tr><td>ط§ظ„طھط±ظƒظٹط²</td><td>ط§ظ„ط£ط¯ط§ط، ط§ظ„ط¬ظ…ط§ط¹ظٹ</td><td>ط§ظ„ط·ط§ظ„ط¨ ط¨ط´ظƒظ„ ظپط±ط¯ظٹ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec" id="s3">
+      <div class="sec-hd">
+        <div class="sec-n">ظ£</div>
+        <div>
+          <div class="sec-t">ظ…ط¬ط§ظ„ط§طھ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ط«ظ„ط§ط«ط©</div>
+          <div class="sec-s">ظˆظپظ‚ ط§ظ„ط¥ط·ط§ط± ط§ظ„ظˆط·ظ†ظٹ ظ„ظ„ظ…ط¤ظ‡ظ„ط§طھ ط¨ط§ظ„ظ…ظ…ظ„ظƒط© ط§ظ„ط¹ط±ط¨ظٹط© ط§ظ„ط³ط¹ظˆط¯ظٹط©</div>
+        </div>
+      </div>
+
+      <div class="g3">
+        <div style="border-radius:12px;overflow:hidden;border:2px solid var(--p);">
+          <div style="background:var(--p);color:#fff;padding:14px;text-align:center;">
+            <div style="font-size:28px;">ًں§ </div>
+            <strong>ط§ظ„ظ…ط¹ط§ط±ظپ</strong>
+          </div>
+          <div style="padding:14px;font-size:13px;color:var(--tl);">
+            ظ…ط§ ظٹط¹ط±ظپظ‡ ط§ظ„ط·ط§ظ„ط¨ ظˆظٹظپظ‡ظ…ظ‡ ظ…ظ† ظ…ظپط§ظ‡ظٹظ… ظˆظ†ط¸ط±ظٹط§طھ ظˆظ…ط¨ط§ط¯ط¦.
+            <br><br>
+            <strong>ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ:</strong> ظ…ط¹ط±ظپط© ط§ظ„ظ…ط²ظٹط¬ ط§ظ„طھط³ظˆظٹظ‚ظٹ (4Ps)<br>
+            <strong>ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط©:</strong> ظپظ‡ظ… ظ…ط¨ط¯ط£ ط§ظ„ط§ط³طھط­ظ‚ط§ظ‚<br>
+            <strong>ط§ظ„ظ…ظˆط§ط±ط¯ ط§ظ„ط¨ط´ط±ظٹط©:</strong> ظ…ط¹ط±ظپط© ظ…ط±ط§ط­ظ„ ط¯ظˆط±ط© ط­ظٹط§ط© ط§ظ„ظ…ظˆط¸ظپ<br>
+            <strong>ط§ظ„ط£ظ†ط¸ظ…ط©:</strong> ط§ظ„ظ‡ط±ظ… ط§ظ„طھط´ط±ظٹط¹ظٹ ط§ظ„ط³ط¹ظˆط¯ظٹ
+          </div>
+        </div>
+
+        <div style="border-radius:12px;overflow:hidden;border:2px solid var(--g);">
+          <div style="background:var(--g);color:#fff;padding:14px;text-align:center;">
+            <div style="font-size:28px;">ًں› ï¸ڈ</div>
+            <strong>ط§ظ„ظ…ظ‡ط§ط±ط§طھ</strong>
+          </div>
+          <div style="padding:14px;font-size:13px;color:var(--tl);">
+            ظ…ط§ ظٹط³طھط·ظٹط¹ ط§ظ„ط·ط§ظ„ط¨ ظپط¹ظ„ظ‡ ظˆطھط·ط¨ظٹظ‚ظ‡ ظ…ظ† ظ…ظ‡ط§ط±ط§طھ ط¹ظ…ظ„ظٹط© ظˆظپظƒط±ظٹط©.
+            <br><br>
+            <strong>ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ:</strong> طھطµظ…ظٹظ… ط­ظ…ظ„ط© طھط³ظˆظٹظ‚ظٹط© ط±ظ‚ظ…ظٹط©<br>
+            <strong>ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط©:</strong> ط¥ط¹ط¯ط§ط¯ ط§ظ„ظ‚ظˆط§ط¦ظ… ط§ظ„ظ…ط§ظ„ظٹط©<br>
+            <strong>ط§ظ„ظ…ظˆط§ط±ط¯ ط§ظ„ط¨ط´ط±ظٹط©:</strong> ط¥ط¬ط±ط§ط، ظ…ظ‚ط§ط¨ظ„ط© طھظˆط¸ظٹظپ<br>
+            <strong>ط§ظ„ط£ظ†ط¸ظ…ط©:</strong> طھط­ظ„ظٹظ„ ط¹ظ‚ط¯ طھط¬ط§ط±ظٹ
+          </div>
+        </div>
+
+        <div style="border-radius:12px;overflow:hidden;border:2px solid var(--pur);">
+          <div style="background:var(--pur);color:#fff;padding:14px;text-align:center;">
+            <div style="font-size:28px;">âڑ–ï¸ڈ</div>
+            <strong>ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط©</strong>
+          </div>
+          <div style="padding:14px;font-size:13px;color:var(--tl);">
+            ظ‚ظٹظ… ط§ظ„ط·ط§ظ„ط¨ ظˆط³ظ„ظˆظƒظ‡ ط§ظ„ظ…ظ‡ظ†ظٹ ظˆظ…ط³ط¤ظˆظ„ظٹطھظ‡ طھط¬ط§ظ‡ ط¹ظ…ظ„ظ‡.
+            <br><br>
+            <strong>ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ:</strong> ط§ظ„ط§ظ„طھط²ط§ظ… ط¨ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„ط£ط®ظ„ط§ظ‚ظٹ<br>
+            <strong>ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط©:</strong> ط§ظ„ظ†ط²ط§ظ‡ط© ط§ظ„ظ…ظ‡ظ†ظٹط© ظپظٹ ط§ظ„طھظ‚ط§ط±ظٹط±<br>
+            <strong>ط§ظ„ظ…ظˆط§ط±ط¯ ط§ظ„ط¨ط´ط±ظٹط©:</strong> ط§ظ„ط¹ط¯ط§ظ„ط© ظپظٹ ظ‚ط±ط§ط±ط§طھ ط§ظ„طھط±ظ‚ظٹط©<br>
+            <strong>ط§ظ„ط£ظ†ط¸ظ…ط©:</strong> ط§ظ„ط§ظ„طھط²ط§ظ… ط¨ط³ظٹط§ط¯ط© ط§ظ„ظ‚ط§ظ†ظˆظ†
+          </div>
+        </div>
+      </div>
+
+      <div class="box bi">
+        <div class="bt">ًں“Œ ظ‚ط§ط¹ط¯ط© ط§ظ„طھظ†ظˆظٹط¹</div>
+        ط¹ظ†ط¯ طھطµظ…ظٹظ… ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ظ…ظ‚ط±ط±ظƒطŒ طھط£ظƒط¯ ظ…ظ† ط£ظ† ظ„ط¯ظٹظƒ ظ†ظˆط§طھط¬ طھط؛ط·ظٹ <strong>ط§ظ„ظ…ط¬ط§ظ„ط§طھ ط§ظ„ط«ظ„ط§ط«ط©</strong>. ظ„ط§ طھط±ظƒط² ط¹ظ„ظ‰ ط§ظ„ظ…ط¹ط±ظپط© ط§ظ„ظ†ط¸ط±ظٹط© ظپظ‚ط· ظˆطھظ‡ظ…ظ„ ط§ظ„ط¬ط§ظ†ط¨ ط§ظ„طھط·ط¨ظٹظ‚ظٹ ظˆط§ظ„ظ‚ظٹظ…ظٹ.
+      </div>
+    </div>
+
+    <div class="sec" id="s4">
+      <div class="sec-hd">
+        <div class="sec-n">ظ¤</div>
+        <div>
+          <div class="sec-t">طµظٹط§ط؛ط© ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… â€” ط§ظ„ط®ط·ظˆط§طھ ظˆط§ظ„ط£ظپط¹ط§ظ„</div>
+          <div class="sec-s">ط§ظ„طµظٹط؛ط© ط§ظ„طµط­ظٹط­ط© + ظ‚ط§ط¦ظ…ط© ط§ظ„ط£ظپط¹ط§ظ„ ط§ظ„ظ‚ط§ط¨ظ„ط© ظ„ظ„ظ‚ظٹط§ط³</div>
+        </div>
+      </div>
+
+      <h3>ط§ظ„طµظٹط؛ط© ط§ظ„ط£ط³ط§ط³ظٹط©</h3>
+      <div style="background:linear-gradient(135deg,#0d6e6e,#1a8f8f);color:#fff;border-radius:14px;padding:26px;text-align:center;font-size:17px;font-weight:700;line-height:2.3;margin:16px 0;">
+        ط£ظ† ظٹظƒظˆظ† ط§ظ„ط·ط§ظ„ط¨ ظ‚ط§ط¯ط±ط§ظ‹ ط¹ظ„ظ‰
+        <span style="background:var(--g);padding:4px 16px;border-radius:20px;margin:0 8px;">ظپط¹ظ„ ظ‚ط§ط¨ظ„ ظ„ظ„ظ‚ظٹط§ط³</span>
+        +
+        <span style="background:rgba(255,255,255,.2);padding:4px 16px;border-radius:20px;margin:0 8px;">ظ…ط­طھظˆظ‰ / ظ…ظˆط¶ظˆط¹</span>
+        +
+        <span style="background:rgba(255,255,255,.12);padding:4px 16px;border-radius:20px;margin:0 8px;">ط§ظ„ط³ظٹط§ظ‚ (ط§ط®طھظٹط§ط±ظٹ)</span>
+      </div>
+
+      <h3>ط£ظپط¹ط§ظ„ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… â€” ظ…ظڈط±طھظژظ‘ط¨ط© ط­ط³ط¨ ط§ظ„ظ…ط³طھظˆظ‰</h3>
+      <div class="vcat">
+        <div class="vcat-t">ًں”µ ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ط£ظˆظ„ â€” ط§ظ„طھط°ظƒط± ظˆط§ظ„ظپظ‡ظ…</div>
+        <div class="vtags">
+          <span class="vt">ظٹط°ظƒط±</span><span class="vt">ظٹط¹ط±ظگظ‘ظپ</span><span class="vt">ظٹظڈط³ظ…ظگظ‘ظٹ</span><span class="vt">ظٹطµظپ</span><span class="vt">ظٹظڈط­ط¯ظگظ‘ط¯</span><span class="vt">ظٹظڈظˆط¶ظگظ‘ط­</span><span class="vt">ظٹظڈظ„ط®ظگظ‘طµ</span><span class="vt">ظٹط´ط±ط­</span>
+        </div>
+      </div>
+
+      <div class="vcat">
+        <div class="vcat-t">ًںں، ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ط«ط§ظ†ظٹ â€” ط§ظ„طھط·ط¨ظٹظ‚ ظˆط§ظ„طھط­ظ„ظٹظ„</div>
+        <div class="vtags">
+          <span class="vt g">ظٹظڈط·ط¨ظگظ‘ظ‚</span><span class="vt g">ظٹظڈط­ظ„ظگظ‘ظ„</span><span class="vt g">ظٹط­ط³ط¨</span><span class="vt g">ظٹظڈطµظ…ظگظ‘ظ…</span><span class="vt g">ظٹظڈظ‚ط§ط±ظ†</span><span class="vt g">ظٹظڈطµظ†ظگظ‘ظپ</span><span class="vt g">ظٹظڈظ‚ظٹظگظ‘ظ…</span><span class="vt g">ظٹظڈظ…ظٹظگظ‘ط²</span><span class="vt g">ظٹط³طھط®ط¯ظ…</span><span class="vt g">ظٹظڈط¹ظگط¯ظ‘</span>
+        </div>
+      </div>
+
+      <div class="vcat">
+        <div class="vcat-t">ًںں£ ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ط«ط§ظ„ط« â€” ط§ظ„ط¥ظ†ط´ط§ط، ظˆط§ظ„ط§ط¨طھظƒط§ط±</div>
+        <div class="vtags">
+          <span class="vt pu">ظٹظڈط·ظˆظگظ‘ط±</span><span class="vt pu">ظٹط¨طھظƒط±</span><span class="vt pu">ظٹظڈظ‚ط¯ظگظ‘ظ…</span><span class="vt pu">ظٹط¨ظ†ظٹ</span><span class="vt pu">ظٹظ†طھظ‚ط¯</span><span class="vt pu">ظٹظڈط¨ط±ظ‡ظ†</span><span class="vt pu">ظٹظڈطµظٹط؛</span><span class="vt pu">ظٹط¯ط§ظپط¹</span>
+        </div>
+      </div>
+
+      <h3>ط£ظ…ط«ظ„ط© طھط·ط¨ظٹظ‚ظٹط© ظ…ظ† ط§ظ„طھط®طµطµط§طھ ط§ظ„ط£ط±ط¨ط¹ط©</h3>
+      <div class="spg">
+        <div class="sp mk">
+          <div class="sp-h">ًں“ٹ ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ</div>
+          <div class="sp-b"><strong>ظ…ط¹ط±ظپط©:</strong> ط£ظ† ظٹظڈط¹ط±ظگظ‘ظپ ط§ظ„ط·ط§ظ„ط¨ ط§ظ„ظ…ط²ظٹط¬ ط§ظ„طھط³ظˆظٹظ‚ظٹ ظˆط¹ظ†ط§طµط±ظ‡ ط§ظ„ط£ط±ط¨ط¹ط© ظپظٹ ط§ظ„ط³ظٹط§ظ‚ ط§ظ„طھط¬ط§ط±ظٹ.<br><br><strong>ظ…ظ‡ط§ط±ط©:</strong> ط£ظ† ظٹظڈط­ظ„ظگظ‘ظ„ ط§ظ„ط·ط§ظ„ط¨ ط§ط³طھط±ط§طھظٹط¬ظٹط© طھط³ط¹ظٹط± ظ…ظ†طھط¬ ظˆظٹظ‚طھط±ط­ ط¨ط¯ظٹظ„ط§ظ‹ ظ…ط¹ ط§ظ„طھط¨ط±ظٹط±.<br><br><strong>ظ‚ظٹظ…:</strong> ط£ظ† ظٹظڈط¸ظ‡ط± ط§ظ„ط·ط§ظ„ط¨ ط§ظ„ط§ظ„طھط²ط§ظ… ط¨ظ…ط¨ط§ط¯ط¦ ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„ط£ط®ظ„ط§ظ‚ظٹ ط¹ظ†ط¯ طھطµظ…ظٹظ… ط­ظ…ظ„ط© ط¥ط¹ظ„ط§ظ†ظٹط©.</div>
+        </div>
+
+        <div class="sp hr">
+          <div class="sp-h">ًں‘¥ ط§ظ„ظ…ظˆط§ط±ط¯ ط§ظ„ط¨ط´ط±ظٹط©</div>
+          <div class="sp-b"><strong>ظ…ط¹ط±ظپط©:</strong> ط£ظ† ظٹطµظپ ط§ظ„ط·ط§ظ„ط¨ ظ…ط±ط§ط­ظ„ ط¯ظˆط±ط© ط­ظٹط§ط© ط§ظ„ظ…ظˆط¸ظپ ظ…ظ† ط§ظ„ط§ط³طھظ‚ط·ط§ط¨ ط­طھظ‰ ط§ظ„ط®ط±ظˆط¬.<br><br><strong>ظ…ظ‡ط§ط±ط©:</strong> ط£ظ† ظٹظڈط¹ظگط¯ظژظ‘ ط§ظ„ط·ط§ظ„ط¨ ط®ط·ط© طھط¯ط±ظٹط¨ظٹط© ظ…طھظƒط§ظ…ظ„ط© ظ„ظ…ظˆط¸ظپ ط¬ط¯ظٹط¯ ظˆظپظ‚ ط§ط­طھظٹط§ط¬ط§طھ ط§ظ„ظˆط¸ظٹظپط©.<br><br><strong>ظ‚ظٹظ…:</strong> ط£ظ† ظٹظڈط·ط¨ظگظ‘ظ‚ ط§ظ„ط·ط§ظ„ط¨ ظ…ط¨ط§ط¯ط¦ ط§ظ„ط¹ط¯ط§ظ„ط© ط¹ظ†ط¯ ط§طھط®ط§ط° ظ‚ط±ط§ط±ط§طھ ط§ظ„طھط±ظ‚ظٹط© ظˆط§ظ„ظ…ظƒط§ظپط£ط©.</div>
+        </div>
+
+        <div class="sp ac">
+          <div class="sp-h">ًں“’ ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط©</div>
+          <div class="sp-b"><strong>ظ…ط¹ط±ظپط©:</strong> ط£ظ† ظٹظڈط­ط¯ظگظ‘ط¯ ط§ظ„ط·ط§ظ„ط¨ ط§ظ„ظپط±ظ‚ ط¨ظٹظ† ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ†ظ‚ط¯ظٹط© ظˆظ…ط­ط§ط³ط¨ط© ط§ظ„ط§ط³طھط­ظ‚ط§ظ‚.<br><br><strong>ظ…ظ‡ط§ط±ط©:</strong> ط£ظ† ظٹظڈط¹ظگط¯ظژظ‘ ط§ظ„ط·ط§ظ„ط¨ ظ‚ظˆط§ط¦ظ… ظ…ط§ظ„ظٹط© ظ„ظ…ظ†ط´ط£ط© طھط¬ط§ط±ظٹط© طµط؛ظٹط±ط© ظˆظپظ‚ ط§ظ„ظ…ط¹ط§ظٹظٹط± ط§ظ„ظ…ط­ط§ط³ط¨ظٹط©.<br><br><strong>ظ‚ظٹظ…:</strong> ط£ظ† ظٹظ„طھط²ظ… ط§ظ„ط·ط§ظ„ط¨ ط¨ظ…ط¹ط§ظٹظٹط± ط§ظ„ط´ظپط§ظپظٹط© ط¹ظ†ط¯ ط¥ط¹ط¯ط§ط¯ ط§ظ„طھظ‚ط§ط±ظٹط± ط§ظ„ظ…ط§ظ„ظٹط©.</div>
+        </div>
+
+        <div class="sp sy">
+          <div class="sp-h">âڑ–ï¸ڈ ط§ظ„ط£ظ†ط¸ظ…ط©</div>
+          <div class="sp-b"><strong>ظ…ط¹ط±ظپط©:</strong> ط£ظ† ظٹظڈظˆط¶ظگظ‘ط­ ط§ظ„ط·ط§ظ„ط¨ ط§ظ„ظپط±ظ‚ ط¨ظٹظ† ط§ظ„ظ„ظˆط§ط¦ط­ ظˆط§ظ„ط£ظ†ط¸ظ…ط© ظˆطھط±طھظٹط¨ظ‡ط§ ظپظٹ ط§ظ„ظ‡ط±ظ… ط§ظ„طھط´ط±ظٹط¹ظٹ.<br><br><strong>ظ…ظ‡ط§ط±ط©:</strong> ط£ظ† ظٹظڈط­ظ„ظگظ‘ظ„ ط§ظ„ط·ط§ظ„ط¨ ط¹ظ‚ط¯ط§ظ‹ طھط¬ط§ط±ظٹط§ظ‹ ظˆظٹظڈط­ط¯ظگظ‘ط¯ ط§ظ„ط¨ظ†ظˆط¯ ط؛ظٹط± ط§ظ„ظ…طھظˆط§ظپظ‚ط© ظ…ط¹ ط§ظ„ظ†ط¸ط§ظ….<br><br><strong>ظ‚ظٹظ…:</strong> ط£ظ† ظٹظڈط¸ظ‡ط± ط§ظ„ط·ط§ظ„ط¨ ط§ظ„ط§ظ„طھط²ط§ظ… ط¨ظ…ط¨ط§ط¯ط¦ ط³ظٹط§ط¯ط© ط§ظ„ظ‚ط§ظ†ظˆظ† ط¹ظ†ط¯ طھظ‚ط¯ظٹظ… ط§ظ„ط§ط³طھط´ط§ط±ط©.</div>
+        </div>
+      </div>
+
+      <h3>ظ‚ط§ط¦ظ…ط© ظ…ط±ط§ط¬ط¹ط© ط§ظ„طµظٹط§ط؛ط©</h3>
+      <ul class="cl">
+        <li>طھط¨ط¯ط£ ط¨ظپط¹ظ„ ظ‚ط§ط¨ظ„ ظ„ظ„ظ‚ظٹط§ط³ ظˆط§ظ„ظ…ظ„ط§ط­ط¸ط© â€” ظˆظ„ظٹط³ "ظٹظپظ‡ظ…" ط£ظˆ "ظٹظڈظ‚ط¯ظگظ‘ط±"</li>
+        <li>طھطµظپ ط£ط¯ط§ط، ط§ظ„ط·ط§ظ„ط¨ ظˆظ„ظٹط³ ط£ط¯ط§ط، ط§ظ„ظ…ط¹ظ„ظ…</li>
+        <li>طھطµظپ ظ†طھظٹط¬ط© ط§ظ„طھط¹ظ„ظ… ظˆظ„ظٹط³ ط¹ظ…ظ„ظٹط© ط§ظ„طھط¯ط±ظٹط³</li>
+        <li>ظ…ط­ط¯ط¯ط© ظˆظˆط§ط¶ط­ط© ظˆظ„ظٹط³طھ ط¹ط§ظ…ط© ط£ظˆ ظˆط§ط³ط¹ط©</li>
+        <li>ظ‚ط§ط¨ظ„ط© ظ„ظ„ظ‚ظٹط§ط³ ظˆطھطµظپ ظ†طھظٹط¬ط© ظ…ظ„ظ…ظˆط³ط© ظٹظ…ظƒظ† ظ…ظ„ط§ط­ط¸طھظ‡ط§</li>
+        <li>ظ…ظƒطھظˆط¨ط© ط¨طµظٹط؛ط©: "ط£ظ† ظٹظƒظˆظ† ط§ظ„ط·ط§ظ„ط¨ ظ‚ط§ط¯ط±ط§ظ‹ ط¹ظ„ظ‰ + ظپط¹ظ„ + ظ…ط­طھظˆظ‰"</li>
+        <li>ظ…طھظ†ظˆط¹ط© ط¨ظٹظ† ط§ظ„ظ…ط¬ط§ظ„ط§طھ ط§ظ„ط«ظ„ط§ط«ط© (ظ…ط¹ط±ظپط© + ظ…ظ‡ط§ط±ط§طھ + ظ‚ظٹظ…)</li>
+      </ul>
+    </div>
+        <div class="sec" id="s5">
+      <div class="sec-hd">
+        <div class="sec-n">ظ¥</div>
+        <div>
+          <div class="sec-t">ط£ط®ط·ط§ط، ط´ط§ط¦ط¹ط© ظپظٹ ط§ظ„طµظٹط§ط؛ط© ظ…ط¹ ط§ظ„طھطµط­ظٹط­</div>
+          <div class="sec-s">طھط¹ظ„ظ… ظ…ظ† ط§ظ„ط£ظ…ط«ظ„ط© ط§ظ„ط®ط§ط·ط¦ط© ظˆط§ظ„طµط­ظٹط­ط© ظ…ظ† ط§ظ„طھط®طµطµط§طھ ط§ظ„ط£ط±ط¨ط¹ط©</div>
+        </div>
+      </div>
+
+      <div class="box bd">
+        <div class="bt">ًںڑ« ط£ظپط¹ط§ظ„ ظٹط¬ط¨ طھط¬ظ†ط¨ظ‡ط§ â€” ط؛ظٹط± ظ‚ط§ط¨ظ„ط© ظ„ظ„ظ‚ظٹط§ط³</div>
+        ظٹظپظ‡ظ… â€” ظٹظڈظ‚ط¯ظگظ‘ط± â€” ظٹظڈط¯ط±ظƒ â€” ظٹط¹ظ„ظ… â€” ظٹط¤ظ…ظ† â€” ظٹط´ط¹ط± â€” ظٹط³طھظˆط¹ط¨ â€” ظٹطھط¹ط±ظپ ط¹ظ„ظ‰
+      </div>
+
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„طھط®طµطµ</th>
+            <th>â‌Œ ط§ظ„طµظٹط§ط؛ط© ط§ظ„ط®ط§ط·ط¦ط©</th>
+            <th>âœ… ط§ظ„طµظٹط§ط؛ط© ط§ظ„طµط­ظٹط­ط©</th>
+            <th>ط³ط¨ط¨ ط§ظ„طھطµط­ظٹط­</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ</td><td>ط£ظ† ظٹظپظ‡ظ… ط§ظ„ط·ط§ظ„ط¨ ط£ظ‡ظ…ظٹط© ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„ط±ظ‚ظ…ظٹ</td><td>ط£ظ† ظٹظڈطµظ…ظگظ‘ظ… ط§ظ„ط·ط§ظ„ط¨ ط­ظ…ظ„ط© طھط³ظˆظٹظ‚ظٹط© ط±ظ‚ظ…ظٹط© ظ„ظ…ظ†طھط¬ ظ…ط­ط¯ط¯ ط¨ط§ط³طھط®ط¯ط§ظ… ظ…ظ†طµط© ظˆط§ط­ط¯ط© ط¹ظ„ظ‰ ط§ظ„ط£ظ‚ظ„</td><td>"ظٹظپظ‡ظ…" ظ„ط§ ظٹظڈط±ظ‰ â€” "ظٹظڈطµظ…ظگظ‘ظ…" ظٹظ…ظƒظ† طھظ‚ظٹظٹظ…ظ‡</td></tr>
+          <tr><td>ط§ظ„ظ…ظˆط§ط±ط¯ ط§ظ„ط¨ط´ط±ظٹط©</td><td>ط£ظ† ظٹطھط¹ط±ظپ ط§ظ„ط·ط§ظ„ط¨ ط¹ظ„ظ‰ ظ‚ظˆط§ظ†ظٹظ† ط§ظ„ط¹ظ…ظ„</td><td>ط£ظ† ظٹظڈط·ط¨ظگظ‘ظ‚ ط§ظ„ط·ط§ظ„ط¨ ط£ط­ظƒط§ظ… ظ†ط¸ط§ظ… ط§ظ„ط¹ظ…ظ„ ط§ظ„ط³ط¹ظˆط¯ظٹ ط¹ظ„ظ‰ ط­ط§ظ„ط© ظ†ط²ط§ط¹ ظˆط¸ظٹظپظٹ ظ…ط­ط¯ط¯ط©</td><td>"ظٹطھط¹ط±ظپ" ط؛ط§ظ…ط¶ â€” "ظٹظڈط·ط¨ظگظ‘ظ‚" ظ†ط§طھط¬ ظ…ظ„ظ…ظˆط³</td></tr>
+          <tr><td>ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط©</td><td>ط£ظ† ظٹظڈظ‚ط¯ظگظ‘ط± ط§ظ„ط·ط§ظ„ط¨ ط£ظ‡ظ…ظٹط© ط§ظ„ظ‚ظˆط§ط¦ظ… ط§ظ„ظ…ط§ظ„ظٹط©</td><td>ط£ظ† ظٹظڈط­ظ„ظگظ‘ظ„ ط§ظ„ط·ط§ظ„ط¨ ط§ظ„ظ‚ظˆط§ط¦ظ… ط§ظ„ظ…ط§ظ„ظٹط© ظ„ط´ط±ظƒط© ظˆظٹظڈط­ط¯ظگظ‘ط¯ ظ…ط¤ط´ط±ط§طھ ط§ظ„ط£ط¯ط§ط، ط§ظ„ط±ط¦ظٹط³ظٹط©</td><td>"ظٹظڈظ‚ط¯ظگظ‘ط±" ظ„ط§ ظٹظڈظ‚ط§ط³ â€” "ظٹظڈط­ظ„ظگظ‘ظ„ ظˆظٹظڈط­ط¯ظگظ‘ط¯" ظ†طھط§ط¦ط¬ ظ…ظ„ظ…ظˆط³ط©</td></tr>
+          <tr><td>ط§ظ„ط£ظ†ط¸ظ…ط©</td><td>ط£ظ† ظٹط¹ظ„ظ… ط§ظ„ط·ط§ظ„ط¨ ط§ظ„ط£ظ†ط¸ظ…ط© ط§ظ„طھط¬ط§ط±ظٹط©</td><td>ط£ظ† ظٹظڈظ‚ط§ط±ظ† ط§ظ„ط·ط§ظ„ط¨ ط¨ظٹظ† ط§ظ„ط´ط±ظƒط© ط°ط§طھ ط§ظ„ظ…ط³ط¤ظˆظ„ظٹط© ط§ظ„ظ…ط­ط¯ظˆط¯ط© ظˆط§ظ„ظ…ط¤ط³ط³ط© ط§ظ„ظپط±ط¯ظٹط© ظˆظپظ‚ ظ†ط¸ط§ظ… ط§ظ„ط´ط±ظƒط§طھ</td><td>"ظٹط¹ظ„ظ…" ظ„ط§ ظٹط­ط¯ط¯ ط§ظ„ظ†ط§طھط¬ â€” "ظٹظڈظ‚ط§ط±ظ†" ظ…ط­ط¯ط¯ ظˆظ‚ط§ط¨ظ„ ظ„ظ„ظ‚ظٹط§ط³</td></tr>
+          <tr><td>ط§ظ„ظ…ظˆط§ط±ط¯ ط§ظ„ط¨ط´ط±ظٹط©</td><td>ط³ط£ظڈط¯ط±ظگظ‘ط³ ط§ظ„ط·ظ„ط§ط¨ ظƒظٹظپظٹط© طھظ‚ظٹظٹظ… ط§ظ„ط£ط¯ط§ط،</td><td>ط£ظ† ظٹظڈط¹ظگط¯ظژظ‘ ط§ظ„ط·ط§ظ„ط¨ ظ†ظ…ظˆط°ط¬ طھظ‚ظٹظٹظ… ط£ط¯ط§ط، ظ…ظˆط¸ظپ ط¨ط§ط³طھط®ط¯ط§ظ… ظ…ط¹ط§ظٹظٹط± ظ‚ط§ط¨ظ„ط© ظ„ظ„ظ‚ظٹط§ط³</td><td>ط§ظ„ط£ظˆظ„ظ‰ ظ‡ط¯ظپ ظ„ظ„ظ…ط¹ظ„ظ… â€” ط§ظ„ط«ط§ظ†ظٹط© ظ†ط§طھط¬ ظ„ظ„ط·ط§ظ„ط¨</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="part">
+      <div class="part-num">ط¨</div>
+      <div>
+        <div class="part-title">ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظˆطھط­ظ„ظٹظ„ ط§ظ„ظ†طھط§ط¦ط¬</div>
+        <div class="part-sub">ظ…ظ† ط§ظ„ط£ط¯ظˆط§طھ ط¥ظ„ظ‰ ط§ظ„ط­ط³ط§ط¨ ط¥ظ„ظ‰ ط§طھط®ط§ط° ط§ظ„ظ‚ط±ط§ط±</div>
+      </div>
+    </div>
+
+    <div class="sec" id="s7">
+      <div class="sec-hd">
+        <div class="sec-n gold">ظ§</div>
+        <div>
+          <div class="sec-t">ط§ظ„ظپط±ظ‚ ط¨ظٹظ† ط§ظ„ظ‚ظٹط§ط³ ظˆط§ظ„طھظ‚ظٹظٹظ…</div>
+          <div class="sec-s">ظ…ظپظ‡ظˆظ…ط§ظ† ظ…ط®طھظ„ظپط§ظ† ظٹط¹ظ…ظ„ ظƒظ„ ظ…ظ†ظ‡ظ…ط§ ظپظٹ ظ…ط±ط­ظ„ط© ظ…ط®طھظ„ظپط©</div>
+        </div>
+      </div>
+
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ط¹ظ†طµط±</th>
+            <th>ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط§ظ„طھظ‚ظٹظٹظ…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>ط§ظ„طھط¹ط±ظٹظپ</strong></td><td>ط¬ظ…ط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆطھط­ظˆظٹظ„ ط§ظ„ط£ط¯ط§ط، ط¥ظ„ظ‰ ط£ط±ظ‚ط§ظ… ظˆظ†ط³ط¨</td><td>ط¥طµط¯ط§ط± ط­ظƒظ… ط¹ظ„ظ‰ ط§ظ„ظ†طھط§ط¦ط¬ ظˆط§طھط®ط§ط° ظ‚ط±ط§ط±</td></tr>
+          <tr><td><strong>ط§ظ„ظ‡ط¯ظپ</strong></td><td>ظ…ط¹ط±ظپط© ظ…ط³طھظˆظ‰ طھط­ظ‚ظ‚ ط§ظ„ظ†ط§طھط¬</td><td>طھط­ط¯ظٹط¯ ط§ظ„ط­ط§ط¬ط© ظ„ظ„طھط­ط³ظٹظ† ط£ظˆ ط§ظ„طھط·ظˆظٹط±</td></tr>
+          <tr><td><strong>ط§ظ„ظ…ط®ط±ط¬ط§طھ</strong></td><td>ظ†ط³ط¨ â€” ظ…طھظˆط³ط·ط§طھ â€” ظ…ط³طھظˆظٹط§طھ ط£ط¯ط§ط،</td><td>طھظˆطµظٹط§طھ â€” ظ‚ط±ط§ط±ط§طھ â€” ط®ط·ط· طھط­ط³ظٹظ†</td></tr>
+          <tr><td><strong>ظ…ط«ط§ظ„</strong></td><td>ظ†ط³ط¨ط© طھط­ظ‚ظ‚ ط§ظ„ظ†ط§طھط¬ = ظ§ظ¥ظھ</td><td>ط§ظ„ظ†طھظٹط¬ط© ظ…ط­ظ‚ظ‚ط© ظˆطھط¬ط§ظˆط²طھ ط§ظ„ظ…ط³طھظ‡ط¯ظپ âœ…</td></tr>
+        </tbody>
+      </table>
+
+      <div class="def">
+        <h3>ط§ظ„ظ‚ط§ط¹ط¯ط© ط§ظ„ط£ط³ط§ط³ظٹط©</h3>
+        <p><strong>ط§ظ„ظ‚ظٹط§ط³</strong> ظٹط¬ظٹط¨ ط¹ظ†: "ظƒظ… ط¨ظ„ط؛طھ ط§ظ„ظ†طھظٹط¬ط©طں"<br><strong>ط§ظ„طھظ‚ظٹظٹظ…</strong> ظٹط¬ظٹط¨ ط¹ظ†: "ظ‡ظ„ ظ‡ط°ظ‡ ط§ظ„ظ†طھظٹط¬ط© ط¬ظٹط¯ط© ط£ظ… طھط­طھط§ط¬ طھط­ط³ظٹظ†ط§ظ‹طں"</p>
+      </div>
+
+      <h3>ط£ظ†ظˆط§ط¹ ط§ظ„ظ‚ظٹط§ط³</h3>
+      <div class="g2">
+        <div class="card">
+          <div class="card-h" style="background:var(--p);">ًں“ڈ ط§ظ„ظ‚ظٹط§ط³ ط§ظ„ظ…ط¨ط§ط´ط±</div>
+          <div class="card-b">
+            ظٹظڈظ‚ظٹظگظ‘ظ… ط£ط¯ط§ط، ط§ظ„ط·ط§ظ„ط¨ ط§ظ„ظپط¹ظ„ظٹ â€” ظ‡ظˆ ط§ظ„ظ…ط¤ط´ط± ط§ظ„ط£ط¯ظ‚.
+            <br><br>
+            <strong>ط£ط¯ظˆط§طھظ‡:</strong>
+            <ul style="padding-right:16px;margin-top:8px;">
+              <li>ط§ط®طھط¨ط§ط±ط§طھ طھط­ط±ظٹط±ظٹط© ظˆط´ظپظ‡ظٹط©</li>
+              <li>ظ…ط´ط§ط±ظٹط¹ ظˆط£ط¨ط­ط§ط«</li>
+              <li>ط¹ط±ظˆط¶ طھظ‚ط¯ظٹظ…ظٹط©</li>
+              <li>ظ…ظ„ظپط§طھ ط§ظ„ط¥ظ†ط¬ط§ط² (Portfolio)</li>
+              <li>طھط¯ط±ظٹط¨ ظ…ظٹط¯ط§ظ†ظٹ ظˆط¹ظ…ظ„ظٹ</li>
+              <li>ظˆط§ط¬ط¨ط§طھ ظˆط¯ط±ط§ط³ط§طھ ط­ط§ظ„ط©</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h" style="background:var(--g);">ًں“‹ ط§ظ„ظ‚ظٹط§ط³ ط؛ظٹط± ط§ظ„ظ…ط¨ط§ط´ط±</div>
+          <div class="card-b">
+            ظٹط¹طھظ…ط¯ ط¹ظ„ظ‰ ط¢ط±ط§ط، ط§ظ„ط£ط·ط±ط§ظپ ط°ظˆظٹ ط§ظ„ط¹ظ„ط§ظ‚ط©.
+            <br><br>
+            <strong>ط£ط¯ظˆط§طھظ‡:</strong>
+            <ul style="padding-right:16px;margin-top:8px;">
+              <li>ط§ط³طھط¨ط§ظ†ط© ط§ظ„ط®ط±ظٹط¬ظٹظ†</li>
+              <li>ط§ط³طھط¨ط§ظ†ط© ط£ط±ط¨ط§ط¨ ط§ظ„ط¹ظ…ظ„</li>
+              <li>ط§ط³طھط¨ط§ظ†ط© طھظ‚ظˆظٹظ… ط§ظ„ظ…ظ‚ط±ط±ط§طھ (ط§ظ„ط·ظ„ط§ط¨)</li>
+              <li>ط§ظ„طھظ‚ظٹظٹظ… ط§ظ„ط°ط§طھظٹ ظ„ظ„ط·ط§ظ„ط¨</li>
+            </ul>
+            <br>
+            <strong>ظٹظڈط¬ط±ظ‰:</strong> ظ‚ط¨ظ„ ط§ظ„ط³ظ†ط© ط§ظ„ظ†ظ‡ط§ط¦ظٹط© ظ…ظ† ط§ظ„ط®ط·ط©.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec" id="s8">
+      <div class="sec-hd">
+        <div class="sec-n gold">ظ¨</div>
+        <div>
+          <div class="sec-t">ظƒظٹظپظٹط© ط­ط³ط§ط¨ ظ†ط³ط¨ط© طھط­ظ‚ظ‚ ظ†ط§طھط¬ ط§ظ„طھط¹ظ„ظ…</div>
+          <div class="sec-s">ط§ظ„ظ…ط¹ط§ط¯ظ„ط© ط§ظ„ط±ط³ظ…ظٹط© ط§ظ„ظ…ط¹طھظ…ط¯ط© â€” ط®ط·ظˆط§طھ ظˆط§ط¶ط­ط© ظ…ط¹ ط£ظ…ط«ظ„ط©</div>
+        </div>
+      </div>
+
+      <p>طھظڈط­ط³ط¨ ظ†ط³ط¨ط© طھط­ظ‚ظ‚ ظ†ط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ط¹ط¨ط± <strong>ط«ظ„ط§ط« ط®ط·ظˆط§طھ ظ…طھط³ظ„ط³ظ„ط©</strong>:</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="sn">ط£</div>
+          <div class="sc">
+            <h4>ظپظٹ ظƒظ„ ظ…ظ‚ط±ط± ظ…ط±طھط¨ط· â€” ط§ط­ط³ط¨ ظ†ط³ط¨ط© ط§ظ„طھط­ظ‚ظ‚</h4>
+            <div class="fml">ظ†ط³ط¨ط© ط§ظ„طھط­ظ‚ظ‚ ظپظٹ ط§ظ„ظ…ظ‚ط±ط± = <span class="num">(ظ…ط¬ظ…ظˆط¹ ط¯ط±ط¬ط§طھ ط§ظ„ط·ظ„ط§ط¨ أ· ط¹ط¯ط¯ ط§ظ„ط·ظ„ط§ط¨) أ· ط§ظ„ط¯ط±ط¬ط© ط§ظ„ظƒظ„ظٹط© أ— ظ،ظ ظ </span></div>
+
+            <div class="ex">
+              <div class="ex-h">ًں“ٹ ظ…ط«ط§ظ„ â€” ظ…ظ‚ط±ط± ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط© / ظ†ط§طھط¬ ظ…ظ،: ط¥ط¹ط¯ط§ط¯ ط§ظ„ظ‚ظˆط§ط¦ظ… ط§ظ„ظ…ط§ظ„ظٹط©</div>
+              <div class="ex-b" style="font-size:13px;">
+                <p>ط£ط¯ط§ط© ط§ظ„ظ‚ظٹط§ط³: ظˆط§ط¬ط¨ ط¥ط¹ط¯ط§ط¯ ظ…ظٹط²ط§ظ†ظٹط© â€” ط§ظ„ط¯ط±ط¬ط© ط§ظ„ظƒظ„ظٹط© = ظ¢ظ </p>
+
+                <table class="tbl" style="font-size:12px;">
+                  <thead>
+                    <tr>
+                      <th>ط§ظ„ط·ط§ظ„ط¨</th>
+                      <th>ط§ظ„ط¯ط±ط¬ط©/ظ¢ظ </th>
+                      <th>ط§ظ„ظ†ط³ط¨ط©</th>
+                      <th>ط¨ظ„ط؛ ظ§ظ ظھطں</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>ط·ط§ظ„ط¨ ظ،</td><td>ظ،ظ¦</td><td>ظ¨ظ ظھ</td><td class="cok">âœ“</td></tr>
+                    <tr><td>ط·ط§ظ„ط¨ ظ¢</td><td>ظ،ظ¢</td><td>ظ¦ظ ظھ</td><td class="cno">âœ—</td></tr>
+                    <tr><td>ط·ط§ظ„ط¨ ظ£</td><td>ظ،ظ¨</td><td>ظ©ظ ظھ</td><td class="cok">âœ“</td></tr>
+                    <tr><td>ط·ط§ظ„ط¨ ظ¤</td><td>ظ،ظ¤</td><td>ظ§ظ ظھ</td><td class="cok">âœ“</td></tr>
+                    <tr><td>ط·ط§ظ„ط¨ ظ¥</td><td>ظ،ظ¥</td><td>ظ§ظ¥ظھ</td><td class="cok">âœ“</td></tr>
+                    <tr><td>ط·ط§ظ„ط¨ ظ¦</td><td>ظ،ظ،</td><td>ظ¥ظ¥ظھ</td><td class="cno">âœ—</td></tr>
+                    <tr><td>ط·ط§ظ„ط¨ ظ§</td><td>ظ،ظ§</td><td>ظ¨ظ¥ظھ</td><td class="cok">âœ“</td></tr>
+                    <tr><td>ط·ط§ظ„ط¨ ظ¨</td><td>ظ،ظ£</td><td>ظ¦ظ¥ظھ</td><td class="cno">âœ—</td></tr>
+                    <tr><td>ط·ط§ظ„ط¨ ظ©</td><td>ظ،ظ¦</td><td>ظ¨ظ ظھ</td><td class="cok">âœ“</td></tr>
+                    <tr><td>ط·ط§ظ„ط¨ ظ،ظ </td><td>ظ،ظ¨</td><td>ظ©ظ ظھ</td><td class="cok">âœ“</td></tr>
+                  </tbody>
+                </table>
+
+                <div class="fml" style="font-size:13px;margin-top:10px;">
+                  ط§ظ„ظ…طھظˆط³ط· = ظ،ظ¥ظ  أ· ظ،ظ  = ظ،ظ¥ &nbsp;|&nbsp; ظ†ط³ط¨ط© ط§ظ„طھط­ظ‚ظ‚ = ظ،ظ¥ أ· ظ¢ظ  أ— ظ،ظ ظ  = <span class="num">ظ§ظ¥ظھ</span>
+                </div>
+
+                <div class="box bi">
+                  <div class="bt">ًں“Œ ط§ظ„ط·ط±ظٹظ‚ط© ط§ظ„ظ…ظˆط§ط²ظٹط© â€” ط¹ط¯ط¯ ط§ظ„ط·ظ„ط§ط¨ ط§ظ„ط°ظٹظ† ط¨ظ„ط؛ظˆط§ ط§ظ„ظ…ط³طھظ‡ط¯ظپ</div>
+                  ط§ظ„ط·ظ„ط§ط¨ ط§ظ„ط°ظٹظ† ط­طµظ„ظˆط§ ط¹ظ„ظ‰ ظ§ظ ظھ ظپط£ط¹ظ„ظ‰ = ظ§ ظ…ظ† ظ،ظ  = <strong>ظ§ظ ظھ</strong> â€” ظٹط³ط§ظˆظٹ ط§ظ„ظ…ط³طھظ‡ط¯ظپ âœ…
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="sn">ط¨</div>
+          <div class="sc">
+            <h4>ط§ط¬ظ…ط¹ ظ†ط³ط¨ ط§ظ„طھط­ظ‚ظ‚ ظ…ظ† ط¬ظ…ظٹط¹ ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط±طھط¨ط·ط© ط¨ط§ظ„ظ†ط§طھط¬</h4>
+            <div class="ex">
+              <div class="ex-h">ًں“ٹ ظ…ط«ط§ظ„ â€” ظ†ط§طھط¬ ظ…ظ، ظپظٹ ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط© ظپظٹ ظ£ ظ…ظ‚ط±ط±ط§طھ</div>
+              <div class="ex-b">
+                <table class="tbl" style="font-size:13px;">
+                  <thead>
+                    <tr>
+                      <th>ط§ظ„ظ…ظ‚ط±ط±</th>
+                      <th>ظ†ط³ط¨ط© ط§ظ„طھط­ظ‚ظ‚</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط© ظ،</td><td style="text-align:center;font-weight:700;">ظ§ظ¥ظھ</td></tr>
+                    <tr><td>ظ…ط­ط§ط³ط¨ط© ط§ظ„طھظƒط§ظ„ظٹظپ</td><td style="text-align:center;font-weight:700;">ظ¦ظ¨ظھ</td></tr>
+                    <tr><td>ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط© ظ¢</td><td style="text-align:center;font-weight:700;">ظ§ظ©ظھ</td></tr>
+                    <tr><td><strong>ط§ظ„ظ…ط¬ظ…ظˆط¹</strong></td><td style="text-align:center;font-weight:800;color:var(--p);">ظ¢ظ¢ظ¢ظھ</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="sn">ط¬</div>
+          <div class="sc">
+            <h4>ظ‚ط³ظگظ‘ظ… ط§ظ„ظ…ط¬ظ…ظˆط¹ ط¹ظ„ظ‰ ط¹ط¯ط¯ ط§ظ„ظ…ظ‚ط±ط±ط§طھ â€” ط§ظ„ظ†طھظٹط¬ط© ظ‡ظٹ ظ†ط³ط¨ط© طھط­ظ‚ظ‚ ظ†ط§طھط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</h4>
+            <div class="fml">ظ†ط³ط¨ط© طھط­ظ‚ظ‚ ظ†ط§طھط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ (ظ…ظ،) = <span class="num">ظ¢ظ¢ظ¢ أ· ظ£ = ظ§ظ¤ظھ</span></div>
+            <div class="box bs"><div class="bt">âœ… ط§ظ„ط­ظƒظ…: ط§ظ„ظ†ط§طھط¬ ظ…طھط­ظ‚ظ‚</div>ط§ظ„ظ†ط³ط¨ط© ط§ظ„ظپط¹ظ„ظٹط© = ظ§ظ¤ظھ | ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط© = ظ§ظ ظھ â€” طھط¬ط§ظˆط²طھ ط§ظ„ظ…ط³طھظ‡ط¯ظپ ط¨ظ€ ظ¤ظھ âœ“</div>
+            <div class="box bd"><div class="bt">âڑ ï¸ڈ ظ…ط«ط§ظ„ ط­ط§ظ„ط© ط§ظ„ظپط´ظ„</div>ظ„ظˆ ظƒط§ظ†طھ ط§ظ„ظ†طھظٹط¬ط© = ظ¦ظ¥ظھ ظˆط§ظ„ظ…ط³طھظ‡ط¯ظپ = ظ§ظ ظھ â†گ ط§ظ„ظ†ط§طھط¬ ط؛ظٹط± ظ…طھط­ظ‚ظ‚ â†گ ط®ط·ط© طھط­ط³ظٹظ† ظˆط§ط¬ط¨ط© ظپظˆط±ط§ظ‹</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>ط¬ط¯ظˆظ„ طھظپط³ظٹط± ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ط­ط§ظ„ط©</th>
+            <th>ط§ظ„طھظپط³ظٹط±</th>
+            <th>ط§ظ„ط¥ط¬ط±ط§ط،</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط§ظ„ظ†ط³ط¨ط© â‰¥ ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</td><td class="cok">ط§ظ„ظ†ط§طھط¬ ظ…طھط­ظ‚ظ‚ âœ…</td><td>طھظˆط«ظٹظ‚ ط§ظ„ظ†ط¬ط§ط­ + ط§ظ„ط­ظپط§ط¸ ط¹ظ„ظ‰ ط§ظ„ظ…ط³طھظˆظ‰</td></tr>
+          <tr><td>ط§ظ„ظ†ط³ط¨ط© ط£ظ‚ظ„ ظ…ظ† ط§ظ„ظ…ط³طھظ‡ط¯ظپ ط¨ظ€ ظ،â€“ظ¥ظھ</td><td style="background:#fef9e8;color:var(--g);font-weight:700;text-align:center;">ظ‚ط±ظٹط¨ ظ…ظ† ط§ظ„ظ…ط³طھظ‡ط¯ظپ âڑ،</td><td>ظ…ط±ط§ط¬ط¹ط© ظˆط®ط·ط© طھط­ط³ظٹظ† ط¨ط³ظٹط·ط©</td></tr>
+          <tr><td>ط§ظ„ظ†ط³ط¨ط© ط£ظ‚ظ„ ظ…ظ† ط§ظ„ظ…ط³طھظ‡ط¯ظپ ط¨ط£ظƒط«ط± ظ…ظ† ظ¥ظھ</td><td class="cno">ط¯ظˆظ† ط§ظ„ظ…ط³طھظ‡ط¯ظپ â‌Œ</td><td>ط®ط·ط© طھط­ط³ظٹظ† ظپظˆط±ظٹط© ظˆط´ط§ظ…ظ„ط©</td></tr>
+          <tr><td>ط§ظ„ظ†ط³ط¨ط© ظ…ظ†ط®ظپط¶ط© ط¬ط¯ط§ظ‹</td><td style="background:#fdeaea;color:var(--red);font-weight:700;text-align:center;">ظپط¬ظˆط© ظƒط¨ظٹط±ط© ًںڑ¨</td><td>طھط¯ط®ظ„ ط¹ط§ط¬ظ„ + ظ…ط±ط§ط¬ط¹ط© طھطµظ…ظٹظ… ط§ظ„ظ…ظ‚ط±ط±</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec" id="s10">
+      <div class="sec-hd">
+        <div class="sec-n gold">ظ،ظ </div>
+        <div>
+          <div class="sec-t">ظ‚ظٹط§ط³ ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© â€” ظ…طµظپظˆظپط§طھ ط§ظ„طھظ‚ط¯ظٹط± (Rubrics)</div>
+          <div class="sec-s">ظƒظٹظپ ظ†ظ‚ظٹط³ ظ…ط§ ظ„ط§ ظٹط¸ظ‡ط± ظپظٹ ط§ظ„ط§ط®طھط¨ط§ط±ط§طھطں</div>
+        </div>
+      </div>
+
+      <p>ظٹظڈط¹ط¯ظ‘ ظ‚ظٹط§ط³ ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط³ظ„ظˆظƒ ط§ظ„ظ…ظ‡ظ†ظٹ ظ…ظ† ط£طµط¹ط¨ ط£ظ†ظˆط§ط¹ ط§ظ„ظ‚ظٹط§ط³ط› ظ„ط£ظ†ظ‡ ظ„ط§ ظٹط¹طھظ…ط¯ ط¹ظ„ظ‰ ط§ظ„ط§ط®طھط¨ط§ط±ط§طھ ط§ظ„طھظ‚ظ„ظٹط¯ظٹط©طŒ ط¨ظ„ ظٹطھط·ظ„ط¨ ظ…ظ„ط§ط­ط¸ط© ط§ظ„ط£ط¯ط§ط، ظˆط§ظ„ط³ظ„ظˆظƒ ط§ظ„ظپط¹ظ„ظٹ.</p>
+
+      <h3>ط£ظ‡ظ… ط£ط¯ظˆط§طھ ظ‚ظٹط§ط³ ط§ظ„ظ‚ظٹظ…</h3>
+      <div class="g3">
+        <div style="background:#eef5f5;border-radius:8px;padding:12px;text-align:center;font-size:13px;">ًں‘¥ طھظ‚ظٹظٹظ… ط§ظ„ط¹ظ…ظ„ ط§ظ„ط¬ظ…ط§ط¹ظٹ</div>
+        <div style="background:#eef5f5;border-radius:8px;padding:12px;text-align:center;font-size:13px;">ًں¤‌ طھظ‚ظٹظٹظ… ط§ظ„ط£ظ‚ط±ط§ظ†</div>
+        <div style="background:#eef5f5;border-radius:8px;padding:12px;text-align:center;font-size:13px;">ًں“پ ظ…ظ„ظپ ط§ظ„ط¥ظ†ط¬ط§ط² (Portfolio)</div>
+        <div style="background:#eef5f5;border-radius:8px;padding:12px;text-align:center;font-size:13px;">ًںڈ¢ ط§ظ„طھط¯ط±ظٹط¨ ط§ظ„ظ…ظٹط¯ط§ظ†ظٹ</div>
+        <div style="background:#eef5f5;border-radius:8px;padding:12px;text-align:center;font-size:13px;">ًں‘پï¸ڈ ط§ظ„ظ…ظ„ط§ط­ط¸ط© ط§ظ„ظ…ط¨ط§ط´ط±ط©</div>
+        <div style="background:#eef5f5;border-radius:8px;padding:12px;text-align:center;font-size:13px;">âڈ° ط§ظ„ط§ظ†ط¶ط¨ط§ط· ط§ظ„ظ…ظ‡ظ†ظٹ</div>
+      </div>
+
+      <h3>ظ…ط§ ط§ظ„ظ…ظ‚طµظˆط¯ ط¨ظ…طµظپظˆظپط© ط§ظ„طھظ‚ط¯ظٹط± (Rubric)طں</h3>
+      <p>ط£ط¯ط§ط© طھظ‚ظٹظٹظ… طھطھط¶ظ…ظ† <strong>ظ…ط¹ط§ظٹظٹط± ظ…ط­ط¯ط¯ط© + ظ…ط³طھظˆظٹط§طھ ط£ط¯ط§ط، ظ…طھط¯ط±ط¬ط© + ط£ظˆطµط§ظپ ظˆط§ط¶ط­ط© ظ„ظƒظ„ ظ…ط³طھظˆظ‰</strong>. طھظڈط³طھط®ط¯ظ… ظ„ظ‚ظٹط§ط³ ط§ظ„ظ…ظ‡ط§ط±ط§طھ ظˆط§ظ„ظ…ط´ط§ط±ظٹط¹ ظˆط§ظ„ط¹ط±ظˆط¶ ظˆط§ظ„ظ‚ظٹظ… ط§ظ„ظ…ظ‡ظ†ظٹط©.</p>
+
+      <div class="box bs">
+        <div class="bt">âœ… ظپظˆط§ط¦ط¯ Rubrics</div>
+        ط±ظپط¹ ط¹ط¯ط§ظ„ط© ط§ظ„طھظ‚ظٹظٹظ… â€” طھظˆط­ظٹط¯ ط§ظ„طھطµط­ظٹط­ ط¨ظٹظ† ط§ظ„ظ…ط¯ط±ط³ظٹظ† â€” طھط³ظ‡ظٹظ„ ط§ط³طھط®ط±ط§ط¬ ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³ â€” طھط­ط³ظٹظ† ط¯ظ‚ط© طھظ‚ظٹظٹظ… ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ظ…ظ‡ط§ط±ط§طھ.
+      </div>
+
+      <h3>ظ…ط«ط§ظ„ Rubric â€” ظ†ط§طھط¬ ظ‚ظٹظ…: "ط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆطھط­ظ…ظ„ ط§ظ„ظ…ط³ط¤ظˆظ„ظٹط© ظپظٹ ظ…ط¬ط§ظ„ ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ"</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¹ظٹط§ط±</th>
+            <th>ظ، â€” ط¶ط¹ظٹظپ</th>
+            <th>ظ¢ â€” ظ…ظ‚ط¨ظˆظ„</th>
+            <th>ظ£ â€” ط¬ظٹط¯</th>
+            <th>ظ¤ â€” ظ…ظ…طھط§ط²</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>ط§ظ„ط§ظ„طھط²ط§ظ… ط¨ط§ظ„طھط³ظ„ظٹظ…</strong></td><td>ظ„ط§ ظٹظڈط³ظ„ظگظ‘ظ… ظپظٹ ط§ظ„ظˆظ‚طھ ط§ظ„ظ…ط­ط¯ط¯</td><td>ظٹطھط£ط®ط± ط£ط­ظٹط§ظ†ط§ظ‹</td><td>ظٹظڈط³ظ„ظگظ‘ظ… ظپظٹ ط§ظ„ظˆظ‚طھ ط¯ط§ط¦ظ…ط§ظ‹</td><td>ظٹظڈط³ظ„ظگظ‘ظ… ظ…ط¨ظƒط±ط§ظ‹ ط¨ط§ط³طھظ…ط±ط§ط±</td></tr>
+          <tr><td><strong>طھط­ظ…ظ„ ط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</strong></td><td>ظ„ط§ ظٹظڈط¹طھط±ظپ ط¨ط§ظ„ط£ط®ط·ط§ط،</td><td>ظٹظڈط¹طھط±ظپ ط¬ط²ط¦ظٹط§ظ‹</td><td>ظٹظڈط¹طھط±ظپ ظˆظٹظڈطµط­ظگظ‘ط­</td><td>ظٹظڈط¹طھط±ظپ ظˆظٹظڈط·ظˆظگظ‘ط± ط­ظ„ط§ظ‹ ط§ط³طھط¨ط§ظ‚ظٹط§ظ‹</td></tr>
+          <tr><td><strong>ط§ظ„ظ…ط¨ط§ط¯ط±ط©</strong></td><td>ظٹظ†طھط¸ط± ط§ظ„طھظˆط¬ظٹظ‡ ط¯ط§ط¦ظ…ط§ظ‹</td><td>ظٹط¨ط§ط¯ط± ط£ط­ظٹط§ظ†ط§ظ‹</td><td>ظٹط¨ط§ط¯ط± ط¨ط§ط³طھظ…ط±ط§ط±</td><td>ظٹظ‚ظˆط¯ ط§ظ„ظپط±ظٹظ‚ ظˆظٹظڈظ„ظ‡ظ… ط§ظ„ط¢ط®ط±ظٹظ†</td></tr>
+          <tr><td><strong>ط¬ظˆط¯ط© ط§ظ„ط¹ظ…ظ„ ط§ظ„ظ…ط³طھظ‚ظ„</strong></td><td>ط¯ظˆظ† ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ظ…ط·ظ„ظˆط¨</td><td>ظ…ظ‚ط¨ظˆظ„ ظ…ط¹ طھظˆط¬ظٹظ‡</td><td>ط¬ظٹط¯ ط¨ط§ط³طھظ‚ظ„ط§ظ„ظٹط©</td><td>ظ…طھظ…ظٹط² ظˆظ…ط¨طھظƒط±</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bw">
+        <div class="bt">ًں’، ظƒظٹظپ طھظڈط­ظˆظگظ‘ظ„ Rubric ط¥ظ„ظ‰ ظ†ط³ط¨ط©طں</div>
+        ط¥ط°ط§ ط­طµظ„ ط§ظ„ط·ط§ظ„ط¨ ط¹ظ„ظ‰ (ظ£+ظ£+ظ¤+ظ£) = ظ،ظ£ ظ…ظ† ظ،ظ¦ = <strong>ظ¨ظ،ظھ</strong>.<br>
+        ط¥ط°ط§ ظƒط§ظ† ظ…ط³طھظˆظ‰ ط§ظ„طھط­طµظٹظ„ = ظ§ظ ظھ â†گ ظ‡ط°ط§ ط§ظ„ط·ط§ظ„ط¨ ط­ظ‚ظژظ‘ظ‚ ط§ظ„ظ†ط§طھط¬ âœ…
+      </div>
+    </div>
+
+    <div class="sec" id="s11">
+      <div class="sec-hd">
+        <div class="sec-n gold">ظ،ظ،</div>
+        <div>
+          <div class="sec-t">ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„طھطھظˆظٹط¬ظٹط© ظˆط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³ ظˆط§ظ„ظˆط«ط§ط¦ظ‚</div>
+          <div class="sec-s">ط£ظ‚ظˆظ‰ ظ…طµط§ط¯ط± ط§ظ„ظ‚ظٹط§ط³ ط§ظ„ظ…ط¨ط§ط´ط± ظˆط£ظ‡ظ… ط§ظ„ط£ط¯ظ„ط© ط§ظ„ظ…ط·ظ„ظˆط¨ط©</div>
+        </div>
+      </div>
+
+      <h3>ظ…ط§ ظ‡ظٹ ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„طھطھظˆظٹط¬ظٹط©طں</h3>
+      <p>ظ‡ظٹ ظ…ظ‚ط±ط±ط§طھ ظ…طھظ‚ط¯ظ…ط© طھظڈط³طھط®ط¯ظ… ظ„ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ط¨ط´ظƒظ„ ط´ط§ظ…ظ„ ظ„ط£ظ†ظ‡ط§ طھط¬ظ…ط¹ ظ…ط§ ط§ظƒطھط³ط¨ظ‡ ط§ظ„ط·ط§ظ„ط¨ ط·ظˆط§ظ„ ط¯ط±ط§ط³طھظ‡.</p>
+
+      <div class="g2">
+        <div style="background:#eef5f5;border-radius:10px;padding:16px;">
+          <h4>ط£ظ…ط«ظ„ط© ط¹ظ„ظ‰ ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„طھطھظˆظٹط¬ظٹط©</h4>
+          <ul style="font-size:13px;padding-right:16px;">
+            <li>ًںژ“ ظ…ط´ط±ظˆط¹ ط§ظ„طھط®ط±ط¬</li>
+            <li>ًںڈ¢ ط§ظ„طھط¯ط±ظٹط¨ ط§ظ„طھط¹ط§ظˆظ†ظٹ / ط§ظ„ظ…ظٹط¯ط§ظ†ظٹ</li>
+            <li>ًں“پ ط§ظ„ظ…ط´ط§ط±ظٹط¹ ط§ظ„طھط·ط¨ظٹظ‚ظٹط© ط§ظ„ظ†ظ‡ط§ط¦ظٹط©</li>
+            <li>ًں› ï¸ڈ ط§ظ„ظƒط§ط¨ط³طھظˆظ† (Capstone Course)</li>
+          </ul>
+        </div>
+
+        <div style="background:#fef9e8;border-radius:10px;padding:16px;">
+          <h4>ظ„ظ…ط§ط°ط§ ظ‡ظٹ ط§ظ„ط£ظ‚ظˆظ‰طں</h4>
+          <ul style="font-size:13px;padding-right:16px;">
+            <li>طھظ‚ظٹط³ ط§ظ„ط£ط¯ط§ط، ط§ظ„ط­ظ‚ظٹظ‚ظٹ ظپظٹ ط³ظٹط§ظ‚ ظˆط§ظ‚ط¹ظٹ</li>
+            <li>طھط±ط¨ط· ط§ظ„ظ†ط¸ط±ظٹ ط¨ط§ظ„طھط·ط¨ظٹظ‚ظٹ</li>
+            <li>طھط¹ظƒط³ ط¬ط§ظ‡ط²ظٹط© ط§ظ„ط·ط§ظ„ط¨ ظ„ط³ظˆظ‚ ط§ظ„ط¹ظ…ظ„</li>
+            <li>طھظ‚ظٹط³ ظ†ظˆط§طھط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ط¨طµظˆط±ط© ط´ط§ظ…ظ„ط©</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>ط§ظ„ط£ط¯ظ„ط© ظˆط§ظ„ظˆط«ط§ط¦ظ‚ ط§ظ„ظ…ط·ظ„ظˆط¨ط©</h3>
+      <ul class="cl">
+        <li>ظ†ظ…ط§ط°ط¬ ط§ظ„ط§ط®طھط¨ط§ط±ط§طھ ظˆط§ظ„ظˆط§ط¬ط¨ط§طھ</li>
+        <li>Rubrics ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ط§ظ„طھطµط­ظٹط­</li>
+        <li>ظ†ظ…ط§ط°ط¬ ظ…ظ† ظ…ط´ط§ط±ظٹط¹ ط§ظ„ط·ظ„ط§ط¨ ظˆط£ط¨ط­ط§ط«ظ‡ظ…</li>
+        <li>ظ…ظ„ظپط§طھ ط§ظ„ط¥ظ†ط¬ط§ط² (Portfolio)</li>
+        <li>ظ†طھط§ط¦ط¬ ط§ظ„طھط­ظ„ظٹظ„ ط§ظ„ط¥ط­طµط§ط¦ظٹ (ظ…ظ„ظپط§طھ Excel)</li>
+        <li>طھظ‚ط§ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ظ…ظ‚ط±ط±ط§طھ</li>
+        <li>ظ†طھط§ط¦ط¬ ط§ط³طھط¨ط§ظ†ط§طھ ط§ظ„ط®ط±ظٹط¬ظٹظ† ظˆط£ط±ط¨ط§ط¨ ط§ظ„ط¹ظ…ظ„</li>
+        <li>ط¹ظٹظ†ط§طھ ظ…ظ† ط£ط¹ظ…ط§ظ„ ط§ظ„ط·ظ„ط§ط¨ ط¨ظ…ط³طھظˆظٹط§طھ ظ…ط®طھظ„ظپط©</li>
+      </ul>
+    </div>
+        <div class="part">
+      <div class="part-num">ط¬</div>
+      <div>
+        <div class="part-title">ط§ظ„ط£ط¯ظˆط§ط± ظˆط§ظ„ط¥ط¬ط±ط§ط،ط§طھ ظˆط§ظ„ظ…ط«ط§ظ„ ط§ظ„ط­ظٹ</div>
+        <div class="part-sub">ظ…ظ† ط§ظ„ظ†ط¸ط±ظٹط© ط¥ظ„ظ‰ ط§ظ„طھط·ط¨ظٹظ‚ ط§ظ„ظپط¹ظ„ظٹ</div>
+      </div>
+    </div>
+
+    <div class="sec" id="s12">
+      <div class="sec-hd">
+        <div class="sec-n pur">ظ،ظ¢</div>
+        <div>
+          <div class="sec-t">ط£ط¯ظˆط§ط± ط¹ط¶ظˆ ظ‡ظٹط¦ط© ط§ظ„طھط¯ط±ظٹط³ ظˆط§ظ„طھط³ظ„ط³ظ„ ط§ظ„ط¥ط¬ط±ط§ط¦ظٹ</div>
+          <div class="sec-s">ظ…ط§ط°ط§ ظٹط¬ط¨ ط¹ظ„ظٹظƒ ظپط¹ظ„ظ‡ طھط­ط¯ظٹط¯ط§ظ‹ â€” ط®ط·ظˆط© ط¨ط®ط·ظˆط©</div>
+        </div>
+      </div>
+
+      <h3>ظ…ط³ط¤ظˆظ„ظٹط§طھ ط¹ط¶ظˆ ظ‡ظٹط¦ط© ط§ظ„طھط¯ط±ظٹط³</h3>
+      <ul class="cl">
+        <li>طھظ†ظپظٹط° ط£ط¯ط§ط© ط§ظ„ظ‚ظٹط§ط³ ظپظٹ ط§ظ„ظˆظ‚طھ ط§ظ„ظ…ط­ط¯ط¯ ظ…ظ† ط®ط·ط© ط§ظ„ظ…ظ‚ط±ط±</li>
+        <li>طھطµط­ظٹط­ ط§ظ„ط£ط¯ط§ط، ظˆظپظ‚ Rubrics ظˆط§ط¶ط­ط© ظˆظ…ط¹ظ„ظ†ط© ظ„ظ„ط·ظ„ط§ط¨ ظ…ط³ط¨ظ‚ط§ظ‹</li>
+        <li>ط§ط³طھط®ط±ط§ط¬ ط§ظ„ظ†طھط§ط¦ط¬ ط§ظ„ط¥ط­طµط§ط¦ظٹط© ظ„ظƒظ„ ظ†ط§طھط¬</li>
+        <li>ط­ط³ط§ط¨ ظ†ط³ط¨ ط§ظ„طھط­ظ‚ظ‚ ظˆظ…ظ‚ط§ط±ظ†طھظ‡ط§ ط¨ط§ظ„ظ…ط³طھظ‡ط¯ظپ</li>
+        <li>ط¥ط¹ط¯ط§ط¯ طھظ‚ط±ظٹط± ط§ظ„ظ…ظ‚ط±ط± ظپظٹ ظ†ظ‡ط§ظٹط© ط§ظ„ظپطµظ„ ظˆطھظˆط«ظٹظ‚ ط§ظ„ظ†طھط§ط¦ط¬</li>
+        <li>ط§ظ‚طھط±ط§ط­ ط§ظ„ط¥ط¬ط±ط§ط،ط§طھ ط§ظ„طھطµط­ظٹط­ظٹط© ظˆط±ظپط¹ظ‡ط§ ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</li>
+        <li>ط­ظپط¸ ط§ظ„ط£ط¯ظ„ط© ظˆط§ظ„ظˆط«ط§ط¦ظ‚ ظ„ط¯ط¹ظ… ط§ظ„ط§ط¹طھظ…ط§ط¯ ط§ظ„ط£ظƒط§ط¯ظٹظ…ظٹ</li>
+      </ul>
+
+      <h3>ط§ظ„طھط³ظ„ط³ظ„ ط§ظ„ط¥ط¬ط±ط§ط¦ظٹ ط§ظ„ظƒط§ظ…ظ„</h3>
+      <div class="steps">
+        <div class="step"><div class="sn">ظ،</div><div class="sc"><h4>ط±ط§ط¬ط¹ ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4><p>ط­ط¯ظگظ‘ط¯: ط£ظٹظڈظ‘ ظ†ظˆط§طھط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ظٹظڈظ‚ط§ط³ ظپظٹ ظ…ظ‚ط±ط±ظƒطں ظ…ط§ ط§ظ„ظ…ط³طھظ‡ط¯ظپطں ظ…ط§ ط§ظ„ط£ط¯ط§ط© ط§ظ„ظ…ظ‚طھط±ط­ط©طں</p></div></div>
+        <div class="step"><div class="sn">ظ¢</div><div class="sc"><h4>طµظ…ظگظ‘ظ… ط£ط¯ط§ط© ط§ظ„ظ‚ظٹط§ط³ ط§ظ„ظ…ظ†ط§ط³ط¨ط©</h4><p>ط¨ظ†ط§ط،ظ‹ ط¹ظ„ظ‰ ط·ط¨ظٹط¹ط© ط§ظ„ظ†ط§طھط¬: ط§ط®طھط¨ط§ط± / ظ…ط´ط±ظˆط¹ / ط¹ط±ط¶ طھظ‚ط¯ظٹظ…ظٹ / ظˆط§ط¬ط¨ / ط¯ط±ط§ط³ط© ط­ط§ظ„ط©. ط£ط¹ط¯ظژظ‘ Rubric ظˆط§ط¶ط­ط§ظ‹ ظˆط´ط§ط±ظƒظ‡ ظ…ط¹ ط§ظ„ط·ظ„ط§ط¨ ظ…ط³ط¨ظ‚ط§ظ‹.</p></div></div>
+        <div class="step"><div class="sn">ظ£</div><div class="sc"><h4>ط·ط¨ظگظ‘ظ‚ ط§ظ„ط£ط¯ط§ط© ظˆطµط­ظگظ‘ط­ ط§ظ„ظ†طھط§ط¦ط¬</h4><p>ط·ط¨ظگظ‘ظ‚ ظپظٹ ط§ظ„ظˆظ‚طھ ط§ظ„ظ…ط­ط¯ط¯ (ط£ط³ط¨ظˆط¹ ظ،ظ  ط£ظˆ ظ،ظ¥ ط£ظˆ ظ†ظ‡ط§ظٹط© ط§ظ„ظپطµظ„). طµط­ظگظ‘ط­ ط¨ط§ط³طھط®ط¯ط§ظ… Rubric ظ„ط¶ظ…ط§ظ† ط§ظ„ظ…ظˆط¶ظˆط¹ظٹط©.</p></div></div>
+        <div class="step"><div class="sn">ظ¤</div><div class="sc"><h4>ط§ط­ط³ط¨ ظ†ط³ط¨ط© ط§ظ„طھط­ظ‚ظ‚</h4><p>ط§ط­طµط± ط¹ط¯ط¯ ط§ظ„ط·ظ„ط§ط¨ ط§ظ„ط°ظٹظ† ط¨ظ„ط؛ظˆط§ ظ…ط³طھظˆظ‰ ط§ظ„طھط­طµظٹظ„. ط§ط­ط³ط¨ ط§ظ„ظ†ط³ط¨ط©. ظ‚ط§ط±ظ†ظ‡ط§ ط¨ط§ظ„ظ…ط³طھظ‡ط¯ظپ ط§ظ„ظ…ط­ط¯ط¯ ظپظٹ ط§ظ„ط®ط·ط©.</p></div></div>
+        <div class="step"><div class="sn">ظ¥</div><div class="sc"><h4>ط§ظƒطھط¨ ط§ظ„طھط­ظ„ظٹظ„ ظˆط§ظ„طھظˆطµظٹط§طھ</h4><p>ط¥ط°ط§ طھط­ظ‚ظ‚ ط§ظ„ظ†ط§طھط¬: ظˆط«ظگظ‘ظ‚ ط§ظ„ظ†ط¬ط§ط­. ط¥ط°ط§ ظ„ظ… ظٹطھط­ظ‚ظ‚: ط­ظ„ظگظ‘ظ„ ط§ظ„ط£ط³ط¨ط§ط¨ ظˆط§ظ‚طھط±ط­ ط¥ط¬ط±ط§ط،ط§طھ طھطµط­ظٹط­ظٹط©.</p></div></div>
+        <div class="step"><div class="sn">ظ¦</div><div class="sc"><h4>ط§ط±ظپط¹ ط§ظ„طھظ‚ط±ظٹط± ط§ظ„ظ†ظ‡ط§ط¦ظٹ</h4><p>ط£ط±ط³ظ„ طھظ‚ط±ظٹط± ط§ظ„ظ…ظ‚ط±ط± ظ…ظƒطھظ…ظ„ط§ظ‹ ظ„ظ„ط¬ظ†ط© ط§ظ„ظ‚ظٹط§ط³ ط¨ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ظ…ط¹ ط§ظ„ط£ط¯ظ„ط© ط§ظ„ط¯ط§ط¹ظ…ط©.</p></div></div>
+      </div>
+
+      <h3>طھظˆط²ظٹط¹ ط§ظ„ط£ط¯ظˆط§ط± â€” ظ…ظ† ظٹظپط¹ظ„ ظ…ط§ط°ط§طں</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ط®ط·ظˆط©</th>
+            <th>ط§ظ„ظ…ظ‡ظ…ط©</th>
+            <th>ط§ظ„ظ…ط³ط¤ظˆظ„</th>
+            <th>ط§ظ„طھظˆظ‚ظٹطھ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="text-align:center;font-weight:700;">ظ،</td><td>طھط´ظƒظٹظ„ ظ„ط¬ظ†ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</td><td><strong>ظ…ط´ط±ظپ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</strong></td><td>ط¨ط¯ط§ظٹط© ط§ظ„ظپطµظ„ ط§ظ„ط£ظˆظ„</td></tr>
+          <tr><td style="text-align:center;font-weight:700;">ظ¢</td><td>ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط¨ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط±طھط¨ط·ط©</td><td><strong>ط£ط¹ط¶ط§ط، ظ‡ظٹط¦ط© ط§ظ„طھط¯ط±ظٹط³</strong></td><td>ط®ظ„ط§ظ„ ط§ظ„ظپطµظ„ظٹظ† ط§ظ„ط¯ط±ط§ط³ظٹظٹظ†</td></tr>
+          <tr><td style="text-align:center;font-weight:700;">ظ£</td><td>ط¥ط¬ط±ط§ط، ط§ط³طھط·ظ„ط§ط¹ط§طھ ط±ط£ظٹ ط§ظ„ط®ط±ظٹط¬ظٹظ† ظˆط£ط±ط¨ط§ط¨ ط§ظ„ط¹ظ…ظ„</td><td><strong>ظ„ط¬ظ†ط© ط§ظ„ظ‚ظٹط§ط³</strong></td><td>ظ†ظ‡ط§ظٹط© ط§ظ„ط¹ط§ظ… ط§ظ„ط¯ط±ط§ط³ظٹ</td></tr>
+          <tr><td style="text-align:center;font-weight:700;">ظ¤</td><td>طھط¬ظ…ظٹط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظˆط¥ط¬ط±ط§ط، ط§ظ„ط­ط³ط§ط¨ط§طھ ط§ظ„ط¥ط­طµط§ط¦ظٹط©</td><td><strong>ظ„ط¬ظ†ط© ط§ظ„ظ‚ظٹط§ط³</strong></td><td>ط¨ط¹ط¯ ظ†ظ‡ط§ظٹط© ط§ظ„ظپطµظ„ ط§ظ„ط«ط§ظ†ظٹ</td></tr>
+          <tr><td style="text-align:center;font-weight:700;">ظ¥</td><td>ط¥ط¹ط¯ط§ط¯ طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</td><td><strong>ظ„ط¬ظ†ط© ط§ظ„ظ‚ظٹط§ط³ + ظ…ط´ط±ظپ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</strong></td><td>ظ†ظ‡ط§ظٹط© ط§ظ„ط¹ط§ظ…</td></tr>
+          <tr><td style="text-align:center;font-weight:700;">ظ¦</td><td>ط±ظپط¹ ط§ظ„طھظˆطµظٹط§طھ ظˆط§ط¹طھظ…ط§ط¯ ط®ط·ط· ط§ظ„طھط­ط³ظٹظ†</td><td><strong>ط±ط¦ظٹط³ ط§ظ„ظ‚ط³ظ… + ظ…ط¬ظ„ط³ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</strong></td><td>ط¨ط¯ط§ظٹط© ط§ظ„ط¹ط§ظ… ط§ظ„طھط§ظ„ظٹ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec" id="s13">
+      <div class="sec-hd">
+        <div class="sec-n pur">ظ،ظ£</div>
+        <div>
+          <div class="sec-t">ظ…ط«ط§ظ„ ط­ظٹ ظ…طھظƒط§ظ…ظ„ ظ…ظ† ط¯ط¨ظ„ظˆظ… ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ</div>
+          <div class="sec-s">طھطھط¨ظژظ‘ط¹ ظ‚ظٹط§ط³ ظ†ط§طھط¬ (ظ…ظ£) ظ…ظ† ط§ظ„ط¨ط¯ط§ظٹط© ط¥ظ„ظ‰ ط§ظ„ظ†ظ‡ط§ظٹط©</div>
+        </div>
+      </div>
+
+      <div class="box bp">
+        <div class="bt">ًںژ¯ ط§ظ„ظ†ط§طھط¬ ط§ظ„ظ…ظڈط®طھط§ط±: ظ…ظ£ â€” ط§ظ„طھظˆط§طµظ„ ط§ظ„ظپط¹ط§ظ„</div>
+        ظ†طµ ط§ظ„ظ†ط§طھط¬: <em>"ظٹطھظˆط§طµظ„ ط¨ظپط¹ط§ظ„ظٹط© ظ…ظ† ط®ظ„ط§ظ„ ط£ط³ط§ظ„ظٹط¨ ظ…طھط¹ط¯ط¯ط© ظ„ظ†ظ‚ظ„ ط§ظ„ط£ظپظƒط§ط± ظˆط§ظ„ظ…ط¹ط§ط±ظپ ظˆط§ظ„ظ…ظ‡ط§ط±ط§طھ ظپظٹ ظ…ط¬ط§ظ„ ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ"</em><br>
+        ط§ظ„ظ…ط³طھظ‡ط¯ظپ: ظ§ظ ظھ ظ…ظ† ط§ظ„ط·ظ„ط§ط¨ ظٹط­ظ‚ظ‚ظˆظ† ظ¨ظ ظھ ظپط£ط¹ظ„ظ‰<br>
+        ط§ظ„ظ…ظ‚ط±ط±: <strong>ط¨ط­ظˆط« ط§ظ„طھط³ظˆظٹظ‚ (APAM2515T)</strong> â€” ط£ط¯ط§ط© ط§ظ„ظ‚ظٹط§ط³: ط¹ط±ط¶ طھظ‚ط¯ظٹظ…ظٹ ظ„ظ†طھط§ط¦ط¬ ط¨ط­ط« طھط³ظˆظٹظ‚ظٹ (ظ¢ظ¥ ط¯ط±ط¬ط©)
+      </div>
+
+      <h3>ط§ظ„ط®ط·ظˆط© ظ،: طھطµظ…ظٹظ… Rubric ط£ط¯ط§ط© ط§ظ„ظ‚ظٹط§ط³</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¹ظٹط§ط±</th>
+            <th>ظ، â€” ط¶ط¹ظٹظپ</th>
+            <th>ظ¢ â€” ظ…ظ‚ط¨ظˆظ„</th>
+            <th>ظ£ â€” ط¬ظٹط¯</th>
+            <th>ظ¤ â€” ظ…ظ…طھط§ط²</th>
+            <th>ط§ظ„ط¯ط±ط¬ط©</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>ظˆط¶ظˆط­ ط§ظ„ط¹ط±ط¶ ظˆطھظ†ط¸ظٹظ…ظ‡</strong></td><td>ط؛ظٹط± ظˆط§ط¶ط­ ظˆط؛ظٹط± ظ…ظ†ط¸ظ…</td><td>ظˆط§ط¶ط­ ط¬ط²ط¦ظٹط§ظ‹</td><td>ظˆط§ط¶ط­ ظˆظ…ظ†ط¸ظ…</td><td>ظˆط§ط¶ط­ ظˆظ…ظ†ط¸ظ… ظˆط§ط­طھط±ط§ظپظٹ</td><td>ظ§ ط¯ط±ط¬ط§طھ</td></tr>
+          <tr><td><strong>ط£ط³ظ„ظˆط¨ ط§ظ„طھظˆط§طµظ„ ظˆط§ظ„ط«ظ‚ط©</strong></td><td>ط¶ط¹ظٹظپ ط¬ط¯ط§ظ‹</td><td>ظ…ظ‚ط¨ظˆظ„ ظ…ط¹ ط§ط±طھط¨ط§ظƒ</td><td>ط¬ظٹط¯ ظˆظˆط§ط«ظ‚</td><td>ظ…طھظ…ظٹط² ظˆظ…ط¤ط«ط±</td><td>ظ¨ ط¯ط±ط¬ط§طھ</td></tr>
+          <tr><td><strong>ط¬ظˆط¯ط© ط§ظ„طھظˆطµظٹط§طھ ط§ظ„طھط³ظˆظٹظ‚ظٹط©</strong></td><td>ط؛ظٹط± ظˆط§ظ‚ط¹ظٹط©</td><td>ط¹ط§ظ…ط© ظˆط؛ظٹط± ظ…ط­ط¯ط¯ط©</td><td>ظ…ظ†ط§ط³ط¨ط© ظˆظ…ط¹ظ„ظ„ط©</td><td>ظ…ط¨طھظƒط±ط© ظˆظ‚ط§ط¨ظ„ط© ظ„ظ„طھط·ط¨ظٹظ‚</td><td>ظ،ظ  ط¯ط±ط¬ط§طھ</td></tr>
+        </tbody>
+      </table>
+
+      <h3>ط§ظ„ط®ط·ظˆط© ظ¢: ط§ظ„ظ†طھط§ط¦ط¬ ط¨ط¹ط¯ ط§ظ„طھط·ط¨ظٹظ‚</h3>
+      <p>ط¹ط¯ط¯ ط§ظ„ط·ظ„ط§ط¨ = ظ،ظ¢ | ط§ظ„ط¯ط±ط¬ط© ط§ظ„ظƒظ„ظٹط© = ظ¢ظ¥</p>
+      <table class="tbl" style="font-size:12px;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>ظˆط¶ظˆط­/ظ§</th>
+            <th>ط£ط³ظ„ظˆط¨/ظ¨</th>
+            <th>طھظˆطµظٹط§طھ/ظ،ظ </th>
+            <th>ط§ظ„ظ…ط¬ظ…ظˆط¹/ظ¢ظ¥</th>
+            <th>ط§ظ„ظ†ط³ط¨ط©</th>
+            <th>ط¨ظ„ط؛طھ ظ¨ظ ظھطں</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ظ،</td><td>ظ¦</td><td>ظ§</td><td>ظ©</td><td>ظ¢ظ¢</td><td>ظ¨ظ¨ظھ</td><td class="cok">âœ“</td></tr>
+          <tr><td>ظ¢</td><td>ظ¥</td><td>ظ¦</td><td>ظ§</td><td>ظ،ظ¨</td><td>ظ§ظ¢ظھ</td><td class="cno">âœ—</td></tr>
+          <tr><td>ظ£</td><td>ظ§</td><td>ظ¨</td><td>ظ،ظ </td><td>ظ¢ظ¥</td><td>ظ،ظ ظ ظھ</td><td class="cok">âœ“</td></tr>
+          <tr><td>ظ¤</td><td>ظ¦</td><td>ظ§</td><td>ظ¨</td><td>ظ¢ظ،</td><td>ظ¨ظ¤ظھ</td><td class="cok">âœ“</td></tr>
+          <tr><td>ظ¥</td><td>ظ¤</td><td>ظ¥</td><td>ظ¦</td><td>ظ،ظ¥</td><td>ظ¦ظ ظھ</td><td class="cno">âœ—</td></tr>
+          <tr><td>ظ¦</td><td>ظ¦</td><td>ظ§</td><td>ظ©</td><td>ظ¢ظ¢</td><td>ظ¨ظ¨ظھ</td><td class="cok">âœ“</td></tr>
+          <tr><td>ظ§</td><td>ظ¦</td><td>ظ¦</td><td>ظ¨</td><td>ظ¢ظ </td><td>ظ¨ظ ظھ</td><td class="cok">âœ“</td></tr>
+          <tr><td>ظ¨</td><td>ظ¥</td><td>ظ¥</td><td>ظ§</td><td>ظ،ظ§</td><td>ظ¦ظ¨ظھ</td><td class="cno">âœ—</td></tr>
+          <tr><td>ظ©</td><td>ظ§</td><td>ظ§</td><td>ظ©</td><td>ظ¢ظ£</td><td>ظ©ظ¢ظھ</td><td class="cok">âœ“</td></tr>
+          <tr><td>ظ،ظ </td><td>ظ¦</td><td>ظ¦</td><td>ظ©</td><td>ظ¢ظ،</td><td>ظ¨ظ¤ظھ</td><td class="cok">âœ“</td></tr>
+          <tr><td>ظ،ظ،</td><td>ظ¥</td><td>ظ¦</td><td>ظ§</td><td>ظ،ظ¨</td><td>ظ§ظ¢ظھ</td><td class="cno">âœ—</td></tr>
+          <tr><td>ظ،ظ¢</td><td>ظ§</td><td>ظ¨</td><td>ظ،ظ </td><td>ظ¢ظ¥</td><td>ظ،ظ ظ ظھ</td><td class="cok">âœ“</td></tr>
+        </tbody>
+      </table>
+
+      <h3>ط§ظ„ط®ط·ظˆط© ظ£: ط§ظ„ط­ط³ط§ط¨ ظˆط§ظ„ط­ظƒظ…</h3>
+      <div class="g2">
+        <div class="fml" style="font-size:13px;">ظ†ط³ط¨ط© ط§ظ„ط·ظ„ط§ط¨ ط§ظ„ط°ظٹظ† ط¨ظ„ط؛ظˆط§ ظ¨ظ ظھ<br><span class="num">ظ¨ ظ…ظ† ظ،ظ¢ = ظ¦ظ¦.ظ§ظھ</span></div>
+        <div class="fml" style="font-size:13px;">ظ…طھظˆط³ط· ظ†ط³ط¨ط© ط§ظ„طھط­ظ‚ظ‚ ط§ظ„ظƒظ„ظٹط©<br><span class="num">ظ¢ظ¤ظ§ أ· ظ،ظ¢ أ· ظ¢ظ¥ أ— ظ،ظ ظ  = ظ¨ظ¢.ظ£ظھ</span></div>
+      </div>
+
+      <div class="box bd">
+        <div class="bt">âڑ ï¸ڈ ط§ظ„ط­ظƒظ…: ط§ظ„ظ†ط§طھط¬ ظ…ظ£ ظ„ظ… ظٹطھط­ظ‚ظ‚ ط¨ط§ظ„ظƒط§ظ…ظ„</div>
+        ظ†ط³ط¨ط© ط§ظ„ط·ظ„ط§ط¨ ط§ظ„ط°ظٹظ† ط¨ظ„ط؛ظˆط§ ظ¨ظ ظھ = <strong>ظ¦ظ¦.ظ§ظھ</strong> | ط§ظ„ظ…ط³طھظ‡ط¯ظپ = <strong>ظ§ظ ظھ</strong><br>
+        ط§ظ„ظپط§ط±ظ‚ = ظ£.ظ£ظھ ط¯ظˆظ† ط§ظ„ظ…ط³طھظ‡ط¯ظپ â†گ ظٹط³طھظˆط¬ط¨ ط®ط·ط© طھط­ط³ظٹظ†.
+      </div>
+
+      <h3>ط§ظ„ط®ط·ظˆط© ظ¤: ظ†ظ…ظˆط°ط¬ طھظ‚ط±ظٹط± ط§ظ„ظ…ظ‚ط±ط±</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ†ط§طھط¬ ط§ظ„طھط¹ظ„ظ…</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</th>
+            <th>ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ظپط¹ظ„ظٹ</th>
+            <th>ط§ظ„ط­ظƒظ…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ظ…ظ£ â€” ط§ظ„طھظˆط§طµظ„ ط§ظ„ظپط¹ط§ظ„</td><td>ظ§ظ ظھ ظ…ظ† ط§ظ„ط·ظ„ط§ط¨ ظٹط­ظ‚ظ‚ظˆظ† ظ¨ظ ظھ</td><td>ظ¦ظ¦.ظ§ظھ ظ…ظ† ط§ظ„ط·ظ„ط§ط¨</td><td class="cno">ط¯ظˆظ† ط§ظ„ظ…ط³طھظ‡ط¯ظپ</td></tr>
+        </tbody>
+      </table>
+
+      <div style="border:1.5px solid var(--bd);border-radius:12px;padding:18px;margin-top:14px;">
+        <h4>ط§ظ„طھط¹ظ„ظٹظ‚</h4>
+        <p style="font-size:13px;">ظ¤ 'ط·ط§ظ„ط¨' ظ…ظ† ظ،ظ¢ ظ„ظ… ظٹط¨ظ„ط؛ظˆط§ ظ…ط³طھظˆظ‰ ط§ظ„طھط­طµظٹظ„. ظٹظڈظ„ط§ط­ظژط¸ ط§ظ„ط¶ط¹ظپ ظپظٹ ظ…ط­ظˆط± "ط£ط³ظ„ظˆط¨ ط§ظ„طھظˆط§طµظ„" ط®ط§طµط© ط§ظ„ط·ط§ظ„ط¨ط§طھ ظ¢طŒ ظ¥طŒ ظ¨طŒ ظ،ظ،.</p>
+        <h4>ط®ط·ط© ط§ظ„طھط­ط³ظٹظ† ط§ظ„ظ…ظ‚طھط±ط­ط©</h4>
+        <ul style="font-size:13px;padding-right:18px;">
+          <li>ط¥ط¶ط§ظپط© طھط¯ط±ظٹط¨ط§طھ ط£ط³ط¨ظˆط¹ظٹط© ط¹ظ„ظ‰ ط§ظ„ط¹ط±ظˆط¶ ط§ظ„طھظ‚ط¯ظٹظ…ظٹط© ظ‚ط¨ظ„ ط§ظ„طھظ‚ظٹظٹظ… ط§ظ„ظ†ظ‡ط§ط¦ظٹ</li>
+          <li>طھظˆظپظٹط± Rubric ظˆط§ط¶ط­ ظ„ظ„ط·ظ„ط§ط¨ ظ…ط³ط¨ظ‚ط§ظ‹ ظ…ط¹ ظ†ظ…ط§ط°ط¬ ظ…ط«ط§ظ„ظٹط©</li>
+          <li>ط¥ط¯ط±ط§ط¬ ط¬ظ„ط³ط© طھط؛ط°ظٹط© ط±ط§ط¬ط¹ط© طھظپطµظٹظ„ظٹط© ط¨ط¹ط¯ ط§ظ„طھظ‚ظٹظٹظ… ط§ظ„ط£ظˆظ„</li>
+          <li>ظ…ط´ط§ظ‡ط¯ط© ط¹ط±ظˆط¶ ظ†ظ…ظˆط°ط¬ظٹط© ظ…ظ† ظ…ط¬ط§ظ„ ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ ط§ظ„ط§ط­طھط±ط§ظپظٹ</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec" id="s15">
+      <div class="sec-hd">
+        <div class="sec-n pur">ظ،ظ¥</div>
+        <div>
+          <div class="sec-t">ط§ظ„طھط­ط³ظٹظ† ظˆط§ظ„ط¥ط¬ط±ط§ط،ط§طھ ط§ظ„طھطµط­ظٹط­ظٹط©</div>
+          <div class="sec-s">ط§ظ„ظ‚ظٹط§ط³ ط¨ظ„ط§ طھط­ط³ظٹظ† ظ„ط§ ظ‚ظٹظ…ط© ظ„ظ‡ â€” ظ‡ظ†ط§ ظٹظƒطھظ…ظ„ ط§ظ„ط¯ظˆط±</div>
+        </div>
+      </div>
+
+      <h3>ط¯ظˆط±ط© ط§ظ„طھط­ط³ظٹظ† ط§ظ„ظ…ط³طھظ…ط±</h3>
+      <div class="flow">
+        <div class="fstep"><div class="fin"><div class="fnum">ظ،</div><div class="flbl">ط§ظ„طھط®ط·ظٹط·</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin" style="background:#fef9e8;"><div class="fnum" style="background:var(--g);">ظ¢</div><div class="flbl">ط§ظ„ظ‚ظٹط§ط³</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin"><div class="fnum">ظ£</div><div class="flbl">ط§ظ„طھط­ظ„ظٹظ„</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin" style="background:#fef9e8;"><div class="fnum" style="background:var(--g);">ظ¤</div><div class="flbl">ط§ظ„طھط­ط³ظٹظ†</div></div></div>
+        <div class="farr">â†گ</div>
+        <div class="fstep"><div class="fin"><div class="fnum">ظ¥</div><div class="flbl">ط§ظ„طھظˆط«ظٹظ‚</div></div></div>
+      </div>
+
+      <h3>ظ†ظ…ظˆط°ط¬ طھط­ظ„ظٹظ„ ظ†طھط§ط¦ط¬ طھظ‚ظٹظٹظ… ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h3>
+      <div style="border:2px solid var(--bd);border-radius:12px;overflow:hidden;margin:16px 0;">
+        <div style="background:var(--p);color:#fff;padding:12px 18px;font-weight:700;">طھط­ظ„ظٹظ„ ظ†طھط§ط¦ط¬ ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ â€” ظ…ط«ط§ظ„ ظ…ظ† ط§ظ„ظ…ظˆط§ط±ط¯ ط§ظ„ط¨ط´ط±ظٹط©</div>
+        <div style="padding:18px;">
+          <div style="background:#e8f5e9;border-radius:8px;padding:14px;margin-bottom:12px;">
+            <strong style="color:var(--green);">âœ… ط¬ظˆط§ظ†ط¨ ط§ظ„ظ‚ظˆط©:</strong>
+            <p style="font-size:13px;margin-top:6px;">طھظ…ظٹظژظ‘ط² ط§ظ„ط·ظ„ط§ط¨ ظپظٹ ظ†ظˆط§طھط¬ ط§ظ„ظ…ط¹ط±ظپط© ط§ظ„ظ†ط¸ط±ظٹط© (ط¹ظ،طŒ ط¹ظ¢) ط¨ظ†ط³ط¨ط© طھط­ظ‚ظ‚ ظ¨ظ§ظھطŒ ظˆط£ط«ط¨طھظˆط§ ظƒظپط§ط،ط© ط¹ط§ظ„ظٹط© ظپظٹ ط¥ط¹ط¯ط§ط¯ ط§ظ„ظˆطµظپ ط§ظ„ظˆط¸ظٹظپظٹ (ظ…ظ،) ط¨ظ†ط³ط¨ط© ظ¨ظ¤ظھ.</p>
+          </div>
+
+          <div style="background:#fdeaea;border-radius:8px;padding:14px;margin-bottom:12px;">
+            <strong style="color:var(--red);">âڑ ï¸ڈ ط§ظ„ط¬ظˆط§ظ†ط¨ ط§ظ„طھظٹ طھط­طھط§ط¬ طھط­ط³ظٹظ†ط§ظ‹:</strong>
+            <p style="font-size:13px;margin-top:6px;">ظ†ط§طھط¬ (ظ…ظ£: ط¥ط¬ط±ط§ط، ظ…ظ‚ط§ط¨ظ„ط© طھظˆط¸ظٹظپ) ظ„ظ… ظٹط¨ظ„ط؛ ط§ظ„ظ…ط³طھظ‡ط¯ظپ â€” ظ†ط³ط¨ط© ظ¥ظ©ظھ ظ…ظ‚ط§ط¨ظ„ ظ…ط³طھظ‡ط¯ظپ ظ§ظ¥ظھ. ظƒط°ظ„ظƒ ظ†ط§طھط¬ (ظ‚ظ¢: ط§ظ„ط¹ظ…ظ„ ط§ظ„ط¬ظ…ط§ط¹ظٹ) ط¨ظ†ط³ط¨ط© ظ¦ظ¨ظھ ط¯ظˆظ† ظ…ط³طھظ‡ط¯ظپ ظ§ظ ظھ.</p>
+          </div>
+
+          <div style="background:#fef9e8;border-radius:8px;padding:14px;">
+            <strong style="color:var(--g);">ًںژ¯ ط£ظˆظ„ظˆظٹط§طھ ط§ظ„طھط­ط³ظٹظ†:</strong>
+            <ul style="font-size:13px;margin-top:6px;padding-right:18px;">
+              <li>طھط¹ط²ظٹط² ط£ظ†ط´ط·ط© ظ…ط­ط§ظƒط§ط© ط§ظ„ظ…ظ‚ط§ط¨ظ„ط§طھ ط§ظ„ظˆط¸ظٹظپظٹط© ط¹ط¨ط± ظ„ط¹ط¨ ط§ظ„ط£ط¯ظˆط§ط±</li>
+              <li>ط²ظٹط§ط¯ط© ط§ظ„ظ…ط´ط§ط±ظٹط¹ ط§ظ„ط¬ظ…ط§ط¹ظٹط© ط¯ط§ط®ظ„ ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط°ط§طھ ط§ظ„طµظ„ط©</li>
+              <li>ط¯ظ…ط¬ طھظ‚ظٹظٹظ… ط§ظ„ط£ظ‚ط±ط§ظ† ظ„طھط·ظˆظٹط± ظ…ظ‡ط§ط±ط© ط§ظ„ط¹ظ…ظ„ ط§ظ„ط¬ظ…ط§ط¹ظٹ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3>ط£ظ…ط«ظ„ط© ط¹ظ„ظ‰ ط§ظ„ط¥ط¬ط±ط§ط،ط§طھ ط§ظ„طھطµط­ظٹط­ظٹط© ظ…ظ† ط§ظ„طھط®طµطµط§طھ ط§ظ„ط£ط±ط¨ط¹ط©</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„طھط®طµطµ</th>
+            <th>ط§ظ„ظ†ط§طھط¬ ط؛ظٹط± ط§ظ„ظ…ط­ظ‚ظ‚</th>
+            <th>ط§ظ„ط³ط¨ط¨ ط§ظ„ظ…ط­طھظ…ظ„</th>
+            <th>ط§ظ„ط¥ط¬ط±ط§ط، ط§ظ„طھطµط­ظٹط­ظٹ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط§ظ„طھط³ظˆظٹظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹ</td><td>ظ…ظ،: طھطµظ…ظٹظ… ط­ظ…ظ„ط© ط±ظ‚ظ…ظٹط© (ظ¦ظ ظھ)</td><td>ط¶ط¹ظپ ط§ظ„طھط·ط¨ظٹظ‚ ط¹ظ„ظ‰ ط§ظ„ظ…ظ†طµط§طھ ط§ظ„ط±ظ‚ظ…ظٹط©</td><td>ظˆط±ط´ط© ط¹ظ…ظ„ظٹط© ط¹ظ„ظ‰ Google Ads ظˆMeta Ads Manager</td></tr>
+          <tr><td>ط§ظ„ظ…ط­ط§ط³ط¨ط© ط§ظ„ظ…ط§ظ„ظٹط©</td><td>ظ…ظ¢: طھط­ظ„ظٹظ„ ط§ظ„طھظƒط§ظ„ظٹظپ (ظ¥ظ¨ظھ)</td><td>طµط¹ظˆط¨ط© ظپظٹ ط§ظ„ط­ط§ظ„ط§طھ ظ…طھط¹ط¯ط¯ط© ط§ظ„ظ…طھط؛ظٹط±ط§طھ</td><td>ط²ظٹط§ط¯ط© ط¯ط±ط§ط³ط§طھ ط§ظ„ط­ط§ظ„ط© ط§ظ„ظ…ط­ظ„ظٹط© + ط¯ط¹ظ… ظپظٹ ط§ظ„ط³ط§ط¹ط§طھ ط§ظ„ظ…ظƒطھط¨ظٹط©</td></tr>
+          <tr><td>ط§ظ„ظ…ظˆط§ط±ط¯ ط§ظ„ط¨ط´ط±ظٹط©</td><td>ظ‚ظ،: ط§ظ„ط¹ط¯ط§ظ„ط© ظپظٹ ظ‚ط±ط§ط±ط§طھ ط§ظ„طھط±ظ‚ظٹط© (ظ¦ظ¥ظھ)</td><td>ظ‚ظ„ط© ط§ظ„طھط¹ط±ط¶ ظ„ط³ظٹظ†ط§ط±ظٹظˆظ‡ط§طھ ط§ظ„ط£ط®ظ„ط§ظ‚ ط§ظ„طھط·ط¨ظٹظ‚ظٹط©</td><td>ط­ط§ظ„ط§طھ ط£ط®ظ„ط§ظ‚ظٹط© ط­ظ‚ظٹظ‚ظٹط© ظ„ظ„ظ†ظ‚ط§ط´ + طھظ‚ظٹظٹظ… ط¹ط¨ط± ظ…ظ„ظپ ط§ظ„ط¥ظ†ط¬ط§ط²</td></tr>
+          <tr><td>ط§ظ„ط£ظ†ط¸ظ…ط©</td><td>ظ…ظ،: طھط­ظ„ظٹظ„ ط§ظ„ط¹ظ‚ظˆط¯ (ظ¦ظ£ظھ)</td><td>ط¶ط¹ظپ ط¥ظ„ظ…ط§ظ… ط§ظ„ط·ظ„ط§ط¨ ط¨ط§ظ„طµظٹط§ط؛ط© ط§ظ„ظ‚ط§ظ†ظˆظ†ظٹط©</td><td>ظ…ط³ط±ط¯ ظ…طµط·ظ„ط­ط§طھ ظ‚ط§ظ†ظˆظ†ظٹط© + طھظ…ط§ط±ظٹظ† ظ‚ط±ط§ط،ط© ظ†طµظˆطµ ط£ط³ط¨ظˆط¹ظٹط§ظ‹</td></tr>
+        </tbody>
+      </table>
+    </div>    <div class="sec" id="formulation-steps-summary">
+      <div class="sec-hd">
+        <div>
+          <div class="sec-t">ملخص خطوات صياغة وقياس نواتج التعلم</div>
+        </div>
+      </div>
+
+      <div class="box bi">
+        يختص هذا الملخص بما يفعله عضو هيئة التدريس داخل المقرر: صياغة الناتج، تنفيذ القياس، تحليل النتائج، ثم توثيق التحسين.
+      </div>
+
+      <div class="summary-steps">
+        <div class="summary-step">
+          <strong>المرحلة الأولى: صياغة نواتج التعلم</strong>
+          <ul>
+            <li>تحديد المجال.</li>
+            <li>اختيار الفعل.</li>
+            <li>تحديد المحتوى.</li>
+            <li>كتابة الناتج.</li>
+            <li>مراجعة الصياغة.</li>
+          </ul>
+        </div>
+
+        <div class="summary-step gold">
+          <strong>المرحلة الثانية: قياس نواتج التعلم</strong>
+          <ul>
+            <li>تحديد الناتج المراد قياسه.</li>
+            <li>اختيار أداة القياس.</li>
+            <li>إعداد أداة أو Rubric.</li>
+            <li>تطبيق القياس.</li>
+            <li>رصد النتائج.</li>
+            <li>حساب نسبة التحقق.</li>
+            <li>مقارنة النتائج بالمستهدف.</li>
+            <li>تحليل النتائج.</li>
+            <li>اقتراح التحسينات.</li>
+            <li>توثيق النتائج.</li>
+          </ul>
+        </div>
+      </div>
+    </div><div class="sec" id="formulation-official-forms">
+      <div class="sec-hd">
+        <div class="sec-n pur">ظ،ظ©</div>
+        <div>
+          <div class="sec-t">ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ط±ط³ظ…ظٹط© ظˆط§ظ„طھظˆط«ظٹظ‚ ظˆط§ظ„ط§ط¹طھظ…ط§ط¯</div>
+          <div class="sec-s">ظ†ظ…ط§ط°ط¬ ط§ظ„ط®ط·ط© ظˆط§ظ„طھظ‚ط±ظٹط± ظˆط§ظ„طھظˆط«ظٹظ‚ ط§ظ„ظ…ط·ظ„ظˆط¨ ظپظٹ ط§ظ„ظ…ظ„ظپط§طھ ط§ظ„ط³ظ†ظˆظٹط©</div>
+        </div>
+      </div>
+
+      <h3>ط§ظ„ظ†ظ…ط§ط°ط¬ ط§ظ„ط±ط³ظ…ظٹط© ط§ظ„طھظٹ ظٹظ†ط¨ط؛ظٹ طھظˆظپظٹط±ظ‡ط§</h3>
+      <div class="g3">
+        <div style="background:#e8f4f4;border-radius:10px;padding:16px;border-top:4px solid var(--p);">
+          <strong style="color:var(--p);">ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</strong>
+          <ul style="font-size:13px;padding-right:16px;margin-top:8px;">
+            <li>ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط£ط³ط§ط³ظٹط© ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</li>
+            <li>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ…طµظ†ظپط© ط­ط³ط¨ ط§ظ„ظ…ط¬ط§ظ„ط§طھ</li>
+            <li>ط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³</li>
+            <li>ط¯ظˆط±ط© ط§ظ„ظ‚ظٹط§ط³</li>
+            <li>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ط§ظ„ظ‚ظٹط§ط³</li>
+            <li>ط§ط¹طھظ…ط§ط¯ ط§ظ„ط®ط·ط© ظ…ظ† ط§ظ„ط£ظ‚ط³ط§ظ…/ط§ظ„ظƒظ„ظٹط§طھ/ط§ظ„ظپط±ظˆط¹</li>
+          </ul>
+        </div>
+
+        <div style="background:#fef9e8;border-radius:10px;padding:16px;border-top:4px solid var(--g);">
+          <strong style="color:var(--g);">طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</strong>
+          <ul style="font-size:13px;padding-right:16px;margin-top:8px;">
+            <li>ظ†طھط§ط¦ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ظ…ظ‚ط±ط±ط§طھ</li>
+            <li>ظ†طھط§ط¦ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</li>
+            <li>ط§ظ„طھط¹ظ„ظٹظ‚ ط¹ظ„ظ‰ ط§ظ„ظ†طھط§ط¦ط¬</li>
+            <li>طھط­ظ„ظٹظ„ ط¬ظˆط§ظ†ط¨ ط§ظ„ظ‚ظˆط© ظˆط§ظ„طھط­ط³ظٹظ†</li>
+            <li>ط®ط·ط· ط§ظ„طھط­ط³ظٹظ†</li>
+            <li>ط§ط¹طھظ…ط§ط¯ ط§ظ„طھظ‚ط±ظٹط±</li>
+          </ul>
+        </div>
+
+        <div style="background:#e8f4f4;border-radius:10px;padding:16px;border-top:4px solid var(--pur);">
+          <strong style="color:var(--pur);">طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„ظ…ظ‚ط±ط±</strong>
+          <ul style="font-size:13px;padding-right:16px;margin-top:8px;">
+            <li>ط§ط³ظ… ط§ظ„ظ…ظ‚ط±ط± ظˆط§ظ„ظ‚ط³ظ… ظˆظ…ظ†ط³ظ‚ ط§ظ„ظ…ظ‚ط±ط±</li>
+            <li>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط±طھط¨ط·ط© ط¨ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</li>
+            <li>ط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³ ظˆط§ظ„ظ‚ظٹظ… ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</li>
+            <li>ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³</li>
+            <li>ط§ظ„طھط¹ظ„ظٹظ‚ ط¹ظ„ظ‰ ط§ظ„ظ†طھط§ط¦ط¬</li>
+            <li>ط®ط·ط© ط§ظ„طھط­ط³ظٹظ†</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>ط§ظ„ظ†ظ…ظˆط°ط¬ ط§ظ„ط£ظˆظ„: ظ†ظ…ظˆط°ط¬ ظ…ظ‚طھط±ط­ ظ„ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h3>
+      <div class="box bi">
+        <div class="bt">ط§ظ„ط؛ط±ط¶ ظ…ظ† ط§ظ„ظ†ظ…ظˆط°ط¬</div>
+        ظٹظڈط³طھط®ط¯ظ… ظ‡ط°ط§ ط§ظ„ظ†ظ…ظˆط°ط¬ ظ‚ط¨ظ„ ط¨ط¯ط، ط¯ظˆط±ط© ط§ظ„ظ‚ظٹط§ط³ ظ„طھظˆط«ظٹظ‚ ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬طŒ ظˆظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…طŒ ظˆط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³طŒ ظˆط¯ظˆط±ط© ط§ظ„ظ‚ظٹط§ط³طŒ ظˆط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط©طŒ ظˆط§ط¹طھظ…ط§ط¯ ط§ظ„ط®ط·ط©.
+      </div>
+
+      <h4>ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط£ط³ط§ط³ظٹط©</h4>
+      <table class="tbl">
+        <tbody>
+          <tr><td class="rh">ط§ط³ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</td><td>........................................................</td></tr>
+          <tr><td class="rh">ط§ظ„ط£ظ‚ط³ط§ظ…/ط§ظ„ظƒظ„ظٹط§طھ ط§ظ„ظ…ظ‚ط¯ظ…ط© ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</td><td>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................<br>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................<br>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ط±ظ…ط² ط§ظ„ظ†ط§طھط¬</th>
+            <th>ظ†طµ ظ†ط§طھط¬ ط§ظ„طھط¹ظ„ظ…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="2" class="cs">ط§ظ„ظ…ط¹ط±ظپط©  ظˆط§ظ„ظپظ‡ظ…</td><td>ط¹ظ،</td><td>........................................................</td></tr>
+          <tr><td>ط¹...</td><td>........................................................</td></tr>
+          <tr><td rowspan="2" class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،</td><td>........................................................</td></tr>
+          <tr><td>ظ…...</td><td>........................................................</td></tr>
+          <tr><td rowspan="2" class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،</td><td>........................................................</td></tr>
+          <tr><td>ظ‚ظ¢</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط·ط±ظ‚ ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط§ط±ظپ</td><td>ط¹ظ،</td><td>ظ…ط¨ط§ط´ط± / ط؛ظٹط± ظ…ط¨ط§ط´ط±</td><td>ط§ط®طھط¨ط§ط± / ظ…ط´ط±ظˆط¹ / ط§ط³طھط¨ط§ظ†ط© / ط£ط®ط±ظ‰</td><td>........%</td></tr>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط§ط±ظپ</td><td>ط¹...</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…...</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ¢</td><td>........</td><td>........</td><td>........%</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط¯ظˆط±ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط§ظ„ط¹ط§ظ… ط§ظ„ط¯ط±ط§ط³ظٹ ....</th>
+            <th>ط§ظ„ط¹ط§ظ… ط§ظ„ط¯ط±ط§ط³ظٹ ....</th>
+            <th>ط§ظ„ط¹ط§ظ… ط§ظ„ط¯ط±ط§ط³ظٹ ....</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="rh">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…: ط¹ظ،طŒ ط¹...</td><td>........</td><td>........</td><td>........</td></tr>
+          <tr><td class="rh">ط§ظ„ظ…ظ‡ط§ط±ط§طھ: ظ…ظ،طŒ ظ…...</td><td>........</td><td>........</td><td>........</td></tr>
+          <tr><td class="rh">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©: ظ‚ظ،طŒ ظ‚ظ¢</td><td>........</td><td>........</td><td>........</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط© ظپظٹ ط§ظ„ظ‚ظٹط§ط³</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…</td><td>ط¹ظ،طŒ ط¹...</td><td>........................................................</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،طŒ ظ…...</td><td>........................................................</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،طŒ ظ‚ظ¢</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط§ط¹طھظ…ط§ط¯ ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹</th>
+            <th>طھط§ط±ظٹط® ظˆط±ظ‚ظ… ط¬ظ„ط³ط© ط§ظ„ظ…ط¬ظ„ط³</th>
+            <th>ط§ط¹طھظ…ط§ط¯ ط§ظ„ط£ظ‚ط³ط§ظ… ط§ظ„ظ…ظ‚ط¯ظ…ط© ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>....................</td><td>....................</td><td>....................</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bi" style="text-align:center;">
+        <a href="https://drive.uqu.edu.sa/_/quality/files/21d70234-0c07-41d8-972d-f030f252bfbc.docx" target="_blank" rel="noopener" class="guide-action">
+          طھط­ظ…ظٹظ„ ظ†ظ…ظˆط°ط¬ ط®ط·ط© ط§ظ„ظ‚ظٹط§ط³ ط¨طµظٹط؛ط© Word
+        </a>
+      </div>
+
+      <h3>ط§ظ„ظ†ظ…ظˆط°ط¬ ط§ظ„ط«ط§ظ†ظٹ: ظ†ظ…ظˆط°ط¬ ظ…ظ‚طھط±ط­ ظ„طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬ ط§ظ„ط¯ط±ط§ط³ظٹ</h3>
+      <div class="box bw">
+        <div class="bt">ط§ظ„ط؛ط±ط¶ ظ…ظ† ط§ظ„ظ†ظ…ظˆط°ط¬</div>
+        ظٹظڈط³طھط®ط¯ظ… ط¨ط¹ط¯ طھظ†ظپظٹط° ط§ظ„ظ‚ظٹط§ط³ ظ„طھط¬ظ…ظٹط¹ ظ†طھط§ط¦ط¬ ط§ظ„ظ…ظ‚ط±ط±ط§طھطŒ ظˆط§ط³طھط®ط±ط§ط¬ ظ†طھط§ط¦ط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬طŒ ظˆطھط­ظ„ظٹظ„ ط¬ظˆط§ظ†ط¨ ط§ظ„ظ‚ظˆط© ظˆط§ظ„طھط­ط³ظٹظ†طŒ ظˆطھظˆط«ظٹظ‚ ط®ط·ط· ط§ظ„طھط­ط³ظٹظ† ظˆط§ظ„ط§ط¹طھظ…ط§ط¯.
+      </div>
+
+      <h4>ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط£ط³ط§ط³ظٹط©</h4>
+      <table class="tbl">
+        <tbody>
+          <tr><td class="rh">ط§ط³ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</td><td>........................................................</td></tr>
+          <tr><td class="rh">طھط§ط±ظٹط® ط§ظ„طھظ‚ط±ظٹط±</td><td>........................................................</td></tr>
+          <tr><td class="rh">ط§ظ„ط£ظ‚ط³ط§ظ…/ط§ظ„ظƒظ„ظٹط§طھ ط§ظ„ظ…ظ‚ط¯ظ…ط© ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬</td><td>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................<br>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................<br>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹: ............................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط¨ظٹط§ظ†ط§طھ ط§ظ„ط®ط·ط© ط§ظ„ظ…ط¹طھظ…ط¯ط© ظپظٹ ط§ظ„طھظ‚ط±ظٹط±</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ط¹ظ†طµط±</th>
+            <th>ظ…ط§ ظٹطھظ… ط¥ط¯ط±ط§ط¬ظ‡ ظپظٹ ط§ظ„طھظ‚ط±ظٹط±</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</td><td>طھظڈط¯ط±ط¬ ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ظ…طµظ†ظپط© ط­ط³ط¨: ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…طŒ ط§ظ„ظ…ظ‡ط§ط±ط§طھطŒ ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©.</td></tr>
+          <tr><td>ط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³</td><td>طھظڈط¯ط±ط¬ ط·ط±ظ‚ ط§ظ„ظ‚ظٹط§ط³طŒ ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³طŒ ظˆط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط© ظ„ظƒظ„ ظ†ط§طھط¬.</td></tr>
+          <tr><td>ط¯ظˆط±ط© ط§ظ„ظ‚ظٹط§ط³</td><td>طھظڈط­ط¯ط¯ ط§ظ„ط£ط¹ظˆط§ظ… ط£ظˆ ط§ظ„ظپطµظˆظ„ ط§ظ„طھظٹ طھظ… ظپظٹظ‡ط§ ظ‚ظٹط§ط³ ظƒظ„ ظ†ط§طھط¬.</td></tr>
+          <tr><td>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ط§ظ„ظ‚ظٹط§ط³</td><td>طھظڈط°ظƒط± ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط© ظ„ظƒظ„ ظ†ط§طھط¬ طھط¹ظ„ظ….</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ظ†طھط§ط¦ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ظ…ظ‚ط±ط±ط§طھ</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ظ…ظ‚ط±ط± ظ،</th>
+            <th>ظ…ظ‚ط±ط± ظ¢</th>
+            <th>ظ…ظ‚ط±ط± ظ£</th>
+            <th>ط§ظ„ظ…طھظˆط³ط·</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„طµط؛ط±ظ‰</th>
+            <th>ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ظپط¹ظ„ظٹ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…</td><td>ط¹ظ،</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td><td>....%</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ظ†طھط§ط¦ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬ ظˆط§ظ„طھط¹ظ„ظٹظ‚ ط¹ظ„ظٹظ‡ط§</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</th>
+            <th>ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ظپط¹ظ„ظٹ</th>
+            <th>ط§ظ„ط­ظƒظ…</th>
+            <th>ط§ظ„طھط¹ظ„ظٹظ‚ ط¹ظ„ظ‰ ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط¹ظ،</td><td>....%</td><td>....%</td><td>ظ…طھط­ظ‚ظ‚ / ط؛ظٹط± ظ…طھط­ظ‚ظ‚</td><td>........................................................</td></tr>
+          <tr><td>ظ…ظ،</td><td>....%</td><td>....%</td><td>ظ…طھط­ظ‚ظ‚ / ط؛ظٹط± ظ…طھط­ظ‚ظ‚</td><td>........................................................</td></tr>
+          <tr><td>ظ‚ظ،</td><td>....%</td><td>....%</td><td>ظ…طھط­ظ‚ظ‚ / ط؛ظٹط± ظ…طھط­ظ‚ظ‚</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>طھط­ظ„ظٹظ„ ظ†طھط§ط¦ط¬ طھظ‚ظٹظٹظ… ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <tbody>
+          <tr><td class="rh">ط¬ظˆط§ظ†ط¨ ط§ظ„ظ‚ظˆط©</td><td>........................................................................................................</td></tr>
+          <tr><td class="rh">ط§ظ„ط¬ظˆط§ظ†ط¨ ط§ظ„طھظٹ طھط­طھط§ط¬ ط¥ظ„ظ‰ طھط­ط³ظٹظ†</td><td>........................................................................................................</td></tr>
+          <tr><td class="rh">ط£ظˆظ„ظˆظٹط§طھ ط§ظ„طھط­ط³ظٹظ†</td><td>........................................................................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط®ط·ط· ط§ظ„طھط­ط³ظٹظ†</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظپط¬ظˆط©/ط§ظ„ظ†ط§طھط¬</th>
+            <th>ط§ظ„ط¥ط¬ط±ط§ط، ط§ظ„طھط­ط³ظٹظ†ظٹ</th>
+            <th>ظ…ط³ط¤ظˆظ„ ط§ظ„طھظ†ظپظٹط°</th>
+            <th>ط§ظ„ط¥ط·ط§ط± ط§ظ„ط²ظ…ظ†ظٹ</th>
+            <th>ظ…ط¤ط´ط± ط§ظ„ظ…طھط§ط¨ط¹ط©</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>........</td><td>........</td><td>........</td><td>........</td><td>........</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط§ط¹طھظ…ط§ط¯ طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹</th>
+            <th>طھط§ط±ظٹط® ظˆط±ظ‚ظ… ط¬ظ„ط³ط© ط§ظ„ظ…ط¬ظ„ط³</th>
+            <th>ط§ط¹طھظ…ط§ط¯ ط§ظ„طھظ‚ط±ظٹط±</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>....................</td><td>....................</td><td>....................</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bw" style="text-align:center;">
+        <a href="https://drive.uqu.edu.sa/_/cbe/files/88a58d63-d54b-497d-bf50-121fcfd5b2e9.docx" target="_blank" rel="noopener" class="guide-action gold">
+          طھط­ظ…ظٹظ„ ظ†ظ…ظˆط°ط¬ طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬ ط¨طµظٹط؛ط© Word
+        </a>
+      </div>
+
+      <div class="box bi">
+        <div class="bt">ظ…ظ„ط­ظˆط¸ط©</div>
+        ظٹط±ظپظ‚ طھظ‚ط±ظٹط± ظ…ظ†ظپطµظ„ ط¹ظ† ظƒظ„ ظپط±ط¹ ظٹظ‚ظˆظ… ط¨طھط¯ط±ظٹط³ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬طŒ ط¹ظ„ظ‰ ط£ظ† ظٹطھط¶ظ…ظ† طھظ‚ط±ظٹط± ط§ظ„ظپط±ط¹ ظ…ظ„ط§ط­ظ‚ ظ…ظ† طھظ‚ط§ط±ظٹط± ط§ظ„ظ‚ظٹط§ط³ ظ„ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ط§ظ„ظ‚ظٹط§ط³ ظˆط§ظ„طھظٹ طھظ… طھط¯ط±ظٹط³ظ‡ط§ ظپظٹ ط§ظ„ظپط±ط¹.
+      </div>
+
+      <h3>ط§ظ„ظ†ظ…ظˆط°ط¬ ط§ظ„ط«ط§ظ„ط«: ظ†ظ…ظˆط°ط¬ ظ…ظ‚طھط±ط­ ظ„طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ…ظ‚ط±ط± ط¯ط±ط§ط³ظٹ</h3>
+      <div class="box bp">
+        <div class="bt">ط§ظ„ط؛ط±ط¶ ظ…ظ† ط§ظ„ظ†ظ…ظˆط°ط¬</div>
+        ظٹظڈط³طھط®ط¯ظ… ظ„ظƒظ„ ظ…ظ‚ط±ط± ط¯ط§ط®ظ„ ظ…طµظپظˆظپط© ط§ظ„ظ‚ظٹط§ط³طŒ ظˆظٹط±ظپظ‚ ظ…ط¹ طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬.
+      </div>
+
+      <h4>ط§ظ„ط¨ظٹط§ظ†ط§طھ ط§ظ„ط£ط³ط§ط³ظٹط©</h4>
+      <table class="tbl">
+        <tbody>
+          <tr><td class="rh">ط§ط³ظ… ط§ظ„ظ…ظ‚ط±ط±</td><td>........................................................</td></tr>
+          <tr><td class="rh">طھط§ط±ظٹط® ط§ظ„طھظ‚ط±ظٹط±</td><td>........................................................</td></tr>
+          <tr><td class="rh">ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©</td><td>........................................................</td></tr>
+          <tr><td class="rh">ظ…ظ†ط³ظ‚ ط§ظ„ظ…ظ‚ط±ط±</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬ ط§ظ„ظ…ط±طھط¨ط·ط© ط¨ط§ظ„ظ…ظ‚ط±ط±</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ظ…ظ‚ط±ط±</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…</td><td>ط¹ظ،طŒ ط¹...</td><td>........................................................</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،طŒ ظ…...</td><td>........................................................</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،طŒ ظ‚ظ¢</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط·ط±ظ‚ ظˆط£ط¯ظˆط§طھ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط·ط±ظ‚ ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط§ط±ظپ</td><td>ط¹ظ،</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،</td><td>........</td><td>........</td><td>........%</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،</td><td>........</td><td>........</td><td>........%</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ظ†طھط§ط¦ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ†ط§طھط¬ ط§ظ„طھط¹ظ„ظ…</th>
+            <th>ط£ط¯ط§ط© ط§ظ„ظ‚ظٹط§ط³</th>
+            <th>ط¹ط¯ط¯ ط§ظ„ط·ظ„ط§ط¨</th>
+            <th>ط¹ط¯ط¯ ط§ظ„ط·ظ„ط§ط¨ ط§ظ„ظ…ط­ظ‚ظ‚ظٹظ† ظ„ظ„ظ…ط³طھظ‡ط¯ظپ</th>
+            <th>ظ†ط³ط¨ط© ط§ظ„طھط­ظ‚ظ‚</th>
+            <th>ط§ظ„ط­ظƒظ…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط¹ظ، / ظ…ظ، / ظ‚ظ،</td><td>........</td><td>........</td><td>........</td><td>........%</td><td>ظ…طھط­ظ‚ظ‚ / ط؛ظٹط± ظ…طھط­ظ‚ظ‚</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط³طھط®ط¯ظ…ط© ظپظٹ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ…</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط¬ط§ظ„</th>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط© ظپظٹ ط§ظ„ظ‚ظٹط§ط³</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cs">ط§ظ„ظ…ط¹ط±ظپط© ظˆط§ظ„ظپظ‡ظ…</td><td>ط¹ظ،طŒ ط¹...</td><td>........................................................</td></tr>
+          <tr><td class="cr">ط§ظ„ظ…ظ‡ط§ط±ط§طھ</td><td>ظ…ظ،طŒ ظ…...</td><td>........................................................</td></tr>
+          <tr><td class="ct">ط§ظ„ظ‚ظٹظ… ظˆط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ظˆط§ظ„ظ…ط³ط¤ظˆظ„ظٹط©</td><td>ظ‚ظ،طŒ ظ‚ظ¢</td><td>........................................................</td></tr>
+        </tbody>
+      </table>
+
+      <h4>ط§ظ„طھط¹ظ„ظٹظ‚ ط¹ظ„ظ‰ ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³ ظˆط®ط·ط© ط§ظ„طھط­ط³ظٹظ†</h4>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ط¨ط±ظ†ط§ظ…ط¬</th>
+            <th>ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط©</th>
+            <th>ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ظپط¹ظ„ظٹ</th>
+            <th>ط§ظ„طھط¹ظ„ظٹظ‚</th>
+            <th>ط®ط·ط© ط§ظ„طھط­ط³ظٹظ†</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1.1 / 2.1 / 3.1</td><td>....%</td><td>....%</td><td>................................</td><td>................................</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bw">
+        <div class="bt">ظ…ظ„ط­ظˆط¸ط©</div>
+        ظٹظƒط±ط± ط§ظ„طھظ‚ط±ظٹط± ظ„ظƒظ„ ظ…ظ‚ط±ط± ظپظٹ ظ…طµظپظˆظپط© ط§ظ„ظ‚ظٹط§ط³طŒ ظˆظٹط±ظپظ‚ ظ…ط¹ طھظ‚ط±ظٹط± ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ„ظ„ط¨ط±ظ†ط§ظ…ط¬.
+      </div>
+
+      <h3>ظ…طھط·ظ„ط¨ط§طھ ط§ظ„طھظˆط«ظٹظ‚ ظپظٹ ط§ظ„طھظ‚ط±ظٹط± ط§ظ„ط³ظ†ظˆظٹ</h3>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>ط§ظ„ظ…ط­ظˆط±</th>
+            <th>ظ…ط§ ظٹط¬ط¨ طھظˆط«ظٹظ‚ظ‡</th>
+            <th>ط§ظ„ط¯ظ„ظٹظ„/ط§ظ„ظ…ط±ظپظ‚ ط§ظ„ظ…طھظˆظ‚ط¹</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ط§ظ„ط®ط·ط©</td><td>ط¯ظˆط±ط© ط§ظ„ظ‚ظٹط§ط³طŒ ط§ظ„ظ†ظˆط§طھط¬ ط§ظ„ظ…ط³طھظ‡ط¯ظپط©طŒ ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³طŒ ط§ظ„ظ…ظ‚ط±ط±ط§طھ ط§ظ„ظ…ط¹طھظ…ط¯ط©</td><td>ط®ط·ط© ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ط§ظ„ظ…ط¹طھظ…ط¯ط©</td></tr>
+          <tr><td>ط§ظ„طھظ†ظپظٹط°</td><td>طھط·ط¨ظٹظ‚ ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³ ظˆط¬ظ…ط¹ ط§ظ„ط¨ظٹط§ظ†ط§طھ ظ…ظ† ط§ظ„ظ…ظ‚ط±ط±ط§طھ ظˆط§ظ„ط§ط³طھط¨ط§ظ†ط§طھ</td><td>ظ†ظ…ط§ط°ط¬ ط§ظ„ظ‚ظٹط§ط³طŒ RubricsطŒ ظƒط´ظˆظپ ط§ظ„ط¯ط±ط¬ط§طھطŒ ط±ظˆط§ط¨ط· ط§ظ„ط§ط³طھط¨ط§ظ†ط§طھ</td></tr>
+          <tr><td>ط§ظ„طھط­ظ„ظٹظ„</td><td>ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ظ…ط³طھظˆظ‰ ط§ظ„ظپط¹ظ„ظٹ ط¨ط§ظ„ظ‚ظٹظ…ط© ط§ظ„ظ…ط³طھظ‡ط¯ظپط© ظˆطھط­ظ„ظٹظ„ ط§ظ„ظپط¬ظˆط§طھ</td><td>ط¬ط¯ط§ظˆظ„ ط§ظ„طھط­ظ„ظٹظ„ ط§ظ„ط¥ط­طµط§ط¦ظٹ ظˆط±ط³ظˆظ… ط¨ظٹط§ظ†ظٹط© ط¹ظ†ط¯ ط§ظ„ط­ط§ط¬ط©</td></tr>
+          <tr><td>ط§ظ„طھط­ط³ظٹظ†</td><td>ط¬ظˆط§ظ†ط¨ ط§ظ„ظ‚ظˆط©طŒ ط§ظ„ط¬ظˆط§ظ†ط¨ ط§ظ„طھظٹ طھط­طھط§ط¬ طھط­ط³ظٹظ†ط§ظ‹طŒ ط£ظˆظ„ظˆظٹط§طھ ط§ظ„طھط­ط³ظٹظ†طŒ ط§ظ„ط¥ط¬ط±ط§ط،ط§طھ ط§ظ„طھطµط­ظٹط­ظٹط©</td><td>ط®ط·ط© طھط­ط³ظٹظ† ظˆظ…ط­ط§ط¶ط± ط§ظ„ظ„ط¬ط§ظ†/ط§ظ„ظ…ط¬ط§ظ„ط³ ط°ط§طھ ط§ظ„ط¹ظ„ط§ظ‚ط©</td></tr>
+          <tr><td>ط§ظ„ط§ط¹طھظ…ط§ط¯</td><td>ط§ط¹طھظ…ط§ط¯ ط§ظ„طھظ‚ط§ط±ظٹط± ظˆط§ظ„ط®ط·ط· ط¹ظ„ظ‰ ظ…ط³طھظˆظ‰ ط§ظ„ظ‚ط³ظ…/ط§ظ„ظƒظ„ظٹط©/ط§ظ„ظپط±ط¹</td><td>طھط§ط±ظٹط® ظˆط±ظ‚ظ… ط¬ظ„ط³ط© ط§ظ„ظ…ط¬ظ„ط³ ظˆطھظˆظ‚ظٹط¹/ط§ط¹طھظ…ط§ط¯ ط§ظ„ط¬ظ‡ط© ط§ظ„ظ…ط®طھطµط©</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box bs">
+        <div class="bt">ظ‚ط§ط¹ط¯ط© ط§ظ„ط¥ط؛ظ„ط§ظ‚ ط§ظ„ظ…ط¤ط³ط³ظٹ ظ„ظ„ط¬ظˆط¯ط©</div>
+        ظ„ط§ ظٹظ†طھظ‡ظٹ ط§ظ„ظ‚ظٹط§ط³ ط¹ظ†ط¯ ط§ط³طھط®ط±ط§ط¬ ط§ظ„ظ†ط³ط¨ط©ط› ظٹط¬ط¨ ط£ظ† ظٹظ†طھظ‡ظٹ ط¨ظ€ <strong>طھظˆطµظٹط§طھ طھط·ظˆظٹط±ظٹط©طŒ ط®ط·ط© طھط­ط³ظٹظ†طŒ ط¬ظ‡ط© ظ…ط³ط¤ظˆظ„ط©طŒ ط¥ط·ط§ط± ط²ظ…ظ†ظٹطŒ ظ…ط¤ط´ط± ظ…طھط§ط¨ط¹ط©طŒ ظˆطھظˆط«ظٹظ‚ ط±ط³ظ…ظٹ</strong>. ظˆط¨ظ‡ط°ط§ طھطھط­ظˆظ„ ظ†طھط§ط¦ط¬ ط§ظ„ظ‚ظٹط§ط³ ط¥ظ„ظ‰ ظ‚ط±ط§ط±ط§طھ طھط­ط³ظٹظ† ظ…ط¨ظ†ظٹط© ط¹ظ„ظ‰ ط§ظ„ط£ط¯ظ„ط©.
+      </div>
+
+      <h3>ظ‚ط§ط¦ظ…ط© ظپط­طµ ط³ط±ظٹط¹ط© ظ‚ط¨ظ„ طھط³ظ„ظٹظ… ط§ظ„طھظ‚ط±ظٹط±</h3>
+      <ul class="cl">
+        <li>ظ‡ظ„ ط¬ظ…ظٹط¹ ظ†ظˆط§طھط¬ ط§ظ„طھط¹ظ„ظ… ظ…طµظ†ظپط© ط­ط³ط¨ ط§ظ„ظ…ط¬ط§ظ„ط§طھ ط§ظ„ط«ظ„ط§ط«ط©طں</li>
+        <li>ظ‡ظ„ ظٹظˆط¬ط¯ ط±ط¨ط· ظˆط§ط¶ط­ ط¨ظٹظ† ظ†ظˆط§طھط¬ ط§ظ„ظ…ظ‚ط±ط±طŒ ظˆظ†ظˆط§طھط¬ ط§ظ„ط¨ط±ظ†ط§ظ…ط¬طŒ ظˆط§ظ„ظ†ظˆط§طھط¬ ط§ظ„ظ…ط¤ط³ط³ظٹط©طں</li>
+        <li>ظ‡ظ„ ط£ط¯ظˆط§طھ ط§ظ„ظ‚ظٹط§ط³ ظ…ظ†ط§ط³ط¨ط© ظ„ط·ط¨ظٹط¹ط© ط§ظ„ظ†ط§طھط¬طں</li>
+        <li>ظ‡ظ„ ط§ظ„ظ‚ظٹظ… ط§ظ„ظ…ط³طھظ‡ط¯ظپط© ظˆظ…ط¤ط´ط±ط§طھ ط§ظ„ط£ط¯ط§ط، ظ…ظˆط«ظ‚ط© ظ‚ط¨ظ„ ط§ظ„ظ‚ظٹط§ط³طں</li>
+        <li>ظ‡ظ„ طھظ… طھط­ظ„ظٹظ„ ط§ظ„ظ†طھط§ط¦ط¬ ط­ط³ط¨ ط§ظ„ظ…ط³طھظˆظٹط§طھ ط§ظ„ظ…ط·ظ„ظˆط¨ط©طں</li>
+        <li>ظ‡ظ„ ظƒظڈطھط¨طھ ط®ط·ط© طھط­ط³ظٹظ† ظ…ط±طھط¨ط·ط© ظ…ط¨ط§ط´ط±ط© ط¨ط§ظ„ظپط¬ظˆط§طھطں</li>
+        <li>ظ‡ظ„ طھظ… ط§ط¹طھظ…ط§ط¯ ط§ظ„ط®ط·ط© ط£ظˆ ط§ظ„طھظ‚ط±ظٹط± ظپظٹ ظ…ط¬ظ„ط³/ظ„ط¬ظ†ط© ظ…ط®طھطµط©طں</li>
+      </ul>
+    </div>
+<div class="sec" id="institutional-forms-1447">
+      <div class="sec-hd">
+        <div>
+          <div class="sec-t">ظ†ظ…ط§ط°ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ط© ظ„ظ„ط¹ط§ظ… ظ،ظ¤ظ¤ظ§</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="https://uqu.edu.sa/quality/App/FILES/174914" target="_blank" rel="noopener" class="guide-action">
+          ظپطھط­ ظ†ظ…ط§ط°ط¬ ظ‚ظٹط§ط³ ظ†ظˆط§طھط¬ طھط¹ظ„ظ… ط§ظ„ظ…ط¤ط³ط³ط© ظ„ظ„ط¹ط§ظ… ظ،ظ¤ظ¤ظ§
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function openGuideTab(tabName, btn) {
+  document.body.classList.add('tab-opened');
+  document.querySelectorAll('.tab-panel').forEach(function(panel) {
+    panel.classList.remove('active');
+  });
+
+  document.querySelectorAll('.tab-btn').forEach(function(button) {
+    button.classList.remove('active');
+    button.setAttribute('aria-selected', 'false');
+  });
+
+  var panel = document.getElementById('panel-' + tabName);
+  if (panel) panel.classList.add('active');
+
+  if (btn) {
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+  }
+
+  var hint = document.getElementById('tab-hint');
+  if (hint) hint.style.display = 'none';
+}
+
+function openDefaultTab(tabName) {
+  var button = document.querySelector('[aria-controls="panel-' + tabName + '"]');
+  openGuideTab(tabName, button);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  var backTop = document.getElementById('back-top');
+  var progress = document.getElementById('read-progress');
+  var searchInput = document.getElementById('guide-search-input');
+  var searchResults = document.getElementById('guide-search-results');
+
+  document.querySelectorAll('.fml').forEach(function(formulaBox) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy-formula';
+    btn.textContent = 'ظ†ط³ط® ط§ظ„ظ…ط¹ط§ط¯ظ„ط©';
+    btn.addEventListener('click', function() {
+      navigator.clipboard.writeText(formulaBox.innerText.replace('ظ†ط³ط® ط§ظ„ظ…ط¹ط§ط¯ظ„ط©', '').trim());
+      btn.textContent = 'طھظ… ط§ظ„ظ†ط³ط®';
+      setTimeout(function(){ btn.textContent = 'ظ†ط³ط® ط§ظ„ظ…ط¹ط§ط¯ظ„ط©'; }, 1200);
+    });
+    formulaBox.appendChild(document.createElement('br'));
+    formulaBox.appendChild(btn);
+  });
+
+  window.addEventListener('scroll', function() {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var percent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+
+    if (progress) progress.style.width = percent + '%';
+    if (backTop) backTop.style.display = scrollTop > 500 ? 'block' : 'none';
+  });
+
+  if (backTop) {
+    backTop.addEventListener('click', function() {
+      window.scrollTo({ top:0, behavior:'smooth' });
+    });
+  }
+
+  if (searchInput && searchResults) {
+    searchInput.addEventListener('input', function() {
+      var term = searchInput.value.trim();
+      searchResults.innerHTML = '';
+
+      if (term.length < 2) return;
+
+      var matches = [];
+      document.querySelectorAll('.sec').forEach(function(sec) {
+        var title = sec.querySelector('.sec-t');
+        var text = sec.innerText || '';
+        if (title && text.indexOf(term) !== -1) {
+          matches.push({ id: sec.id, title: title.innerText, panel: sec.closest('.tab-panel') });
+        }
+      });
+
+      matches.slice(0, 8).forEach(function(match) {
+        var link = document.createElement('a');
+        link.href = '#' + match.id;
+        link.textContent = match.title;
+        link.addEventListener('click', function() {
+          if (match.panel && match.panel.id === 'panel-plan') openDefaultTab('plan');
+          if (match.panel && match.panel.id === 'panel-formulation') openDefaultTab('formulation');
+        });
+        searchResults.appendChild(link);
+      });
+
+      if (!matches.length) {
+        searchResults.innerHTML = '<div style="color:#4a5f5f;background:#fff;border:1px solid #d9eeee;border-radius:10px;padding:10px 14px;">ظ„ط§ طھظˆط¬ط¯ ظ†طھط§ط¦ط¬ ظ…ط·ط§ط¨ظ‚ط©.</div>';
+      }
+    });
+  }
+});
+</script>
+<div class="footer">
+  <strong>ظˆط­ط¯ط© ط§ظ„ط¬ظˆط¯ط© ظˆ ط§ظ„ط¨ظٹط§ظ†ط§طھ - ط§ظ„ظƒظ„ظٹط© ط§ظ„طھط·ط¨ظٹظ‚ظٹط© - ط¬ط§ظ…ط¹ط© ط£ظ… ط§ظ„ظ‚ط±ظ‰</strong><br>
+  <p>  ظ„ظ„طھظˆط§طµظ„ applied_qm@uqu.edu.sa </p>
+</div>
+
+
+
