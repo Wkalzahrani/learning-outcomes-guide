@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -484,6 +484,148 @@ h4{
   font-size:30px;
   line-height:1.6;
   font-weight:800;
+}
+
+.matrix-template-stack{
+  display:grid;
+  gap:14px;
+  margin:16px 0 24px;
+}
+
+.matrix-template{
+  background:#fff;
+  border:1px solid #d9eeee;
+  border-right:5px solid var(--p);
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 2px 14px rgba(13,110,110,.05);
+}
+
+.matrix-template-title{
+  color:var(--g);
+  font-size:16px;
+  font-weight:800;
+  margin-bottom:6px;
+  line-height:1.7;
+}
+
+.matrix-template-desc{
+  color:var(--tl);
+  font-size:13px;
+  line-height:1.8;
+  margin-bottom:10px;
+}
+
+.matrix-template .tbl,
+.matrix-template .mx{
+  margin:8px 0 0 !important;
+  font-size:12.5px !important;
+  border-radius:10px !important;
+  box-shadow:none !important;
+}
+
+.matrix-template .tbl th,
+.matrix-template .tbl td,
+.matrix-template .mx th,
+.matrix-template .mx td{
+  padding:9px 8px !important;
+  line-height:1.55 !important;
+}
+
+.matrix-placeholder{
+  color:#8aa0a0 !important;
+  overflow-wrap:anywhere;
+}
+
+.matrix-group-row td{
+  background:var(--g) !important;
+  color:#fff !important;
+  font-weight:800;
+}
+
+.matrix-code{
+  font-weight:800;
+  color:var(--p) !important;
+  text-align:center;
+  white-space:nowrap;
+}
+
+.matrix-compact{
+  min-width:820px;
+}
+
+.attainment-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  overflow:hidden;
+  border:1px solid #c9e3e3;
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(13,110,110,.07);
+}
+
+.attainment-table th{
+  background:#0d7773;
+  color:#fff;
+  font-weight:800;
+  text-align:center;
+  padding:18px;
+  font-size:16px;
+}
+
+.attainment-table td{
+  padding:18px;
+  border-bottom:1px solid #d9eeee;
+  border-left:1px solid #e8f4f4;
+  color:#496363;
+  font-size:16px;
+  line-height:1.9;
+  background:#fff;
+}
+
+.attainment-table tr:nth-child(even) td{
+  background:#f4f9f9;
+}
+
+.attainment-table tr:last-child td{
+  border-bottom:0;
+}
+
+.attainment-table td:last-child,
+.attainment-table th:last-child{
+  border-left:0;
+}
+
+.attainment-table .course-num{
+  width:70px;
+  text-align:center;
+  font-weight:800;
+  color:var(--p);
+}
+
+.attainment-table .course-percent{
+  width:150px;
+  text-align:center;
+  font-weight:800;
+  color:var(--p);
+  font-size:18px;
+}
+
+.attainment-table .course-status{
+  width:170px;
+  text-align:center;
+}
+
+.attainment-table .total-row td{
+  background:#e8f4f4 !important;
+  color:var(--p);
+  font-weight:800;
+}
+
+.attainment-table .total-row .course-percent{
+  color:var(--g);
+  font-size:20px;
 }
 
 p{
@@ -1602,6 +1744,160 @@ body:not(.tab-opened) #panel-formulation,
     margin:0 auto 18px !important;
   }
 }
+
+/* ضبط مقاسات قسم كيفية حساب نسبة تحقق ناتج التعلم لتطابق حضور بقية الدليل */
+#s8,
+#s8 p,
+#s8 .ex-b,
+#s8 .box{
+  font-size:16px !important;
+  line-height:1.95 !important;
+}
+
+#s8 .ex-h{
+  font-size:15.5px !important;
+  padding:13px 18px !important;
+  line-height:1.8 !important;
+}
+
+#s8 .steps .sc > h4{
+  color:var(--p) !important;
+  font-size:17px !important;
+  line-height:1.8 !important;
+  margin:0 0 10px !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+}
+
+#s8 .steps .step:nth-child(2) .sc > h4,
+#s8 .steps .step:nth-child(3) .sc > h4{
+  background:#f4fbfb !important;
+  border:1px solid #d9eeee !important;
+  border-right:5px solid var(--p) !important;
+  border-radius:10px !important;
+  color:#0b6666 !important;
+  font-size:19px !important;
+  font-weight:800 !important;
+  line-height:1.9 !important;
+  padding:12px 16px !important;
+  margin:0 0 16px !important;
+}
+
+#s8 .steps .step:nth-child(2) .tbl th,
+#s8 .steps .step:nth-child(2) .tbl td{
+  font-size:18px !important;
+  padding:28px 22px !important;
+  line-height:2.1 !important;
+}
+
+#s8 .steps .step:nth-child(2) .tbl th{
+  font-size:18px !important;
+}
+
+#s8 .steps .step:nth-child(2) .tbl td:first-child{
+  font-weight:700 !important;
+}
+
+#s8 .steps .step:nth-child(3) .fml{
+  width:100% !important;
+  font-size:18px !important;
+  padding:22px !important;
+  margin:16px 0 !important;
+  border-radius:12px !important;
+  line-height:2.1 !important;
+}
+
+#s8 .steps .step:nth-child(3) .fml .num{
+  display:inline !important;
+  font-size:23px !important;
+  margin-top:0 !important;
+}
+
+#s8 .steps .step:nth-child(3) .box{
+  font-size:17px !important;
+  padding:18px 22px !important;
+}
+
+#s8 .steps .step:nth-child(2),
+#s8 .steps .step:nth-child(3){
+  background:#fff !important;
+  border:1px solid #d9eeee !important;
+  border-radius:14px !important;
+  padding:22px !important;
+  margin:22px 0 !important;
+  box-shadow:0 6px 18px rgba(13,110,110,.06) !important;
+}
+
+#s8 .steps .step:nth-child(2) .sc,
+#s8 .steps .step:nth-child(3) .sc{
+  width:100% !important;
+}
+
+#s8 .steps .step:nth-child(2) .ex,
+#s8 .steps .step:nth-child(2) .tbl{
+  width:100% !important;
+}
+
+#s8 .steps .step:nth-child(2) .sn,
+#s8 .steps .step:nth-child(3) .sn{
+  width:44px !important;
+  height:44px !important;
+  font-size:18px !important;
+}
+
+#s8 .steps .step:nth-child(2) .ex,
+#s8 .steps .step:nth-child(3) .fml,
+#s8 .steps .step:nth-child(3) .box{
+  margin-top:14px !important;
+}
+
+#s8 .steps .step:nth-child(2) .ex-h{
+  font-size:17px !important;
+  padding:15px 20px !important;
+}
+
+#s8 .steps .step:nth-child(2) .ex-b{
+  padding:22px !important;
+}
+
+#s8 .fml{
+  font-size:18px !important;
+  padding:22px !important;
+  line-height:2.1 !important;
+}
+
+#s8 .fml .num{
+  font-size:23px !important;
+}
+
+#s8 .tbl{
+  font-size:16px !important;
+}
+
+#s8 .tbl th,
+#s8 .tbl td{
+  font-size:16px !important;
+  padding:19px 18px !important;
+  line-height:2 !important;
+}
+
+@media(max-width:620px){
+  #s8 .tbl{
+    font-size:13px !important;
+  }
+
+  #s8 .tbl th,
+  #s8 .tbl td{
+    font-size:13px !important;
+    padding:12px 10px !important;
+  }
+
+  #s8 .ex-b,
+  #s8 .box{
+    font-size:14px !important;
+  }
+}
 </style>
 </head>
 
@@ -1650,7 +1946,7 @@ body:not(.tab-opened) #panel-formulation,
 
 <div id="panel-plan" class="tab-panel" role="tabpanel">
   <div class="mini-toc">
-    <h2>محتويات تبويب إعداد خطة قياس نواتج التعلم</h2>
+    <h2>محتويات  إعداد خطة قياس نواتج التعلم</h2>
     <ul>
       <li><a href="#plan-learning-intro">ما هي نواتج التعلم؟ - التعريف والأهمية</a></li>
       <li><a href="#plan-learning-domains">مجالات نواتج التعلم الثلاثة</a></li>
@@ -1660,7 +1956,7 @@ body:not(.tab-opened) #panel-formulation,
       <li><a href="#plan-matrix">مصفوفات نواتج التعلم</a></li>
       <li><a href="#plan-attainment">مستوى التحصيل والقيمة المستهدفة</a></li>
       <li><a href="#plan-cycle">دورة القياس والجدول الزمني</a></li>
-      <li><a href="#plan-steps-summary">ملخص خطوات إعداد خطة قياس نواتج التعلم</a></li>
+      <li><a href="#plan-steps-summary"> خطوات إعداد خطة قياس نواتج التعلم</a></li>
       <li><a href="#s19">النماذج الرسمية والتوثيق والاعتماد</a></li>
     </ul>
   </div>
@@ -1940,6 +2236,11 @@ body:not(.tab-opened) #panel-formulation,
         <div class="wi" style="flex:40;">قياس غير مباشر - ٤٠%</div>
       </div>
 
+      <div class="box bw">
+        <div class="bt">ملاحظة</div>
+        عند إعداد معادلة الأوزان النسبية المعتمدة مؤسسياً، يجب ألا يقل وزن القياس المباشر عن <strong>٥٠%</strong> ولا يزيد عن <strong>٧٠%</strong>، وألا يقل وزن القياس غير المباشر عن <strong>٣٠%</strong> ولا يزيد عن <strong>٥٠%</strong>.
+      </div>
+
       <table class="tbl">
         <thead>
           <tr>
@@ -2009,7 +2310,104 @@ body:not(.tab-opened) #panel-formulation,
         </div>
       </div>
 
-      <h3>مصفوفة نواتج البرنامج والمقررات - مثال من التسويق التطبيقي</h3>
+      <div class="matrix-template-stack" aria-label="نماذج مصفوفات نواتج التعلم">
+        <div class="matrix-template">
+          <div class="matrix-template-title">مصفوفة تصنيف نواتج التعلم للمقرر وربطها بنواتج التعلم للبرنامج</div>
+          <p class="matrix-template-desc">يتم من خلال هذه المصفوفة تصنيف نواتج التعلم للمقرر طبقاً لمجالات التعلم الثلاثة، وربطها مع نواتج التعلم للبرنامج حسب توصيف المقرر.</p>
+          <div style="overflow-x:auto;">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th style="width:120px;">الرمز</th>
+                  <th>نواتج التعلم للمقرر</th>
+                  <th style="width:210px;">رمز مخرج التعلم المرتبط بالبرنامج</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="matrix-group-row"><td>١</td><td colspan="2">المعرفة والفهم</td></tr>
+                <tr><td class="matrix-code">١.١</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr><td class="matrix-code">١.٢</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr><td class="matrix-code">١.٣</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr><td class="matrix-code">...</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr class="matrix-group-row"><td>٢</td><td colspan="2">المهارات</td></tr>
+                <tr><td class="matrix-code">٢.١</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr><td class="matrix-code">٢.٢</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr><td class="matrix-code">٢.٣</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr><td class="matrix-code">...</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr class="matrix-group-row"><td>٣</td><td colspan="2">القيم والاستقلالية والمسؤولية</td></tr>
+                <tr><td class="matrix-code">٣.١</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr><td class="matrix-code">٣.٢</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr><td class="matrix-code">٣.٣</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+                <tr><td class="matrix-code">...</td><td class="matrix-placeholder">........................................................</td><td class="matrix-placeholder">........</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="matrix-template">
+          <div class="matrix-template-title">مصفوفة نواتج التعلم للبرنامج والمقررات الدراسية</div>
+          <p class="matrix-template-desc">توضح هذه المصفوفة الربط بين نواتج تعلم البرنامج والمقررات التي تحقق هذه النواتج بصورة مباشرة وفق مستويات: س = تأسيس، ر = ممارسة، ت = تمكن.</p>
+          <div style="overflow-x:auto;">
+            <table class="mx matrix-compact">
+              <thead>
+                <tr>
+                  <th rowspan="2">المقررات</th>
+                  <th colspan="4" style="background:var(--p);">المعرفة والفهم</th>
+                  <th colspan="4" style="background:var(--g);">المهارات</th>
+                  <th colspan="4" style="background:var(--pur);">القيم والاستقلالية والمسؤولية</th>
+                </tr>
+                <tr>
+                  <th>ع١</th><th>ع٢</th><th>ع٣</th><th>ع...</th>
+                  <th style="background:var(--g);">م١</th><th style="background:var(--g);">م٢</th><th style="background:var(--g);">م٣</th><th style="background:var(--g);">م...</th>
+                  <th style="background:var(--pur);">ق١</th><th style="background:var(--pur);">ق٢</th><th style="background:var(--pur);">ق٣</th><th style="background:var(--pur);">ق...</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="mr">مقرر ....</td><td class="matrix-placeholder">...</td><td></td><td></td><td></td><td></td><td class="matrix-placeholder">...</td><td></td><td></td><td></td><td></td><td class="matrix-placeholder">...</td><td></td></tr>
+                <tr><td class="mr">مقرر ....</td><td></td><td class="matrix-placeholder">...</td><td></td><td></td><td class="matrix-placeholder">...</td><td></td><td></td><td></td><td></td><td class="matrix-placeholder">...</td><td></td><td></td></tr>
+                <tr><td class="mr">مقرر ....</td><td></td><td></td><td class="matrix-placeholder">...</td><td></td><td></td><td></td><td class="matrix-placeholder">...</td><td></td><td class="matrix-placeholder">...</td><td></td><td></td><td></td></tr>
+                <tr><td class="mr">مقرر ....</td><td class="matrix-placeholder">...</td><td></td><td></td><td></td><td></td><td class="matrix-placeholder">...</td><td></td><td></td><td></td><td></td><td class="matrix-placeholder">...</td><td></td></tr>
+                <tr><td class="mr">مقرر ....</td><td></td><td class="matrix-placeholder">...</td><td></td><td></td><td></td><td></td><td class="matrix-placeholder">...</td><td></td><td class="matrix-placeholder">...</td><td></td><td></td><td></td></tr>
+                <tr><td class="mr">مقرر ....</td><td></td><td></td><td class="matrix-placeholder">...</td><td></td><td class="matrix-placeholder">...</td><td></td><td></td><td></td><td></td><td class="matrix-placeholder">...</td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="matrix-template">
+          <div class="matrix-template-title">مصفوفة تصنيف نواتج التعلم للمقرر وربطها بنواتج التعلم للبرنامج حسب المجالات</div>
+          <p class="matrix-template-desc">تستخدم هذه المصفوفة لتجميع نواتج التعلم للبرنامج حسب المجالات، ثم ربط نواتج المقرر بها عند إعداد توصيف المقرر.</p>
+          <div style="overflow-x:auto;">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th style="width:120px;">رمز الناتج</th>
+                  <th>نواتج تعلم البرنامج</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="matrix-group-row"><td colspan="2">المعرفة والفهم</td></tr>
+                <tr><td class="matrix-code">ع١</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr><td class="matrix-code">ع٢</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr><td class="matrix-code">ع٣</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr><td class="matrix-code">ع...</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr class="matrix-group-row"><td colspan="2">المهارات</td></tr>
+                <tr><td class="matrix-code">م١</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr><td class="matrix-code">م٢</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr><td class="matrix-code">م٣</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr><td class="matrix-code">م...</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr class="matrix-group-row"><td colspan="2">القيم والاستقلالية والمسؤولية</td></tr>
+                <tr><td class="matrix-code">ق١</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr><td class="matrix-code">ق٢</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr><td class="matrix-code">ق٣</td><td class="matrix-placeholder">........................................................</td></tr>
+                <tr><td class="matrix-code">ق...</td><td class="matrix-placeholder">........................................................</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <h3>مصفوفة نواتج البرنامج والمقررات - مثال من برنامج التسويق التطبيقي</h3>
       <div style="overflow-x:auto;">
         <table class="mx">
           <thead>
@@ -2047,7 +2445,40 @@ body:not(.tab-opened) #panel-formulation,
         الخلية التي بها رقم ونجمة (*) تعني أن هذا المقرر هو <strong>نقطة قياس معتمدة</strong> لهذا الناتج. عضو هيئة التدريس في هذا المقرر ملزَم بقياس الناتج وتوثيق نتائجه.
       </div>
 
-      <h3>مصفوفة نواتج المقرر مع استراتيجيات التدريس والتقييم - مثال في إدارة الموارد البشرية</h3>
+      <div class="matrix-template-stack" aria-label="مصفوفة نواتج التعلم واستراتيجيات التدريس وطرق التقييم">
+        <div class="matrix-template">
+          <div class="matrix-template-title">مصفوفة نواتج التعلم واستراتيجيات التدريس وطرق التقييم</div>
+          <p class="matrix-template-desc">يتم من خلال هذه المصفوفة تحديد استراتيجيات التدريس وطرق التقييم المناسبة لكل ناتج من نواتج التعلم للمقرر حسب توصيف المقرر.</p>
+          <div style="overflow-x:auto;">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th style="width:100px;">الرمز</th>
+                  <th>نواتج التعلم</th>
+                  <th>استراتيجيات التدريس</th>
+                  <th>طرق التقييم</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="matrix-group-row"><td>١</td><td colspan="3">المعرفة والفهم</td></tr>
+                <tr><td class="matrix-code">١.١</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td></tr>
+                <tr><td class="matrix-code">١.٢</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td></tr>
+                <tr><td class="matrix-code">...</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td></tr>
+                <tr class="matrix-group-row"><td>٢</td><td colspan="3">المهارات</td></tr>
+                <tr><td class="matrix-code">٢.١</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td></tr>
+                <tr><td class="matrix-code">٢.٢</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td></tr>
+                <tr><td class="matrix-code">...</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td></tr>
+                <tr class="matrix-group-row"><td>٣</td><td colspan="3">القيم والاستقلالية والمسؤولية</td></tr>
+                <tr><td class="matrix-code">٣.١</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td></tr>
+                <tr><td class="matrix-code">٣.٢</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td></tr>
+                <tr><td class="matrix-code">...</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td><td class="matrix-placeholder">................................</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <h3>مصفوفة نواتج المقرر مع استراتيجيات التدريس والتقييم - مثال من برنامج  الموارد البشرية</h3>
       <table class="tbl">
         <thead>
           <tr>
@@ -2079,7 +2510,7 @@ body:not(.tab-opened) #panel-formulation,
         <p>هو <strong>أقل قيمة لأداة القياس يمكن عندها اعتبار الطالب قد اكتسب ناتج التعلم</strong>.<br>مثال: إذا حدّدنا مستوى التحصيل بـ ٧٠% - فأي طالب حصل على ٧٠% أو أكثر يُعدّ قد حقّق الناتج.</p>
       </div>
 
-      <h3>القيم المستهدفة في خطة دبلوم التسويق التطبيقي</h3>
+      <h3>القيم المستهدفة في خطة برنامج التسويق التطبيقي</h3>
       <table class="tbl">
         <thead>
           <tr>
@@ -2188,16 +2619,16 @@ body:not(.tab-opened) #panel-formulation,
       </table>
     </div>
 <div class="sec" id="plan-steps-summary">
-      <div class="sec-hd"><div><div class="sec-t">ملخص خطوات إعداد خطة قياس نواتج التعلم</div></div></div>
-      <div class="box bi">يختص هذا الملخص بما يتم التخطيط له على مستوى البرنامج قبل تنفيذ القياس داخل المقررات.</div>
+      <div class="sec-hd"><div><div class="sec-t"> خطوات إعداد خطة قياس نواتج التعلم</div></div></div>
+      <div class="box bi">يختص هذا الجزء بما يتم التخطيط له على مستوى البرنامج قبل تنفيذ القياس داخل المقررات.</div>
       <div class="summary-steps">
         <div class="summary-step"><strong>١. تحديد نواتج تعلم البرنامج</strong>حصر نواتج تعلم البرنامج المعتمدة.</div>
         <div class="summary-step gold"><strong>٢. تصنيف النواتج</strong>تصنيفها إلى معرفة، مهارات، قيم واستقلالية ومسؤولية.</div>
-        <div class="summary-step"><strong>٣. تحديد مؤشرات الأداء</strong>تحديد ما الذي سيقاس لكل ناتج وكيف يظهر تحقق الناتج.</div>
-        <div class="summary-step gold"><strong>٤. تحديد أدوات القياس</strong>اختيار الأدوات المناسبة مثل الاختبارات، المشاريع، العروض، ملفات الإنجاز، التدريب، أو الاستبانات.</div>
-        <div class="summary-step"><strong>٥. تحديد مستويات التحصيل</strong>تحديد الحد الأدنى المقبول الذي يدل على تحقق الناتج.</div>
-        <div class="summary-step gold"><strong>٦. تحديد القيم المستهدفة</strong>تحديد النسبة المستهدفة لتحقق نواتج التعلم.</div>
-        <div class="summary-step"><strong>٧. إعداد مصفوفة الربط</strong>ربط نواتج البرنامج بالمقررات وتحديد مستوى الإسهام.</div>
+        <div class="summary-step"><strong>٣. إعداد مصفوفة الربط</strong>ربط نواتج البرنامج بالمقررات وتحديد مستوى الإسهام.</div>
+        <div class="summary-step gold"><strong>٤. تحديد مؤشرات الأداء</strong>تحديد ما الذي سيقاس لكل ناتج وكيف يظهر تحقق الناتج.</div>
+        <div class="summary-step"><strong>٥. تحديد أدوات القياس</strong>اختيار الأدوات المناسبة مثل الاختبارات، المشاريع، العروض، ملفات الإنجاز، التدريب، أو الاستبانات.</div>
+        <div class="summary-step gold"><strong>٦. تحديد مستويات التحصيل</strong>تحديد الحد الأدنى المقبول الذي يدل على تحقق الناتج.</div>
+        <div class="summary-step"><strong>٧. تحديد القيم المستهدفة</strong>تحديد النسبة المستهدفة لتحقق نواتج التعلم.</div>
         <div class="summary-step gold"><strong>٨. إعداد دورة القياس</strong>توزيع النواتج على الفصول أو الأعوام الدراسية.</div>
         <div class="summary-step"><strong>٩. توزيع المسؤوليات</strong>تحديد أدوار منسق البرنامج، أعضاء هيئة التدريس، لجنة الجودة، والجهات ذات العلاقة.</div>
         <div class="summary-step gold"><strong>١٠. اعتماد الخطة ومتابعتها</strong>اعتماد الخطة رسميًا ومتابعة تنفيذها وتحديثها عند الحاجة.</div>
@@ -2621,7 +3052,7 @@ body:not(.tab-opened) #panel-formulation,
 </div>
 <div id="panel-formulation" class="tab-panel" role="tabpanel">
   <div class="mini-toc">
-    <h2>محتويات تبويب صياغة وقياس نواتج التعلم</h2>
+    <h2>محتويات  صياغة وقياس نواتج التعلم</h2>
     <ul>
       <li><a href="#s1">ما هي نواتج التعلم؟ - التعريف والأهمية</a></li>
       <li><a href="#s2">الفرق بين الغايات والأهداف ونواتج التعلم</a></li>
@@ -2634,9 +3065,9 @@ body:not(.tab-opened) #panel-formulation,
       <li><a href="#s10">قياس القيم والاستقلالية - Rubrics</a></li>
       <li><a href="#s11">المقررات التتويجية وأدوات القياس والوثائق</a></li>
       <li><a href="#s12">أدوار عضو هيئة التدريس والتسلسل الإجرائي</a></li>
-      <li><a href="#s13">مثال حي متكامل من دبلوم التسويق التطبيقي</a></li>
       <li><a href="#s15">التحسين والإجراءات التصحيحية</a></li>
-      <li><a href="#formulation-steps-summary">ملخص خطوات صياغة وقياس نواتج التعلم</a></li>
+      <li><a href="#formulation-steps-summary">
+        خطوات صياغة وقياس نواتج التعلم</a></li>
       <li><a href="#formulation-official-forms">النماذج الرسمية والتوثيق والاعتماد</a></li>
       <li><a href="#institutional-forms-1447">نماذج قياس نواتج تعلم المؤسسة للعام ١٤٤٧</a></li>
     </ul>
@@ -2994,6 +3425,11 @@ body:not(.tab-opened) #panel-formulation,
         <div class="wi" style="flex:40;">قياس غير مباشر - ٤٠٪</div>
       </div>
 
+      <div class="box bw">
+        <div class="bt">ملاحظة</div>
+        عند إعداد معادلة الأوزان النسبية المعتمدة مؤسسياً، يجب ألا يقل وزن القياس المباشر عن <strong>٥٠٪</strong> ولا يزيد عن <strong>٧٠٪</strong>، وألا يقل وزن القياس غير المباشر عن <strong>٣٠٪</strong> ولا يزيد عن <strong>٥٠٪</strong>.
+      </div>
+
       <table class="tbl">
         <thead>
           <tr>
@@ -3054,10 +3490,10 @@ body:not(.tab-opened) #panel-formulation,
 
             <div class="ex">
               <div class="ex-h"> مثال - مقرر المحاسبة المالية / ناتج م١: إعداد القوائم المالية</div>
-              <div class="ex-b" style="font-size:13px;">
+              <div class="ex-b">
                 <p>أداة القياس: واجب إعداد ميزانية - الدرجة الكلية = ٢٠</p>
 
-                <table class="tbl" style="font-size:12px;">
+                <table class="tbl">
                   <thead>
                     <tr>
                       <th>الطالب</th>
@@ -3080,7 +3516,7 @@ body:not(.tab-opened) #panel-formulation,
                   </tbody>
                 </table>
 
-                <div class="fml" style="font-size:13px;margin-top:10px;">
+                <div class="fml" style="margin-top:10px;">
                   المتوسط = ١٥٠ ÷ ١٠ = ١٥ &nbsp;|&nbsp; نسبة التحقق = ١٥ ÷ ٢٠ × ١٠٠ = <span class="num">٧٥%</span>
                 </div>
 
@@ -3100,18 +3536,40 @@ body:not(.tab-opened) #panel-formulation,
             <div class="ex">
               <div class="ex-h"> مثال - ناتج م١ في المحاسبة المالية في ٣ مقررات</div>
               <div class="ex-b">
-                <table class="tbl" style="font-size:13px;">
+                <table class="attainment-table">
                   <thead>
                     <tr>
+                      <th>#</th>
                       <th>المقرر</th>
                       <th>نسبة التحقق</th>
+                      <th>المؤشر</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><td>المحاسبة المالية ١</td><td style="text-align:center;font-weight:700;">٧٥%</td></tr>
-                    <tr><td>محاسبة التكاليف</td><td style="text-align:center;font-weight:700;">٦٨%</td></tr>
-                    <tr><td>المحاسبة المالية ٢</td><td style="text-align:center;font-weight:700;">٧٩%</td></tr>
-                    <tr><td><strong>المجموع</strong></td><td style="text-align:center;font-weight:800;color:var(--p);">٢٢٢%</td></tr>
+                    <tr>
+                      <td class="course-num">١</td>
+                      <td>المحاسبة المالية ١</td>
+                      <td class="course-percent">٧٥%</td>
+                      <td class="course-status"><span class="status-ok">محقق</span></td>
+                    </tr>
+                    <tr>
+                      <td class="course-num">٢</td>
+                      <td>محاسبة التكاليف</td>
+                      <td class="course-percent">٦٨%</td>
+                      <td class="course-status"><span class="status-near">قريب</span></td>
+                    </tr>
+                    <tr>
+                      <td class="course-num">٣</td>
+                      <td>المحاسبة المالية ٢</td>
+                      <td class="course-percent">٧٩%</td>
+                      <td class="course-status"><span class="status-ok">محقق</span></td>
+                    </tr>
+                    <tr class="total-row">
+                      <td class="course-num"></td>
+                      <td>مجموع نسب التحقق من المقررات المرتبطة بالناتج</td>
+                      <td class="course-percent">٢٢٢%</td>
+                      <td class="course-status"></td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -3253,8 +3711,8 @@ body:not(.tab-opened) #panel-formulation,
         <div class="part">
       <div class="part-num">ج</div>
       <div>
-        <div class="part-title">الأدوار والإجراءات والمثال الحي</div>
-        <div class="part-sub">من النظرية إلى التطبيق الفعلي</div>
+        <div class="part-title">الأدوار والإجراءات </div>
+      
       </div>
     </div>
 
@@ -3313,7 +3771,7 @@ body:not(.tab-opened) #panel-formulation,
       <div class="sec-hd">
         <div class="sec-n pur">١٣</div>
         <div>
-          <div class="sec-t">مثال حي متكامل من دبلوم التسويق التطبيقي</div>
+          <div class="sec-t">مثال من برنامج التسويق التطبيقي</div>
           <div class="sec-s">تتبَّع قياس ناتج (م٣) من البداية إلى النهاية</div>
         </div>
       </div>
@@ -3409,7 +3867,7 @@ body:not(.tab-opened) #panel-formulation,
           <li>إضافة تدريبات أسبوعية على العروض التقديمية قبل التقييم النهائي</li>
           <li>توفير Rubric واضح للطلاب مسبقاً مع نماذج مثالية</li>
           <li>إدراج جلسة تغذية راجعة تفصيلية بعد التقييم الأول</li>
-          <li>مشاهدة عروض نموذجية من مجال التسويق التطبيقي الاحترافي</li>
+   
         </ul>
       </div>
     </div>
@@ -3482,8 +3940,8 @@ body:not(.tab-opened) #panel-formulation,
       </table>
     </div>
 <div class="sec" id="formulation-steps-summary">
-      <div class="sec-hd"><div><div class="sec-t">ملخص خطوات صياغة وقياس نواتج التعلم</div></div></div>
-      <div class="box bi">يختص هذا الملخص بما يفعله عضو هيئة التدريس داخل المقرر: صياغة الناتج، تنفيذ القياس، تحليل النتائج، ثم توثيق التحسين.</div>
+      <div class="sec-hd"><div><div class="sec-t"> خطوات صياغة وقياس نواتج التعلم</div></div></div>
+      <div class="box bi">يختص هذا الجزء بما يفعله عضو هيئة التدريس داخل المقرر: صياغة الناتج، تنفيذ القياس، تحليل النتائج، ثم توثيق التحسين.</div>
       <div class="summary-steps">
         <div class="summary-step"><strong>المرحلة الأولى: صياغة نواتج التعلم</strong><ul><li>تحديد المجال.</li><li>اختيار الفعل.</li><li>تحديد المحتوى.</li><li>كتابة الناتج.</li><li>مراجعة الصياغة.</li></ul></div>
         <div class="summary-step gold"><strong>المرحلة الثانية: قياس نواتج التعلم</strong><ul><li>تحديد الناتج المراد قياسه.</li><li>اختيار أداة القياس.</li><li>إعداد أداة أو Rubric.</li><li>تطبيق القياس.</li><li>رصد النتائج.</li><li>حساب نسبة التحقق.</li><li>مقارنة النتائج بالمستهدف.</li><li>تحليل النتائج.</li><li>اقتراح التحسينات.</li><li>توثيق النتائج.</li></ul></div>
